@@ -25,6 +25,7 @@ SPLIT = "train"
 
 OUTPUT_FILE = "bookcorpus_truecased.jsonl"
 REJECTED_FILE = "bookcorpus_rejected.jsonl"
+NEW_WORDS_FILE = "bookcorpus_new_words.txt"
 
 # Для теста.
 # Например 1000.
@@ -133,15 +134,20 @@ def main():
 
     accepted = 0
     rejected = 0
+    new_words = set()
 
     file_mode = "a" if start_index > 0 else "w"
+    if start_index > 0 and os.path.exists(NEW_WORDS_FILE):
+        with open(NEW_WORDS_FILE, "r", encoding="utf-8") as fnew:
+            new_words = {line.strip() for line in fnew if line.strip()}
 
     with open(OUTPUT_FILE, file_mode, encoding="utf-8") as fout, open(REJECTED_FILE, file_mode, encoding="utf-8") as frej:
 
         for sentence_id in range(start_index, total_sentences):
 
             original_text = dataset[sentence_id]["text"]
-            words = str_tokenize_words(original_text)
+            words = set(str_tokenize_words(original_text))
+            new_words.update(words - word_set)
 
             normalized = normalize_sentence(original_text)
 
@@ -225,6 +231,11 @@ def main():
             fout.flush()
             frej.flush()
 
+    sorted_new_words = sorted(new_words, key=lambda x: (x.lower(), x))
+    with open(NEW_WORDS_FILE, "w", encoding="utf-8") as fnew:
+        for w in sorted_new_words:
+            fnew.write(w + "\n")
+
     print("=" * 60)
     print("DONE")
     print("=" * 60)
@@ -232,6 +243,7 @@ def main():
     print(f"accepted:   {accepted:,}")
     print(f"rejected:   {rejected:,}")
     print(f"output:     {OUTPUT_FILE}")
+    print(f"new words:  {len(sorted_new_words):,} -> {NEW_WORDS_FILE}")
 
 
 if __name__ == "__main__":
