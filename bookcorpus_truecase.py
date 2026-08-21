@@ -31,13 +31,14 @@ NEW_WORDS_FILE = "bookcorpus_new_words.txt"
 # Например 1000.
 # Для полного датасета -> None
 MAX_SENTENCES = 1000
+MAX_SENTENCES = None
 
 # Лог каждые N предложений
 LOG_EVERY = 100
 
 # Если True, при повторном запуске продолжит с того места,
 # где остановился.
-RESUME = False
+RESUME = True
 
 
 def valid_truecase(original, generated) -> bool:
@@ -181,20 +182,22 @@ def main():
                         rejected_row = {
                             "id": sentence_id,
                             "original": original_text,
+                            "input": normalized,
                             "truecased": truecased,
                         }
                         frej.write(json.dumps(rejected_row, ensure_ascii=False) + "\n")
                 else:
                     rejected += 1
                     final_text = normalized
-                    print(f"REJECTED sentence {sentence_id}: validation failed")
-                    print(f"INPUT : {normalized}")
-                    print(f"OUTPUT: {truecased}")
-                    print()
+                    print(f"REJECTED sentence {sentence_id}: validation failed\n")
+                    #print(f"INPUT : {normalized}")
+                    #print(f"OUTPUT: {truecased}")
+                    #print()
 
                     rejected_row = {
                         "id": sentence_id,
                         "original": original_text,
+                        "input": normalized,
                         "truecased": truecased,
                     }
                     frej.write(json.dumps(rejected_row, ensure_ascii=False) + "\n")
