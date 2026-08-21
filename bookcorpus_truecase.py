@@ -31,7 +31,7 @@ LOG_EVERY = 100
 
 # Если True, при повторном запуске продолжит с того места,
 # где остановился.
-RESUME = True
+RESUME = False
 
 def valid_truecase(original, generated) -> bool:
     return original.lower() == generated.lower()
@@ -53,6 +53,16 @@ def normalize_sentence(sentence: str) -> str:
 
     sentence = sentence.strip()
     return sentence
+
+
+def force_capitalize_first_letter(sentence: str) -> str:
+    # Поднимаем первую встретившуюся буквенную позицию.
+    chars = list(sentence)
+    for i, ch in enumerate(chars):
+        if ch.isalpha():
+            chars[i] = ch.upper()
+            break
+    return "".join(chars)
 
 # ============================================================
 # LOAD DATASET
@@ -142,19 +152,30 @@ def main():
                 if valid and normalized != truecased:
                     accepted += 1
                     final_text = truecased
+                elif valid and normalized == truecased:
+                    forced_truecased = force_capitalize_first_letter(normalized)
+                    if forced_truecased != normalized:
+                        accepted += 1
+                        final_text = forced_truecased
+                        print(f"FORCED sentence {sentence_id}: {normalized} -> {forced_truecased}")
+                    else:
+                        rejected += 1
+                        final_text = normalized
+                        print(f"REJECTED sentence {sentence_id}: no change: {normalized}")
+                        rejected_row = {
+                            "id": sentence_id,
+                            "original": original_text,
+                            "truecased": truecased,
+                        }
+                        frej.write(json.dumps(rejected_row, ensure_ascii=False) + "\n")
                 else:
                     rejected += 1
                     final_text = normalized
-                    
-                    if normalized == truecased:
-                        print(f"REJECTED sentence {sentence_id}: no change: {normalized}")
-                    else:
-                        print(f"REJECTED sentence {sentence_id}: validation failed")
-                        print(f"INPUT : {normalized}")
-                        print(f"OUTPUT: {truecased}")
-                        print()
+                    print(f"REJECTED sentence {sentence_id}: validation failed")
+                    print(f"INPUT : {normalized}")
+                    print(f"OUTPUT: {truecased}")
+                    print()
 
-                    # Записываем в rejected файл
                     rejected_row = {
                         "id": sentence_id,
                         "original": original_text,
