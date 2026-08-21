@@ -1,0 +1,13 @@
+*.pyc
+*__pycache__/
+
+models/
+
+# Cloned upstream ParlAI (source for datasets list, not part of this repo)
+ParlAI/
+
+data/bookcorpus_truecased.jsonl
+data/bookcorpus_rejected.jsonl
+
+bookcorpus_truecased.jsonl
+bookcorpus_rejected.jsonl
