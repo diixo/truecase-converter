@@ -16762,8 +16762,6 @@ Padding
 Paddle
 Paddles
 Pads
-Page
-Page's
 Page-Rank
 PageRank
 PageSpeed
@@ -47350,8 +47348,6 @@ padding
 paddle
 paddles
 pads
-page
-page's
 page-rank
 page-weight
 paged
