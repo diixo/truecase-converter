@@ -7,6 +7,11 @@ import truecase
 
 from datasets import load_dataset
 
+from utils import str_tokenize_words, read_embedded_dict
+
+
+word_set = read_embedded_dict()
+
 # Загружаем необходимый ресурс NLTK
 try:
     nltk.data.find('tokenizers/punkt_tab')
@@ -33,6 +38,7 @@ LOG_EVERY = 100
 # где остановился.
 RESUME = False
 
+
 def valid_truecase(original, generated) -> bool:
     return original.lower() == generated.lower()
 
@@ -46,7 +52,8 @@ def normalize_sentence(sentence: str) -> str:
     sentence = sentence.replace(" '", "'")
     sentence = sentence.replace("''", "\"")
     sentence = sentence.replace("``", "\"")
-    #sentence = sentence.replace("\" ", "\"")
+    sentence = sentence.replace(" n't", "n't")
+    sentence = sentence.replace(" ...", "...")
 
     if sentence.startswith("\" "):
         sentence = "\"" + sentence[2:].lstrip()
@@ -134,6 +141,8 @@ def main():
         for sentence_id in range(start_index, total_sentences):
 
             original_text = dataset[sentence_id]["text"]
+            words = str_tokenize_words(original_text)
+
             normalized = normalize_sentence(original_text)
 
             try:
@@ -154,6 +163,7 @@ def main():
                     final_text = truecased
                 elif valid and normalized == truecased:
                     forced_truecased = force_capitalize_first_letter(normalized)
+
                     if forced_truecased != normalized:
                         accepted += 1
                         final_text = forced_truecased
