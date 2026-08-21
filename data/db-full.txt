@@ -60658,3 +60658,8 @@ ditch
 ditched
 absently
 licked
+whoosh
+whooshed
+wink
+winked
+winking
