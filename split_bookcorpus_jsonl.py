@@ -43,7 +43,6 @@ def main():
             {
                 "id": item.get("id", record_index),
                 "text": item.get("text", ""),
-                "truecased": "",
             }
         )
         if len(chunk) == CHUNK_SIZE:
