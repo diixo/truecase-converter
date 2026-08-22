@@ -9,7 +9,7 @@ SPLIT = "train"
 CHUNK_SIZE = 10_000
 OUTPUT_DIR = Path("splitted")
 OUTPUT_PREFIX = "bookcorpus_part"
-MAX_SPLIT_FILES = 10  # 0 = без лимита
+MAX_SPLIT_FILES = 100  # 0 = без лимита
 
 
 def write_chunk(chunk, chunk_index: int) -> Path:
@@ -34,11 +34,18 @@ def main():
     chunk_index = 1
     written = 0
 
-    for row in dataset:
+    for record_index, row in enumerate(dataset):
         if MAX_SPLIT_FILES and chunk_index > MAX_SPLIT_FILES:
             break
 
-        chunk.append(dict(row))
+        item = dict(row)
+        chunk.append(
+            {
+                "id": item.get("id", record_index),
+                "text": item.get("text", ""),
+                "truecased": "",
+            }
+        )
         if len(chunk) == CHUNK_SIZE:
             out_path = write_chunk(chunk, chunk_index)
             written += len(chunk)
