@@ -13,3 +13,5 @@ bookcorpus_truecased.jsonl
 bookcorpus_rejected.jsonl
 
 search_results.jsonl
+
+splitted/
