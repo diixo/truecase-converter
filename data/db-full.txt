@@ -60692,3 +60692,5 @@ dueling
 duelist
 duelists
 patted
+jubilation
+quintessence
