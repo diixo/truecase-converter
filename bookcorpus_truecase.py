@@ -1,6 +1,7 @@
 
 import json
 import os
+import re
 import nltk
 
 import truecase
@@ -56,6 +57,9 @@ def normalize_sentence(sentence: str) -> str:
     sentence = sentence.replace("``", "\"")
     sentence = sentence.replace(" n't", "n't")
     sentence = sentence.replace(" ...", "...")
+
+    sentence = sentence.replace(".-", ". -")
+    sentence = re.sub(r"\.([^\W\d_])", r". \1", sentence)
 
     if sentence.startswith("\" "):
         sentence = "\"" + sentence[2:].lstrip()
