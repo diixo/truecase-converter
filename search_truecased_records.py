@@ -3,7 +3,7 @@ from pathlib import Path
 
 JSONL_FILE = "bookcorpus_truecased.jsonl"
 SEARCH_FIELD = "input"
-QUERY = "pesh"
+QUERY = "wroclawskie"
 CASE_SENSITIVE = False
 LIMIT = 0  # 0 = без лимита
 OUTPUT_FILE = "search_results.jsonl"
