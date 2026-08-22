@@ -11,3 +11,5 @@ data/bookcorpus_rejected.jsonl
 
 bookcorpus_truecased.jsonl
 bookcorpus_rejected.jsonl
+
+search_results.jsonl

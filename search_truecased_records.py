@@ -6,6 +6,8 @@ SEARCH_FIELD = "input"
 QUERY = "pesh"
 CASE_SENSITIVE = False
 LIMIT = 0  # 0 = без лимита
+OUTPUT_FILE = "search_results.jsonl"
+PROGRESS_EVERY = 1000000
 
 
 def resolve_search_value(record: dict, field: str):
@@ -22,13 +24,18 @@ def resolve_search_value(record: dict, field: str):
 
 def search_jsonl(path: Path, query: str, field: str, case_sensitive: bool, limit: int):
     found = 0
+    processed = 0
     lowered_query = query if case_sensitive else query.lower()
 
-    with path.open("r", encoding="utf-8") as f:
+    with path.open("r", encoding="utf-8") as f, Path(OUTPUT_FILE).open("w", encoding="utf-8") as out:
         for line_index, line in enumerate(f):
             line = line.strip()
             if not line:
                 continue
+
+            processed += 1
+            if PROGRESS_EVERY > 0 and processed % PROGRESS_EVERY == 0:
+                print(f"Processed: {processed}")
 
             item = json.loads(line)
             value = resolve_search_value(item, field)
@@ -45,12 +52,13 @@ def search_jsonl(path: Path, query: str, field: str, case_sensitive: bool, limit
                 "value": value,
                 "record": item,
             }
-            print(json.dumps(result, ensure_ascii=False))
+            out.write(json.dumps(result, ensure_ascii=False) + "\n")
             found += 1
 
             if limit and found >= limit:
                 break
 
+    print(f"Processed: {processed}")
     print(f"Found: {found}")
 
 
