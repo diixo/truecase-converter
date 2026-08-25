@@ -9,7 +9,7 @@ SPLIT = "train"
 CHUNK_SIZE = 10_000
 OUTPUT_DIR = Path("splitted")
 OUTPUT_PREFIX = "bookcorpus_part"
-MAX_SPLIT_FILES = 1000  # 0 = без лимита
+MAX_SPLIT_FILES = 2000  # 0 = без лимита
 
 
 def write_chunk(chunk, chunk_index: int) -> Path:
