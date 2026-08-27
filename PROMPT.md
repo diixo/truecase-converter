@@ -109,9 +109,10 @@ she 'd   → she'd
 do n't   → don't
 it 's    → it's
 john 's  → John's
+```
 
 И также:
-
+```
 ive   → I've
 im    → I'm
 ill   → I'll
