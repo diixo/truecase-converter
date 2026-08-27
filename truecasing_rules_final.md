@@ -927,3 +927,573 @@ full contextual LLM review
 
 If that cannot be done, report the limitation instead of substituting a dictionary-driven or heuristic method.
 
+---
+
+# 30. Execution Compliance Protocol
+
+The rules in this document are not advisory.
+
+They define the exact execution algorithm and MUST be followed literally.
+
+This protocol exists to prevent silent replacement of the required semantic workflow with a faster dictionary-driven, candidate-driven, heuristic, regex-based, frequency-based, or otherwise approximate implementation.
+
+## 30.1 Mandatory Chunk Execution
+
+The file MUST be processed sequentially in bounded chunks.
+
+Recommended working chunk:
+
+- 50–100 target rows;
+- plus overlapping surrounding context sufficient to understand those rows;
+- default local semantic context of approximately 5–8 neighboring rows around the currently reviewed material;
+- expand context whenever semantic interpretation requires it.
+
+For every chunk:
+
+1. The LLM must read the actual text of **every target row**.
+2. The LLM must semantically inspect **every target row**.
+3. Candidate preselection is forbidden.
+4. A row may not be marked complete merely because no already-known entity was found.
+5. Every potentially referential lexical span must receive an explicit semantic decision.
+6. New and one-off entities must be discoverable directly from the row even if they have never appeared before.
+7. Only after all target rows have been semantically reviewed may Python apply the casing changes.
+8. Python may not generate additional semantic casing decisions.
+9. The next chunk must not begin until the current target rows have completed semantic review.
+
+The mandatory direction is:
+
+```text
+full target rows
+    -> LLM reads every row
+    -> semantic inspection of the complete row
+    -> identify all potentially referential expressions
+    -> explicit casing decisions
+    -> Python applies those exact decisions
+```
+
+Never:
+
+```text
+known-entity list
+    -> candidate extraction
+    -> selected matches only
+    -> bulk replacement
+```
+
+Never:
+
+```text
+Python scans file
+    -> Python proposes likely names
+    -> LLM reviews only those candidates
+```
+
+Never:
+
+```text
+existing Entity Ledger
+    -> find matching strings
+    -> assume remaining text contains no entities
+```
+
+---
+
+## 30.2 Mandatory Per-Row Coverage Condition
+
+For each target row, the LLM must explicitly ask:
+
+> Have I semantically considered every lowercase lexical expression or multi-word span in this row that could plausibly denote a named, unique, referential, calendar, institutional, geographic, fictional, branded, titled, cultural, product, work, event, astronomical, nationality/language, or abbreviated entity?
+
+If the answer is not explicitly yes after examining the actual row text, the row is **NOT complete**.
+
+The review must not be limited to conventional PERSON / PLACE / ORGANIZATION entities.
+
+Potentially named expressions include, but are not limited to:
+
+```text
+PERSON
+CHARACTER
+FIRST_NAME
+SURNAME
+NICKNAME
+PLACE
+COUNTRY
+CITY
+STREET
+BUILDING
+ORGANIZATION
+INSTITUTION
+COMPANY
+BRAND
+PRODUCT
+FOOD_OR_DRINK_NAME
+TITLE
+BOOK_TITLE
+FILM_TITLE
+SONG_TITLE
+WORK_OF_ART
+HISTORICAL_EVENT
+ASTRONOMICAL_ENTITY
+NATIONALITY
+PEOPLE
+LANGUAGE
+CALENDAR
+ABBREVIATION
+FICTIONAL_RACE
+FICTIONAL_ENTITY
+FICTIONAL_TECHNOLOGY
+NAMED_OBJECT
+VEHICLE
+SHIP
+BUILDING
+LAW
+LEGAL_ACT
+PROGRAM
+PROJECT
+MISSION
+EVENT
+```
+
+This category list is a coverage reminder only.
+
+It MUST NOT become a candidate detector or whitelist.
+
+An expression outside this list must still be restored if semantic context shows that it is a proper name.
+
+---
+
+## 30.3 No Candidate-Preselection Shortcut
+
+Do NOT first extract a subset of likely names and then review only that subset.
+
+The direction MUST always be:
+
+```text
+full row
+→ semantic inspection
+→ identify named expressions
+```
+
+Never:
+
+```text
+candidate detector
+→ selected expressions
+→ semantic inspection
+```
+
+The LLM must inspect the **entire lexical content** of the row.
+
+The absence of a match in:
+
+- an Entity Ledger;
+- a dictionary;
+- a known-name list;
+- previous rows;
+- a regex;
+- an NER system;
+- a frequency table;
+
+does **not** provide evidence that the row contains no proper names.
+
+---
+
+## 30.4 New / One-Off Entity Discovery Requirement
+
+Every row must be capable of introducing a completely new entity.
+
+The LLM must therefore actively consider lowercase expressions that have never appeared previously.
+
+Examples:
+
+```text
+a baby girl named emily
+-> Emily
+
+at oxford
+-> Oxford
+
+a shirley temple he had prepared himself
+-> a Shirley Temple he had prepared himself
+```
+
+The `Shirley Temple` example is especially important.
+
+In:
+
+```text
+Eustace sat back down in his seat and took a sip from a shirley temple he had prepared himself .
+```
+
+the expression:
+
+```text
+shirley temple
+```
+
+must be semantically examined because the context:
+
+```text
+took a sip from a ...
+```
+
+indicates a named drink.
+
+Correct:
+
+```text
+Eustace sat back down in his seat and took a sip from a Shirley Temple he had prepared himself .
+```
+
+This entity must be discovered even if:
+
+- `Shirley` has never appeared as a person;
+- `Temple` has never appeared as an entity;
+- `Shirley Temple` is absent from the Entity Ledger;
+- it occurs only once in the entire file.
+
+Failure to inspect such an expression means the row was not fully reviewed.
+
+---
+
+## 30.5 Lexical-Span Review Requirement
+
+Semantic review must consider both:
+
+```text
+single-token expressions
+```
+
+and:
+
+```text
+multi-token expressions
+```
+
+The LLM must not assume that entity boundaries are known in advance.
+
+For example, in:
+
+```text
+a shirley temple
+```
+
+the relevant semantic span is:
+
+```text
+shirley temple
+```
+
+not necessarily the individual tokens:
+
+```text
+shirley
+temple
+```
+
+Likewise:
+
+```text
+milky way terminal
+```
+
+must be considered as a possible complete named span before shorter alternatives.
+
+The semantic pass should prefer the **longest contextually meaningful referential span**.
+
+---
+
+## 30.6 Mandatory Internal Review Record
+
+Before declaring a chunk complete, maintain an internal review record for every target row.
+
+Minimum conceptual structure:
+
+```json
+{
+  "row_id": 11350024,
+  "reviewed": true,
+  "referential_spans": [
+    {
+      "surface": "Eustace",
+      "decision": "proper_name",
+      "canonical_case": "Eustace"
+    },
+    {
+      "surface": "shirley temple",
+      "decision": "named_drink",
+      "canonical_case": "Shirley Temple"
+    }
+  ],
+  "case_changes": [
+    {
+      "from": "shirley temple",
+      "to": "Shirley Temple"
+    }
+  ]
+}
+```
+
+This review record is **execution evidence**.
+
+It is not:
+
+- an Entity Ledger;
+- a global replacement dictionary;
+- a candidate list;
+- a detection mechanism.
+
+A row with:
+
+```json
+{"reviewed": true}
+```
+
+but no evidence that its lexical content was actually inspected is not sufficient.
+
+---
+
+## 30.7 Entity Ledger Separation
+
+The Entity Ledger and the per-row review record serve different purposes.
+
+### Per-row review record
+
+Answers:
+
+```text
+What did the LLM inspect in this concrete row?
+What semantic decisions were made here?
+```
+
+### Entity Ledger
+
+Answers:
+
+```text
+Which entities have already been semantically confirmed in this coherent story fragment?
+What canonical casing should be remembered for consistency?
+```
+
+The Entity Ledger must never replace the per-row semantic review.
+
+Correct:
+
+```text
+read complete row
+    -> discover / classify expressions semantically
+    -> consult ledger for consistency where relevant
+```
+
+Forbidden:
+
+```text
+scan row for ledger matches
+    -> apply matches
+    -> mark row reviewed
+```
+
+---
+
+## 30.8 Mandatory Chunk Completion Gate
+
+A chunk may be marked complete only when all of the following are true:
+
+```text
+[ ] Every target row was actually read by the LLM.
+[ ] Every target row received a semantic coverage review.
+[ ] New / one-off entities were allowed to emerge from any row.
+[ ] Multi-word spans were considered.
+[ ] No candidate-preselection mechanism determined what the LLM inspected.
+[ ] Ambiguous expressions were resolved from local context.
+[ ] All semantic casing decisions were recorded before Python application.
+[ ] Python only applied already-decided case changes.
+[ ] The case-only invariant still holds.
+```
+
+If any item is false, the chunk is incomplete.
+
+---
+
+## 30.9 Independent Coverage Audit Must Re-read the Text
+
+Pass 3 (`Missed-Entity Coverage Audit`) must be a **real independent reread of the actual rows**.
+
+It is forbidden to implement Pass 3 merely as:
+
+```text
+search for lowercase versions of entities already found in Pass 1
+```
+
+or:
+
+```text
+search for known entity categories
+```
+
+or:
+
+```text
+check only the Entity Ledger
+```
+
+Pass 3 must independently ask of every row:
+
+> Is there any lowercase expression in the actual row text that denotes a proper, named, unique, referential, cultural, product, work, event, calendar, institutional, geographic, fictional, or abbreviated entity that previous passes failed to identify?
+
+The purpose of Pass 3 is specifically to discover entities that are **not yet present in the Entity Ledger**.
+
+Examples include:
+
+```text
+Shirley Temple
+Oxford
+Harris
+Emily
+Raoul
+```
+
+---
+
+## 30.10 No Silent Algorithm Substitution
+
+The LLM must never silently replace this workflow with:
+
+- a known-entity dictionary;
+- a hand-built entity dictionary;
+- automatic title casing;
+- regex matching;
+- NER;
+- named candidate extraction;
+- frequency analysis;
+- title/name databases;
+- global search-and-replace;
+- a smaller subset of rows;
+- representative sampling;
+- spot checking;
+- "likely entity" scanning;
+- any other shortcut.
+
+This prohibition applies even when the alternative:
+
+- is faster;
+- appears highly accurate;
+- passes several regression examples;
+- preserves the case-only invariant;
+- successfully restores many known entities.
+
+Passing regression examples does not prove semantic coverage.
+
+---
+
+## 30.11 Python Enforcement Boundary
+
+Python is permitted to:
+
+```text
+read JSONL
+store LLM decisions
+apply exact LLM-decided case changes
+write JSONL
+verify IDs
+verify keys
+verify row order
+verify row count
+verify before["text"].lower() == after["text"].lower()
+```
+
+Python is forbidden to:
+
+```text
+decide that a word is a name
+generate an entity dictionary from the corpus
+extract likely entity candidates for the LLM
+infer capitalization from syntactic position
+infer capitalization from "named X"
+infer capitalization from "X said"
+infer capitalization from frequency
+decide capitalization from regex
+decide capitalization from an external name list
+capitalize every occurrence of a previously seen surface form without contextual review
+```
+
+Python may mechanically apply a decision only **after** that concrete casing decision has been made semantically by the LLM.
+
+---
+
+## 30.12 Completion Claim Restriction
+
+Do NOT state:
+
+```text
+full semantic pass completed
+coverage audit completed
+all rows reviewed
+fully compliant with the rules
+```
+
+unless every target row was actually inspected under this protocol.
+
+If only part of the file was reviewed, state that execution was partial.
+
+If only known entities were checked, state that only an entity-consistency check was performed.
+
+If only regression examples were checked, state that only regression verification was performed.
+
+Never label a partial or shortcut-based process as a full semantic audit.
+
+---
+
+## 30.13 Failure Rule
+
+If resource, context, execution, or tooling constraints prevent this protocol from being followed exactly:
+
+**STOP THE CONVERSION.**
+
+Do not silently switch to:
+
+- dictionary replacement;
+- candidate lists;
+- heuristic extraction;
+- regex detection;
+- NER;
+- bulk capitalization;
+- representative sampling;
+- another approximate algorithm.
+
+Explicitly report:
+
+```text
+The required exhaustive semantic execution protocol could not be completed.
+No substitute algorithm was used.
+```
+
+A partial correctly-described result is preferable to a falsely claimed complete result.
+
+---
+
+## 30.14 Final Compliance Principle
+
+The execution standard is:
+
+```text
+EVERY ROW MUST BE READ.
+EVERY ROW MUST BE SEMANTICALLY REVIEWED.
+EVERY POTENTIALLY REFERENTIAL LOWERCASE EXPRESSION MUST BE CONSIDERED.
+NEW ENTITIES MUST BE DISCOVERABLE WITHOUT BEING PRELISTED.
+PYTHON MUST NEVER MAKE THE SEMANTIC DECISION.
+```
+
+A truecased output is not considered compliant merely because:
+
+- structural validation passes;
+- known regression cases pass;
+- known entities are consistently capitalized;
+- an Entity Ledger is comprehensive.
+
+The primary compliance question remains:
+
+> Was every potentially named expression in every record semantically reviewed from the actual text?
+
+If not, the conversion is incomplete.
+
