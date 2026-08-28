@@ -1,4 +1,4 @@
-# Contextual Truecasing — Fast Parallel v6
+# Contextual Truecasing — Fast Parallel v7
 
 ## Цель
 
@@ -35,7 +35,7 @@
 - `named_object` — собственное имя объекта: корабля, буксира, автомобиля, поезда, самолёта, космического аппарата, станции, машины, оружия, артефакта или именованного продукта;
 - `work` — контекстно подтверждённое собственное название произведения;
 - `event` — собственное название конкретного события;
-- `other_named` — другое однозначно подтверждённое собственное имя, не подходящее к предыдущим классам.
+- `other_named` — другое однозначно подтверждённое собственное имя, включая уникальное название вымышленного народа, цивилизации, расы или вида, не подходящее к предыдущим классам.
 
 ### Важные разграничения
 
@@ -43,6 +43,9 @@
 - `bertie` не капитализируется только потому, что такая форма может быть именем человека или объекта.
 - `God` → `deity`, когда речь идёт об уникально подразумеваемом Боге.
 - `a god`, `the gods`, `his god` могут оставаться строчными, если контекст использует общее значение.
+- `Keo` и `Keos` → `other_named`, когда контекст устанавливает `Keo` как уникальное название вымышленного народа, расы или цивилизации; наличие рядом слова `species` не делает такое название нарицательным.
+- Обычное биологическое название вида или общий класс существ остаётся строчным.
+- Если в источнике пропущен апостроф (`keos` в значении `Keo's`), разрешено восстановить только регистр: `Keos`. Добавлять апостроф или исправлять написание запрещено.
 - `Rose`, `Will`, `Hope`, `Mark`, `May`, `March`, `August`, `Lord` и похожие формы решаются отдельно по контексту.
 - Общее слово, звание, обращение или название предмета не становится собственным именем только из-за частоты либо позиции.
 
@@ -97,6 +100,8 @@ for all proper names that are semantically established by the supplied context:
   and named products as named_object;
 - specific work titles as work;
 - specific named events as event;
+- coined names of fictional peoples, civilizations, races, or species as
+  other_named when the context treats the label as a unique proper group name;
 - any other unmistakable proper name as other_named.
 
 A named_object is a particular object with an established individual name.
@@ -107,11 +112,18 @@ Capitalize God as deity when the narrative uniquely refers to the monotheistic
 God. Keep generic uses such as a god or the gods lowercase. Decide ambiguous
 religious uses from the local narrative rather than applying a global rule.
 
+Capitalize a coined fictional people, civilization, race, or species label when
+the local narrative treats it as the unique name of that group. Thus return Keo
+or Keos when that meaning is established. A nearby word such as species is not
+by itself a reason to lowercase the label. Keep generic biological species and
+common creature-class nouns lowercase.
+
 Do not capitalize generic titles, ranks, forms of address, generic headings,
-nationalities, demonyms, species, common objects, or ordinary words. Position,
-frequency, NER-like appearance, and the fact that a word can be a name are not
-evidence. Resolve ambiguous forms such as will, rose, mark, hope, may, march,
-august, god, lord, or bertie by meaning in the current occurrence.
+nationalities, demonyms, generic biological species, common creature classes,
+common objects, or ordinary words. Position, frequency, NER-like appearance,
+and the fact that a word can be a name are not evidence. Resolve ambiguous
+forms such as will, rose, mark, hope, may, march, august, god, lord, bertie, or
+keo by meaning in the current occurrence.
 
 Each target contains original lowercase alphabetic tokens and a provisionally
 sentence-cased text. Return casing decisions, not rewritten records.
@@ -127,13 +139,20 @@ zero-based alphabetic-token index, source must be copied exactly from tokens,
 and canonical may change letter case only. For a multiword proper name, return a
 decision for every token whose case must change.
 
+The source may contain missing punctuation, for example keos where the context
+implies Keo's. Do not repair punctuation or spelling: a casing decision may
+return Keos only. Recognize case-only plural or possessive-looking forms from
+their semantic referent, never merely from an s suffix.
+
 If the 10+100+10 window is insufficient, put the affected target index in
 needs_context_indices instead of guessing. In expanded_context mode, make the
 best final semantic decision and return an empty needs_context_indices.
 
 Before returning, silently audit every target record token by token for missed
 proper names. Pay special attention to named_object, deity, informal names,
-fictional names, and names that resemble ordinary words. Return only JSON.
+fictional peoples/races/species used as unique proper labels, case-only plural
+or possessive-looking forms, fictional names, and names that resemble ordinary
+words. Return only JSON.
 ```
 
 ## Ответ модели
