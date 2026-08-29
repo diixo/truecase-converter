@@ -1,4 +1,4 @@
-# Contextual Truecasing — Fast Parallel v7
+# Contextual Truecasing — Fast Parallel v8
 
 ## Цель
 
@@ -46,6 +46,8 @@
 - `Keo` и `Keos` → `other_named`, когда контекст устанавливает `Keo` как уникальное название вымышленного народа, расы или цивилизации; наличие рядом слова `species` не делает такое название нарицательным.
 - Обычное биологическое название вида или общий класс существ остаётся строчным.
 - Если в источнике пропущен апостроф (`keos` в значении `Keo's`), разрешено восстановить только регистр: `Keos`. Добавлять апостроф или исправлять написание запрещено.
+- Временное, вымышленное, принятое или позднее опровергнутое имя остаётся собственным именем: `Aidlev` → `person`, если повествование устанавливает, что конкретного человека называют этим именем; форма `aidlevs` восстанавливается как `Aidlevs` без добавления апострофа.
+- Семантически связанное обращение к конкретному собеседнику может подтверждать имя вместе с соседним диалогом и последующими упоминаниями. Одна запятая, позиция слова или шаблон реплики сами по себе доказательством не являются.
 - `Rose`, `Will`, `Hope`, `Mark`, `May`, `March`, `August`, `Lord` и похожие формы решаются отдельно по контексту.
 - Общее слово, звание, обращение или название предмета не становится собственным именем только из-за частоты либо позиции.
 
@@ -100,9 +102,23 @@ for all proper names that are semantically established by the supplied context:
   and named products as named_object;
 - specific work titles as work;
 - specific named events as event;
-- coined names of fictional peoples, civilizations, races, or species as
-  other_named when the context treats the label as a unique proper group name;
+- уникальные названия вымышленных народов, цивилизаций, рас или видов как
+  `other_named`, когда контекст устанавливает, что обозначение функционирует
+  как собственное имя конкретной группы;
 - any other unmistakable proper name as other_named.
+
+Персональный псевдоним, принятое имя, имя прикрытия или имя, которое позднее
+оказывается ненастоящим, всё равно является собственным именем человека во всех
+употреблениях, где конкретного человека называют этим именем. Поэтому возвращай
+`Aidlev` и форму `Aidlevs` с исправлением только регистра, если повествование
+устанавливает соответствующего конкретного носителя имени.
+
+Интерпретируй отношения обращения и референции семантически. Незнакомая форма
+может быть подтверждена как имя человека соседним диалогом, если она устойчиво
+обозначает конкретного человека, к которому обращаются или которого обсуждают.
+Никогда не принимай решение только по запятой, позиции в предложении, шаблону
+диалога или механическому правилу. Незнакомое написание не является доводом
+против статуса собственного имени.
 
 A named_object is a particular object with an established individual name.
 Capitalize Bertie when the context establishes Bertie as the name of a tug or
@@ -112,11 +128,12 @@ Capitalize God as deity when the narrative uniquely refers to the monotheistic
 God. Keep generic uses such as a god or the gods lowercase. Decide ambiguous
 religious uses from the local narrative rather than applying a global rule.
 
-Capitalize a coined fictional people, civilization, race, or species label when
-the local narrative treats it as the unique name of that group. Thus return Keo
-or Keos when that meaning is established. A nearby word such as species is not
-by itself a reason to lowercase the label. Keep generic biological species and
-common creature-class nouns lowercase.
+Пиши с прописной буквы уникальное название вымышленного народа, цивилизации,
+расы или вида, когда локальное повествование использует его как собственное имя
+этой группы. Поэтому возвращай `Keo` или `Keos`, когда такое значение
+подтверждено. Соседнее слово `species` само по себе не является основанием
+оставлять название строчным. Общие биологические названия видов и классов
+существ оставляй строчными.
 
 Do not capitalize generic titles, ranks, forms of address, generic headings,
 nationalities, demonyms, generic biological species, common creature classes,
@@ -139,20 +156,28 @@ zero-based alphabetic-token index, source must be copied exactly from tokens,
 and canonical may change letter case only. For a multiword proper name, return a
 decision for every token whose case must change.
 
-The source may contain missing punctuation, for example keos where the context
-implies Keo's. Do not repair punctuation or spelling: a casing decision may
-return Keos only. Recognize case-only plural or possessive-looking forms from
-their semantic referent, never merely from an s suffix.
+В исходнике может отсутствовать пунктуация, например `keos`, когда по контексту
+подразумевается `Keo's`. Не исправляй пунктуацию или написание: решение о
+регистре может вернуть только `Keos`. Распознавай формы множественного числа и
+формы, похожие на притяжательные, по их семантическому референту, а не только по
+суффиксу `s`.
 
-If the 10+100+10 window is insufficient, put the affected target index in
-needs_context_indices instead of guessing. In expanded_context mode, make the
-best final semantic decision and return an empty needs_context_indices.
+Если окна 10+100+10 недостаточно, добавь индекс соответствующей target-записи в
+`needs_context_indices` вместо угадывания. Если потенциальная форма обращения
+или референции к конкретному человеку остаётся неразрешённой, не оставляй её
+молча строчной: запроси расширенный контекст для каждого затронутого индекса.
+Это особенно важно на границах target-блоков, для повторяющихся незнакомых форм
+и когда последующий контекст может явно установить референта. В режиме
+`expanded_context` прими лучшее окончательное семантическое решение и верни
+пустой `needs_context_indices`.
 
-Before returning, silently audit every target record token by token for missed
-proper names. Pay special attention to named_object, deity, informal names,
-fictional peoples/races/species used as unique proper labels, case-only plural
-or possessive-looking forms, fictional names, and names that resemble ordinary
-words. Return only JSON.
+Перед возвратом молча проверь каждую target-запись токен за токеном на
+пропущенные собственные имена. Особое внимание уделяй `named_object`, `deity`,
+неформальным именам, уникальным названиям вымышленных народов, рас и видов,
+формам множественного числа и притяжательным формам с исправлением только
+регистра, принятым именам и именам прикрытия, незнакомым персональным
+псевдонимам, вымышленным именам и именам, похожим на обычные слова. Возвращай
+только JSON.
 ```
 
 ## Ответ модели
@@ -210,6 +235,8 @@ other_named
 ### `needs_context_indices`
 
 - Если локального окна недостаточно, модель не угадывает.
+- Если незнакомая форма может семантически обозначать конкретного адресата или человека, но базовое окно не даёт окончательного подтверждения, модель обязана запросить расширенный контекст, а не молча оставить строчную букву.
+- Особое внимание уделяется границам target-блоков, повторяющимся обращениям, псевдонимам, принятым именам и формам с пропущенным апострофом.
 - Блок повторяется в `expanded_context` с 40 записями до и после.
 
 ## Инварианты
