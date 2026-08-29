@@ -26,9 +26,13 @@ INPUT_FILE = Path("splitted/bookcorpus_part_01160.jsonl")
 PAIRS_FILE = Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
 OUTPUT_FILE = Path("truecased/bookcorpus_part_01160_truecased.jsonl")
 
-USE_STANZA = True
+USE_STANZA = False
 USE_GPU = True
 STANZA_BATCH_SIZE = 100
+FLAN_MODEL = "google/flan-t5-large"
+FLAN_BATCH_SIZE = 2
+FLAN_CONTEXT_RECORDS = 3
+FLAN_MAX_INPUT_TOKENS = 512
 PROGRESS_EVERY = 100
 CONTEXT_RECORDS = 20
 MODE = "balanced"  # "balanced" or "aggressive"
@@ -49,6 +53,15 @@ ENTITY_TYPES = {
 class Pair:
     source: tuple[str, ...]
     canonical: tuple[str, ...]
+
+
+BUILTIN_CONTRACTION_PAIRS = (
+    Pair(("im",), ("I'm",)),
+    Pair(("ive",), ("I've",)),
+    Pair(("ill",), ("I'll",)),
+    Pair(("id",), ("I'd",)),
+)
+CONTEXTUAL_CONTRACTIONS = {"ill", "id"}
 
 
 def alphabetic_tokens(text: str) -> list[str]:
@@ -82,6 +95,14 @@ def load_pairs(path: Path) -> list[Pair]:
     if skipped:
         print(f"Ignored {skipped} non-case-only pair(s) from {path}", file=sys.stderr)
     return sorted(pairs, key=lambda p: len(p.source), reverse=True)
+
+
+def add_builtin_pairs(pairs: Sequence[Pair]) -> list[Pair]:
+    """Add contraction repairs, preferring explicit file-specific pairs."""
+    result = list(pairs)
+    existing = {pair.source for pair in result}
+    result.extend(pair for pair in BUILTIN_CONTRACTION_PAIRS if pair.source not in existing)
+    return sorted(result, key=lambda pair: len(pair.source), reverse=True)
 
 
 def sentence_baseline(text: str) -> str:
@@ -217,15 +238,129 @@ def pair_occurrences(text: str, pairs_by_first: dict[str, list[Pair]]):
     return found
 
 
-def truecase_records(
-    rows: list[dict], pairs: Sequence[Pair], evidence: Sequence[set[int]],
-    context_records: int, mode: str,
-) -> list[dict]:
+def index_pairs(pairs: Sequence[Pair]) -> dict[str, list[Pair]]:
     pairs_by_first: dict[str, list[Pair]] = defaultdict(list)
     for pair in pairs:
         pairs_by_first[pair.source[0]].append(pair)
     for candidates in pairs_by_first.values():
         candidates.sort(key=lambda pair: len(pair.source), reverse=True)
+    return pairs_by_first
+
+
+def make_flan_prompt(
+    texts: Sequence[str], row_index: int, candidates: Sequence[tuple[int, str]],
+) -> str:
+    context_start = max(0, row_index - FLAN_CONTEXT_RECORDS)
+    context_end = min(len(texts), row_index + FLAN_CONTEXT_RECORDS + 1)
+    before = "\n".join(text[-500:] for text in texts[context_start:row_index]) or "(none)"
+    after = "\n".join(text[:500] for text in texts[row_index + 1:context_end]) or "(none)"
+    target = texts[row_index]
+    if len(target) > 1_500:
+        spans = list(WORD_RE.finditer(target))
+        excerpts = []
+        for token_index, _ in candidates:
+            span = spans[token_index]
+            excerpts.append(target[max(0, span.start() - 300):span.end() + 300])
+        target = "\n[...]\n".join(dict.fromkeys(excerpts))
+    choices = "\n".join(
+        f"{choice}: token={token_index}, canonical={canonical}"
+        for choice, (token_index, canonical) in enumerate(candidates)
+    )
+    return (
+        "Decide which candidate words in TARGET are proper names or named objects. "
+        "Use the narrative context. Do not select ordinary words, verbs, months used "
+        "generically, titles, or common nouns. Return only comma-separated candidate "
+        "numbers, or NONE.\n\n"
+        f"CANDIDATES:\n{choices}\n\nTARGET:\n{target}\n\n"
+        f"CONTEXT BEFORE:\n{before}\n\nCONTEXT AFTER:\n{after}\n\nANSWER:"
+    )
+
+
+def flan_evidence(
+    texts: Sequence[str], pairs: Sequence[Pair], model_name: str = FLAN_MODEL,
+) -> list[set[int]]:
+    """Resolve context-sensitive pair occurrences with FLAN-T5."""
+    import torch
+    from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
+
+    print(f"Loading FLAN resolver: {model_name} ...", flush=True)
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    # Candidate definitions and TARGET are intentionally at the beginning of
+    # the prompt. If context has to be shortened, discard only its tail.
+    tokenizer.truncation_side = "right"
+    dtype = torch.float16 if USE_GPU and torch.cuda.is_available() else torch.float32
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_name, torch_dtype=dtype)
+    device = torch.device("cuda" if USE_GPU and torch.cuda.is_available() else "cpu")
+    model.to(device)
+    model.eval()
+    declared_limits = [FLAN_MAX_INPUT_TOKENS]
+    tokenizer_limit = getattr(tokenizer, "model_max_length", None)
+    if isinstance(tokenizer_limit, int) and tokenizer_limit < 1_000_000:
+        declared_limits.append(tokenizer_limit)
+    model_limit = getattr(model.config, "n_positions", None)
+    if isinstance(model_limit, int) and model_limit > 0:
+        declared_limits.append(model_limit)
+    input_limit = min(declared_limits)
+    print(f"FLAN encoder input limit: {input_limit} tokens", flush=True)
+
+    pairs_by_first = index_pairs(pairs)
+    jobs: list[tuple[int, list[tuple[int, str]], str]] = []
+    for row_index, text in enumerate(texts):
+        candidates: list[tuple[int, str]] = []
+        for pair, indices in pair_occurrences(text, pairs_by_first):
+            if len(pair.source) != 1:
+                continue
+            candidates.append((indices[0], pair.canonical[0]))
+        if candidates:
+            jobs.append((row_index, candidates, make_flan_prompt(texts, row_index, candidates)))
+
+    evidence = [set() for _ in texts]
+    started_at = time.perf_counter()
+    truncated_prompts = 0
+    for batch_start in range(0, len(jobs), FLAN_BATCH_SIZE):
+        batch = jobs[batch_start:batch_start + FLAN_BATCH_SIZE]
+        prompts = [job[2] for job in batch]
+        prompt_lengths = [
+            len(ids) for ids in tokenizer(
+                prompts, add_special_tokens=True, truncation=False
+            )["input_ids"]
+        ]
+        truncated_prompts += sum(length > input_limit for length in prompt_lengths)
+        encoded = tokenizer(
+            prompts, return_tensors="pt", padding=True,
+            truncation=True, max_length=input_limit,
+        ).to(device)
+        if encoded["input_ids"].shape[1] > input_limit:
+            raise AssertionError("FLAN tokenizer exceeded the encoder input limit")
+        with torch.inference_mode():
+            generated = model.generate(
+                **encoded, max_new_tokens=32, do_sample=False, num_beams=1,
+            )
+        answers = tokenizer.batch_decode(generated, skip_special_tokens=True)
+        for (row_index, candidates, _), answer in zip(batch, answers):
+            if answer.strip().upper() == "NONE":
+                continue
+            if not re.fullmatch(r"\s*\d+(?:\s*,\s*\d+)*\s*", answer):
+                continue
+            selected = {int(value) for value in re.findall(r"\d+", answer)}
+            for choice in selected:
+                if 0 <= choice < len(candidates):
+                    evidence[row_index].add(candidates[choice][0])
+        processed = min(batch_start + len(batch), len(jobs))
+        if processed % PROGRESS_EVERY == 0 or processed == len(jobs):
+            print_progress("flan", processed, len(jobs), started_at)
+    print(
+        f"FLAN prompts truncated safely: {truncated_prompts:,}/{len(jobs):,}",
+        flush=True,
+    )
+    return evidence
+
+
+def truecase_records(
+    rows: list[dict], pairs: Sequence[Pair], evidence: Sequence[set[int]],
+    context_records: int, mode: str, propagate_evidence: bool = True,
+) -> list[dict]:
+    pairs_by_first = index_pairs(pairs)
     occurrences = [pair_occurrences(row["text"], pairs_by_first) for row in rows]
     confident_by_form: dict[tuple[str, ...], list[int]] = defaultdict(list)
     for row_index, found in enumerate(occurrences):
@@ -244,17 +379,15 @@ def truecase_records(
             nearby_support = any(
                 abs(row_index - seen_at) <= context_records
                 for seen_at in confident_by_form[pair.source]
-            )
-            acronym = any(sum(ch.isupper() for ch in token) > 1 for token in pair.canonical)
+            ) if propagate_evidence else False
             possessive_restore = any(
                 ("'" in canonical or "’" in canonical)
                 and "'" not in source and "’" not in source
                 for source, canonical in zip(pair.source, pair.canonical)
-            )
+            ) and pair.source[0] not in CONTEXTUAL_CONTRACTIONS
             accept = (
                 mode == "aggressive"
                 or len(pair.source) > 1
-                or acronym
                 or possessive_restore
                 or local_support
                 or nearby_support
@@ -298,17 +431,23 @@ def main() -> int:
         return 2
     print(f"Reading {INPUT_FILE} ...", flush=True)
     rows = read_jsonl(INPUT_FILE)
-    pairs = load_pairs(PAIRS_FILE)
+    pairs = add_builtin_pairs(load_pairs(PAIRS_FILE))
     print(f"Loaded {len(rows):,} records and {len(pairs):,} canonical pairs", flush=True)
-    if not USE_STANZA:
-        evidence = [set() for _ in rows]
-    else:
+    if USE_STANZA:
         evidence = stanza_evidence(
             make_stanza_pipeline(USE_GPU),
             [row["text"] for row in rows],
             STANZA_BATCH_SIZE,
         )
-    results = truecase_records(rows, pairs, evidence, CONTEXT_RECORDS, MODE)
+    else:
+        evidence = flan_evidence([row["text"] for row in rows], pairs)
+    # Stanza produces sparse evidence, so nearby propagation helps recover
+    # missed mentions. FLAN explicitly decides every single-word occurrence;
+    # a positive answer must therefore never leak to a neighbouring occurrence.
+    results = truecase_records(
+        rows, pairs, evidence, CONTEXT_RECORDS, MODE,
+        propagate_evidence=USE_STANZA,
+    )
     OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
     with OUTPUT_FILE.open("w", encoding="utf-8", newline="\n") as handle:
         for row in results:
