@@ -31,7 +31,8 @@ MODEL = "google/flan-t5-large"
 USE_GPU = True
 BATCH_SIZE = 2
 MODEL_CONTEXT_RECORDS = 5
-MAX_INPUT_TOKENS = 512
+MAX_INPUT_TOKENS = 640
+ALLOW_CONTEXT_EXTENSION = True
 MAX_CANDIDATES_PER_PROMPT = 10
 CONTEXT_RECORDS = 20
 MODE = "balanced"
@@ -118,14 +119,21 @@ def flan_evidence(
     device = torch.device("cuda" if USE_GPU and torch.cuda.is_available() else "cpu")
     model.to(device)
     model.eval()
-    declared_limits = [MAX_INPUT_TOKENS]
+    declared_limits: list[int] = []
     tokenizer_limit = getattr(tokenizer, "model_max_length", None)
-    if isinstance(tokenizer_limit, int) and tokenizer_limit < 1_000_000:
+    if (not ALLOW_CONTEXT_EXTENSION
+            and isinstance(tokenizer_limit, int) and tokenizer_limit < 1_000_000):
         declared_limits.append(tokenizer_limit)
     model_limit = getattr(model.config, "n_positions", None)
-    if isinstance(model_limit, int) and model_limit > 0:
+    if not ALLOW_CONTEXT_EXTENSION and isinstance(model_limit, int) and model_limit > 0:
         declared_limits.append(model_limit)
-    input_limit = min(declared_limits)
+    input_limit = min([MAX_INPUT_TOKENS, *declared_limits])
+    if ALLOW_CONTEXT_EXTENSION:
+        print(
+            "FLAN extended context enabled; quality beyond the declared 512-token "
+            "limit is not guaranteed",
+            flush=True,
+        )
     print(f"FLAN encoder input limit: {input_limit} tokens", flush=True)
 
     pairs_by_first = index_pairs(pairs)
@@ -148,10 +156,10 @@ def flan_evidence(
     for batch_start in range(0, len(jobs), BATCH_SIZE):
         batch = jobs[batch_start:batch_start + BATCH_SIZE]
         prompts = [job[2] for job in batch]
+        special_tokens = tokenizer.num_special_tokens_to_add(pair=False)
         prompt_lengths = [
-            len(ids) for ids in tokenizer(
-                prompts, add_special_tokens=True, truncation=False
-            )["input_ids"]
+            len(tokenizer.tokenize(prompt)) + special_tokens
+            for prompt in prompts
         ]
         truncated_prompts += sum(length > input_limit for length in prompt_lengths)
         encoded = tokenizer(

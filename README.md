@@ -42,6 +42,9 @@ to FLAN as candidates. Candidate groups are capped by
 FLAN input is capped by the smallest of `MAX_INPUT_TOKENS`, the tokenizer
 limit, and the model's declared position limit. Candidates and target text are
 placed first, so only trailing context is lost when a prompt must be truncated.
+When `ALLOW_CONTEXT_EXTENSION = True`, `MAX_INPUT_TOKENS` is used directly even
+above the declared 512-token limit. This retains more context but increases VRAM
+use and does not guarantee the same model quality.
 
 Stanza and its English resources must already be installed. If necessary:
 
@@ -51,4 +54,3 @@ python -m stanza.download en
 ```
 
 Run the regression checks with `python -m unittest -v`.
-
