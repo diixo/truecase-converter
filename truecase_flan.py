@@ -12,6 +12,8 @@ from contextual_truecase import (
     add_builtin_pairs,
     index_pairs,
     load_pairs,
+    load_person_name_pairs,
+    merge_pairs,
     pair_occurrences,
     print_progress,
     read_jsonl,
@@ -22,6 +24,7 @@ from contextual_truecase import (
 
 INPUT_FILE = Path("splitted/bookcorpus_part_01160.jsonl")
 PAIRS_FILE = Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
+PERSON_NAMES_FILE = Path("data/person_names_truecase.json")
 OUTPUT_FILE = Path("truecased/bookcorpus_part_01160_truecased.jsonl")
 
 MODEL = "google/flan-t5-large"
@@ -50,7 +53,8 @@ def parse_flan_answer(answer: str, candidate_count: int) -> set[int] | None:
 
 
 def make_flan_prompt(
-    texts: Sequence[str], row_index: int, candidates: Sequence[tuple[int, str]],
+    texts: Sequence[str], row_index: int,
+    candidates: Sequence[tuple[int, str, bool]],
     context_records: int,
 ) -> str:
     context_start = max(0, row_index - context_records)
@@ -61,25 +65,30 @@ def make_flan_prompt(
     if len(target) > 1_500:
         spans = list(WORD_RE.finditer(target))
         excerpts = []
-        for token_index, _ in candidates:
+        for token_index, _, _ in candidates:
             span = spans[token_index]
             excerpts.append(target[max(0, span.start() - 300):span.end() + 300])
         target = "\n[...]\n".join(dict.fromkeys(excerpts))
     choices = "\n".join(
-        f"{choice}: token={token_index}, canonical={canonical}"
-        for choice, (token_index, canonical) in enumerate(candidates)
+        f"{choice}: token={token_index}, canonical={canonical}, "
+        f"common_person_name={'yes' if is_person_name else 'no'}"
+        for choice, (token_index, canonical, is_person_name) in enumerate(candidates)
     )
     return (
         "Decide which candidate words in TARGET are proper names or named objects. "
         "Use the narrative context. Do not select ordinary words, verbs, months used "
-        "generically, titles, or common nouns. Return only comma-separated candidate "
+        "generically, titles, or common nouns. common_person_name=yes is a useful "
+        "prior, not proof: select it only when this occurrence denotes a person. "
+        "Return only comma-separated candidate "
         "numbers, or NONE.\n\n"
         f"CANDIDATES:\n{choices}\n\nTARGET:\n{target}\n\n"
         f"CONTEXT BEFORE:\n{before}\n\nCONTEXT AFTER:\n{after}\n\nANSWER:"
     )
 
 
-def flan_evidence(texts: Sequence[str], pairs: Sequence[Pair]) -> list[set[int]]:
+def flan_evidence(
+    texts: Sequence[str], pairs: Sequence[Pair], person_name_sources: set[str],
+) -> list[set[int]]:
     """Resolve every single-word pair occurrence with FLAN-T5."""
     import torch
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
@@ -103,10 +112,10 @@ def flan_evidence(texts: Sequence[str], pairs: Sequence[Pair]) -> list[set[int]]
     print(f"FLAN encoder input limit: {input_limit} tokens", flush=True)
 
     pairs_by_first = index_pairs(pairs)
-    jobs: list[tuple[int, list[tuple[int, str]], str]] = []
+    jobs: list[tuple[int, list[tuple[int, str, bool]], str]] = []
     for row_index, text in enumerate(texts):
         candidates = [
-            (indices[0], pair.canonical[0])
+            (indices[0], pair.canonical[0], pair.source[0] in person_name_sources)
             for pair, indices in pair_occurrences(text, pairs_by_first)
             if len(pair.source) == 1
         ]
@@ -154,12 +163,37 @@ def flan_evidence(texts: Sequence[str], pairs: Sequence[Pair]) -> list[set[int]]
     return evidence
 
 
+def build_candidate_pairs(
+    pairs_file: Path, person_names_file: Path,
+) -> tuple[list[Pair], set[str]]:
+    """Build candidates with file pairs > person names > built-ins priority."""
+    person_name_pairs = load_person_name_pairs(person_names_file)
+    person_name_sources = {
+        pair.source[0] for pair in person_name_pairs if len(pair.source) == 1
+    }
+    if pairs_file.exists():
+        file_pairs = load_pairs(pairs_file)
+    else:
+        file_pairs = []
+        print(
+            f"WARNING: pairs file not found: {pairs_file}; "
+            "using person names and built-in contractions only",
+            flush=True,
+        )
+    pairs = add_builtin_pairs(merge_pairs(file_pairs, person_name_pairs))
+    return pairs, person_name_sources
+
+
 def main() -> int:
+
     print(f"Reading {INPUT_FILE} ...", flush=True)
     rows = read_jsonl(INPUT_FILE)
-    pairs = add_builtin_pairs(load_pairs(PAIRS_FILE))
+
+    pairs, person_name_sources = build_candidate_pairs(PAIRS_FILE, PERSON_NAMES_FILE)
+
     print(f"Loaded {len(rows):,} records and {len(pairs):,} canonical pairs", flush=True)
-    evidence = flan_evidence([row["text"] for row in rows], pairs)
+    evidence = flan_evidence([row["text"] for row in rows], pairs, person_name_sources)
+
     results = truecase_records(
         rows, pairs, evidence, CONTEXT_RECORDS, MODE, propagate_evidence=True
     )

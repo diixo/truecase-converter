@@ -81,6 +81,34 @@ def add_builtin_pairs(pairs: Sequence[Pair]) -> list[Pair]:
     return sorted(result, key=lambda pair: len(pair.source), reverse=True)
 
 
+def load_person_name_pairs(path: Path) -> list[Pair]:
+    """Load a lowercase-to-canonical JSON object as case-only name candidates."""
+    with path.open(encoding="utf-8-sig") as handle:
+        data = json.load(handle)
+    if not isinstance(data, dict):
+        raise ValueError(f"{path}: expected a JSON object")
+    pairs: list[Pair] = []
+    for source_text, canonical_text in data.items():
+        if not isinstance(source_text, str) or not isinstance(canonical_text, str):
+            raise ValueError(f"{path}: person-name keys and values must be strings")
+        source = tuple(token.lower() for token in alphabetic_tokens(source_text))
+        canonical = tuple(alphabetic_tokens(canonical_text))
+        if not source or len(source) != len(canonical):
+            continue
+        if tuple(token.lower() for token in canonical) != source:
+            continue
+        pairs.append(Pair(source, canonical))
+    return pairs
+
+
+def merge_pairs(primary: Sequence[Pair], extra: Sequence[Pair]) -> list[Pair]:
+    """Merge candidates while preserving the primary source's canonical form."""
+    result = list(primary)
+    existing = {pair.source for pair in result}
+    result.extend(pair for pair in extra if pair.source not in existing)
+    return sorted(result, key=lambda pair: len(pair.source), reverse=True)
+
+
 def sentence_baseline(text: str) -> str:
     """Capitalize sentence starts and standalone 'i', preserving all bytes but case."""
     chars = list(text)

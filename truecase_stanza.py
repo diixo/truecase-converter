@@ -9,6 +9,8 @@ from contextual_truecase import (
     WORD_RE,
     add_builtin_pairs,
     load_pairs,
+    load_person_name_pairs,
+    merge_pairs,
     print_progress,
     read_jsonl,
     truecase_records,
@@ -18,6 +20,7 @@ from contextual_truecase import (
 
 INPUT_FILE = Path("splitted/bookcorpus_part_01160.jsonl")
 PAIRS_FILE = Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
+PERSON_NAMES_FILE = Path("data/person_names_truecase.json")
 OUTPUT_FILE = Path("truecased/bookcorpus_part_01160_stanza_truecased.jsonl")
 
 USE_GPU = True
@@ -79,7 +82,9 @@ def stanza_evidence(nlp, texts: Sequence[str]) -> list[set[int]]:
 def main() -> int:
     print(f"Reading {INPUT_FILE} ...", flush=True)
     rows = read_jsonl(INPUT_FILE)
-    pairs = add_builtin_pairs(load_pairs(PAIRS_FILE))
+    pairs = add_builtin_pairs(merge_pairs(
+        load_pairs(PAIRS_FILE), load_person_name_pairs(PERSON_NAMES_FILE)
+    ))
     print(f"Loaded {len(rows):,} records and {len(pairs):,} canonical pairs", flush=True)
     evidence = stanza_evidence(make_stanza_pipeline(), [row["text"] for row in rows])
     results = truecase_records(
