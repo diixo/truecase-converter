@@ -23,7 +23,7 @@ from contextual_truecase import (
 
 
 INPUT_FILE = Path("splitted/bookcorpus_part_01160.jsonl")
-PAIRS_FILE = Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
+PAIRS_FILE: Path | None = None  # Or Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
 PERSON_NAMES_FILE = Path("data/person_names_truecase.json")
 OUTPUT_FILE = Path("truecased/bookcorpus_part_01160_truecased.jsonl")
 
@@ -32,6 +32,7 @@ USE_GPU = True
 BATCH_SIZE = 2
 MODEL_CONTEXT_RECORDS = 5
 MAX_INPUT_TOKENS = 512
+MAX_CANDIDATES_PER_PROMPT = 10
 CONTEXT_RECORDS = 20
 MODE = "balanced"
 
@@ -86,10 +87,26 @@ def make_flan_prompt(
     )
 
 
+def build_flan_candidates(
+    text: str, pairs_by_first: dict[str, list[Pair]],
+    person_name_sources: set[str],
+) -> list[tuple[int, str, bool]]:
+    """Create a closed candidate set; FLAN cannot introduce another token."""
+    known_candidates = {
+        indices[0]: (pair.canonical[0], pair.source[0] in person_name_sources)
+        for pair, indices in pair_occurrences(text, pairs_by_first)
+        if len(pair.source) == 1
+    }
+    return [
+        (token_index, canonical, is_person_name)
+        for token_index, (canonical, is_person_name) in sorted(known_candidates.items())
+    ]
+
+
 def flan_evidence(
     texts: Sequence[str], pairs: Sequence[Pair], person_name_sources: set[str],
 ) -> list[set[int]]:
-    """Resolve every single-word pair occurrence with FLAN-T5."""
+    """Let FLAN select only among supplied candidates, never generate new names."""
     import torch
     from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
@@ -114,14 +131,14 @@ def flan_evidence(
     pairs_by_first = index_pairs(pairs)
     jobs: list[tuple[int, list[tuple[int, str, bool]], str]] = []
     for row_index, text in enumerate(texts):
-        candidates = [
-            (indices[0], pair.canonical[0], pair.source[0] in person_name_sources)
-            for pair, indices in pair_occurrences(text, pairs_by_first)
-            if len(pair.source) == 1
-        ]
-        if candidates:
-            jobs.append((row_index, candidates, make_flan_prompt(
-                texts, row_index, candidates, MODEL_CONTEXT_RECORDS
+        candidates = build_flan_candidates(
+            text, pairs_by_first, person_name_sources
+        )
+
+        for start in range(0, len(candidates), MAX_CANDIDATES_PER_PROMPT):
+            candidate_group = candidates[start:start + MAX_CANDIDATES_PER_PROMPT]
+            jobs.append((row_index, candidate_group, make_flan_prompt(
+                texts, row_index, candidate_group, MODEL_CONTEXT_RECORDS
             )))
 
     evidence = [set() for _ in texts]
@@ -164,14 +181,21 @@ def flan_evidence(
 
 
 def build_candidate_pairs(
-    pairs_file: Path, person_names_file: Path,
+    pairs_file: Path | None, person_names_file: Path,
 ) -> tuple[list[Pair], set[str]]:
     """Build candidates with file pairs > person names > built-ins priority."""
     person_name_pairs = load_person_name_pairs(person_names_file)
     person_name_sources = {
         pair.source[0] for pair in person_name_pairs if len(pair.source) == 1
     }
-    if pairs_file.exists():
+    if pairs_file is None:
+        file_pairs = []
+        print(
+            "Pairs file disabled (PAIRS_FILE = None); "
+            "using person names and built-in contractions only",
+            flush=True,
+        )
+    elif pairs_file.exists():
         file_pairs = load_pairs(pairs_file)
     else:
         file_pairs = []
@@ -192,7 +216,9 @@ def main() -> int:
     pairs, person_name_sources = build_candidate_pairs(PAIRS_FILE, PERSON_NAMES_FILE)
 
     print(f"Loaded {len(rows):,} records and {len(pairs):,} canonical pairs", flush=True)
-    evidence = flan_evidence([row["text"] for row in rows], pairs, person_name_sources)
+    evidence = flan_evidence(
+        [row["text"] for row in rows], pairs, person_name_sources
+    )
 
     results = truecase_records(
         rows, pairs, evidence, CONTEXT_RECORDS, MODE, propagate_evidence=True

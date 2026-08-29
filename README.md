@@ -35,6 +35,9 @@ Built-in missing-apostrophe pairs are `im -> I'm`, `ive -> I've`,
 `data/person_names_truecase.json` contributes additional person-name candidates.
 For FLAN, dictionary membership is passed as a probabilistic hint rather than
 an unconditional capitalization rule, so common-word homonyms remain contextual.
+Tokens absent from the configured pairs and person-name dictionary are not sent
+to FLAN as candidates. Candidate groups are capped by
+`MAX_CANDIDATES_PER_PROMPT` to preserve the model's limited encoder context.
 
 FLAN input is capped by the smallest of `MAX_INPUT_TOKENS`, the tokenizer
 limit, and the model's declared position limit. Candidates and target text are

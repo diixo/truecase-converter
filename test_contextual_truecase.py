@@ -2,7 +2,10 @@ import unittest
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
-from truecase_flan import build_candidate_pairs, make_flan_prompt, parse_flan_answer
+from truecase_flan import (
+    build_candidate_pairs, build_flan_candidates, make_flan_prompt,
+    parse_flan_answer,
+)
 
 from contextual_truecase import (
     Pair, add_builtin_pairs, allowed_truecase_equal, case_only_equal, load_pairs,
@@ -26,6 +29,16 @@ class ContextualTruecaseTests(unittest.TestCase):
         self.assertIn("common_person_name=yes", prompt)
         self.assertIn("prior, not proof", prompt)
 
+    def test_flan_ignores_tokens_absent_from_candidate_sources(self):
+        from contextual_truecase import index_pairs
+
+        known = [Pair(("mark",), ("Mark",))]
+        candidates = build_flan_candidates(
+            "xylara met mark .", index_pairs(known), {"mark"}
+        )
+        self.assertIn((2, "Mark", True), candidates)
+        self.assertEqual(candidates, [(2, "Mark", True)])
+
     def test_candidate_pair_priority_with_optional_pairs_file(self):
         with TemporaryDirectory() as directory:
             root = Path(directory)
@@ -48,6 +61,12 @@ class ContextualTruecaseTests(unittest.TestCase):
             by_source = {pair.source: pair.canonical for pair in pairs}
             self.assertEqual(by_source[("mark",)], ("Mark",))
             self.assertEqual(by_source[("alice",)], ("Alice",))
+            self.assertEqual(by_source[("im",)], ("I'm",))
+            self.assertNotIn(("fanio",), by_source)
+
+            pairs, person_sources = build_candidate_pairs(None, names_file)
+            by_source = {pair.source: pair.canonical for pair in pairs}
+            self.assertEqual(by_source[("mark",)], ("Mark",))
             self.assertEqual(by_source[("im",)], ("I'm",))
             self.assertNotIn(("fanio",), by_source)
 
