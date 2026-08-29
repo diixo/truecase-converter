@@ -1,5 +1,7 @@
 import unittest
 
+from truecase_flan import parse_flan_answer
+
 from contextual_truecase import (
     Pair, add_builtin_pairs, allowed_truecase_equal, case_only_equal, load_pairs,
     sentence_baseline, truecase_records,
@@ -7,6 +9,13 @@ from contextual_truecase import (
 
 
 class ContextualTruecaseTests(unittest.TestCase):
+    def test_flan_answer_parser_accepts_terse_variants_only(self):
+        self.assertEqual(parse_flan_answer("0", 2), {0})
+        self.assertEqual(parse_flan_answer("[0, 1]", 2), {0, 1})
+        self.assertEqual(parse_flan_answer("0.", 2), {0})
+        self.assertEqual(parse_flan_answer("NONE.", 2), set())
+        self.assertIsNone(parse_flan_answer("Candidate 0", 2))
+
     def test_baseline_preserves_format(self):
         source = "`` i went home . '' then i slept !"
         result = sentence_baseline(source)
