@@ -1,4 +1,5 @@
 import json
+import os
 import re
 
 from datasets import load_dataset
@@ -13,6 +14,8 @@ NEW_WORDS_FILE = "bookcorpus_new_words.txt"
 NEW_WORDS_SENTENCES_FILE = "bookcorpus_new_words_sentences.jsonl"
 MAX_SENTENCES = 1000  # Use None for the complete dataset.
 LOG_EVERY = 100
+
+RESUME = False
 
 
 def normalize_sentence(sentence: str) -> str:
@@ -33,7 +36,33 @@ def normalize_sentence(sentence: str) -> str:
     return sentence
 
 
+def get_resume_position():
+
+    if (not RESUME or not os.path.exists(NEW_WORDS_SENTENCES_FILE)):
+        return 0
+
+    print("Existing output found. Checking resume position...")
+    last_id = -1
+    with open(NEW_WORDS_SENTENCES_FILE, "r", encoding="utf-8") as f:
+        for line in f:
+            line = line.strip()
+            if not line:
+                continue
+            item = json.loads(line)
+            last_id = max(last_id, item["id"])
+
+    start = last_id + 1
+
+    print(f"Resume from sentence: {start:,}")
+
+    return start
+
+
+
 def main() -> None:
+
+    start_index = get_resume_position()
+
     word_set = read_embedded_dict()
 
     print("Loading dataset...")
@@ -44,10 +73,18 @@ def main() -> None:
     print(f"Total sentences: {total_sentences:,}")
 
     new_words: set[str] = set()
-    logged_sentences = 0
+    if start_index > 0 and os.path.exists(NEW_WORDS_FILE):
+        with open(NEW_WORDS_FILE, "r", encoding="utf-8") as words_input:
+            new_words = {line.strip() for line in words_input if line.strip()}
 
-    with open(NEW_WORDS_SENTENCES_FILE, "w", encoding="utf-8", newline="\n") as output:
-        for sentence_id in range(total_sentences):
+    logged_sentences = 0
+    file_mode = "a" if start_index > 0 else "w"
+
+    with (
+        open(NEW_WORDS_SENTENCES_FILE, file_mode, encoding="utf-8", newline="\n") as output,
+        open(NEW_WORDS_FILE, file_mode, encoding="utf-8", newline="\n") as words_output,
+    ):
+        for sentence_id in range(start_index, total_sentences):
             original_text = dataset[sentence_id]["text"]
             words = set(str_tokenize_words(normalize_sentence(original_text)))
             sentence_new_words = words - word_set - new_words
@@ -55,6 +92,10 @@ def main() -> None:
             if sentence_new_words:
                 item = {"id": sentence_id, "original_text": original_text}
                 output.write(json.dumps(item, ensure_ascii=False) + "\n")
+                for word in sorted(sentence_new_words):
+                    words_output.write(word + "\n")
+                output.flush()
+                words_output.flush()
                 new_words.update(sentence_new_words)
                 logged_sentences += 1
 
