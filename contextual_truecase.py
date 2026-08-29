@@ -2,28 +2,47 @@
 """Context-aware, case-only truecasing for lowercase JSONL corpora.
 
 The script combines a deterministic sentence-case baseline, a file-specific
-canonical-name lexicon, and Stanza POS/NER evidence.  Every output row has the
-same schema as its input row and only ``text`` is changed.
+canonical-name lexicon, and Stanza POS/NER evidence. Every output row has the
+same schema as its input row; ``text`` may change case and restore explicitly
+configured possessive apostrophes.
 """
 
 from __future__ import annotations
 
-import argparse
 import json
 import re
 import sys
+import time
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Iterable, Sequence
+from typing import Sequence
+
+
+# ---------------------------------------------------------------------------
+# Configuration: edit these values, then run ``python contextual_truecase.py``.
+# ---------------------------------------------------------------------------
+INPUT_FILE = Path("splitted/bookcorpus_part_01160.jsonl")
+PAIRS_FILE = Path("truecased/bookcorpus_part_01160_truecase_pairs.txt")
+OUTPUT_FILE = Path("truecased/bookcorpus_part_01160_truecased.jsonl")
+
+USE_STANZA = True
+USE_GPU = True
+STANZA_BATCH_SIZE = 100
+PROGRESS_EVERY = 100
+CONTEXT_RECORDS = 20
+MODE = "balanced"  # "balanced" or "aggressive"
 
 
 WORD_RE = re.compile(r"[A-Za-z]+(?:['’][A-Za-z]+)*")
 SENTENCE_END = frozenset(".!?")
 ENTITY_TYPES = {
     "PERSON", "ORG", "GPE", "LOC", "FAC", "NORP", "PRODUCT",
-    "EVENT", "WORK_OF_ART", "LAW", "LANGUAGE",
+    "EVENT", "WORK_OF_ART", "LAW", "LANGUAGE", "NAMED_OBJ",
 }
+# NAMED_OBJ is reserved for a custom/future NER resolver. The stock English
+# Stanza OntoNotes model has no such label; named ships may instead appear as
+# PRODUCT/ORG, or be detected through PROPN and the canonical-pairs file.
 
 
 @dataclass(frozen=True)
@@ -136,9 +155,22 @@ def make_stanza_pipeline(use_gpu: bool):
         ) from exc
 
 
-def stanza_evidence(nlp, texts: Sequence[str], batch_size: int = 128) -> list[set[int]]:
+def print_progress(phase: str, processed: int, total: int, started_at: float) -> None:
+    elapsed = max(time.perf_counter() - started_at, 1e-9)
+    percent = processed / total * 100 if total else 100.0
+    speed = processed / elapsed
+    eta = (total - processed) / speed if speed else 0.0
+    print(
+        f"[{phase}] {processed:,}/{total:,} ({percent:6.2f}%) | "
+        f"{speed:,.1f} records/s | elapsed {elapsed:.1f}s | ETA {eta:.1f}s",
+        flush=True,
+    )
+
+
+def stanza_evidence(nlp, texts: Sequence[str], batch_size: int = 100) -> list[set[int]]:
     """Return alphabetic-token indices supported as proper names by POS or NER."""
     evidence: list[set[int]] = []
+    started_at = time.perf_counter()
     for chunk_start in range(0, len(texts), batch_size):
         chunk = texts[chunk_start:chunk_start + batch_size]
         docs = nlp.bulk_process(list(chunk))
@@ -158,6 +190,9 @@ def stanza_evidence(nlp, texts: Sequence[str], batch_size: int = 128) -> list[se
                         if span.start() < word.end_char and span.end() > word.start_char:
                             supported.add(i)
             evidence.append(supported)
+        processed = min(chunk_start + len(chunk), len(texts))
+        if processed % PROGRESS_EVERY == 0 or processed == len(texts):
+            print_progress("stanza", processed, len(texts), started_at)
     return evidence
 
 
@@ -199,6 +234,7 @@ def truecase_records(
                 confident_by_form[pair.source].append(row_index)
 
     output: list[dict] = []
+    started_at = time.perf_counter()
     for row_index, row in enumerate(rows):
         original = row["text"]
         baseline = sentence_baseline(original)
@@ -231,6 +267,9 @@ def truecase_records(
         new_row = dict(row)
         new_row["text"] = result
         output.append(new_row)
+        processed = row_index + 1
+        if processed % PROGRESS_EVERY == 0 or processed == len(rows):
+            print_progress("truecase", processed, len(rows), started_at)
     return output
 
 
@@ -247,41 +286,35 @@ def read_jsonl(path: Path) -> list[dict]:
     return rows
 
 
-def parse_args(argv: Iterable[str] | None = None):
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("input", type=Path)
-    parser.add_argument("--pairs", type=Path, required=True)
-    parser.add_argument("--output", type=Path)
-    parser.add_argument("--context-records", type=int, default=20)
-    parser.add_argument("--mode", choices=("balanced", "aggressive"), default="balanced")
-    parser.add_argument("--no-stanza", action="store_true", help="Use rules/pairs only")
-    parser.add_argument("--gpu", action="store_true")
-    parser.add_argument("--batch-size", type=int, default=128,
-                        help="Records per Stanza bulk call (default: 128)")
-    return parser.parse_args(argv)
-
-
-def main(argv: Iterable[str] | None = None) -> int:
-    args = parse_args(argv)
-    output_path = args.output or args.input.with_name(args.input.stem + "_truecased.jsonl")
-    if output_path.resolve() == args.input.resolve():
+def main() -> int:
+    if MODE not in {"balanced", "aggressive"}:
+        raise ValueError("MODE must be 'balanced' or 'aggressive'")
+    if STANZA_BATCH_SIZE < 1:
+        raise ValueError("STANZA_BATCH_SIZE must be positive")
+    if PROGRESS_EVERY < 1:
+        raise ValueError("PROGRESS_EVERY must be positive")
+    if OUTPUT_FILE.resolve() == INPUT_FILE.resolve():
         print("Refusing to overwrite the input file", file=sys.stderr)
         return 2
-    rows = read_jsonl(args.input)
-    pairs = load_pairs(args.pairs)
-    if args.no_stanza:
+    print(f"Reading {INPUT_FILE} ...", flush=True)
+    rows = read_jsonl(INPUT_FILE)
+    pairs = load_pairs(PAIRS_FILE)
+    print(f"Loaded {len(rows):,} records and {len(pairs):,} canonical pairs", flush=True)
+    if not USE_STANZA:
         evidence = [set() for _ in rows]
     else:
         evidence = stanza_evidence(
-            make_stanza_pipeline(args.gpu), [row["text"] for row in rows], args.batch_size
+            make_stanza_pipeline(USE_GPU),
+            [row["text"] for row in rows],
+            STANZA_BATCH_SIZE,
         )
-    results = truecase_records(rows, pairs, evidence, args.context_records, args.mode)
-    output_path.parent.mkdir(parents=True, exist_ok=True)
-    with output_path.open("w", encoding="utf-8", newline="\n") as handle:
+    results = truecase_records(rows, pairs, evidence, CONTEXT_RECORDS, MODE)
+    OUTPUT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    with OUTPUT_FILE.open("w", encoding="utf-8", newline="\n") as handle:
         for row in results:
             handle.write(json.dumps(row, ensure_ascii=False) + "\n")
     changed = sum(a["text"] != b["text"] for a, b in zip(rows, results))
-    print(f"Wrote {len(results):,} rows to {output_path} ({changed:,} changed)")
+    print(f"Wrote {len(results):,} rows to {OUTPUT_FILE} ({changed:,} changed)")
     return 0
 
 
