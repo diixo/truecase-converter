@@ -1,146 +1,78 @@
-
 import json
-import os
 import re
-
 
 from datasets import load_dataset
 
-from utils import str_tokenize_words, read_embedded_dict
-
-
-word_set = read_embedded_dict()
+from utils import read_embedded_dict, str_tokenize_words
 
 
 DATASET_NAME = "aitetic/bookcorpus"
 SPLIT = "train"
 
-OUTPUT_FILE = "bookcorpus_truecased.jsonl"
-
 NEW_WORDS_FILE = "bookcorpus_new_words.txt"
-
-# Для теста.
-# Например 1000.
-# Для полного датасета -> None
-MAX_SENTENCES = 1000
-
-# Лог каждые N предложений
+NEW_WORDS_SENTENCES_FILE = "bookcorpus_new_words_sentences.jsonl"
+MAX_SENTENCES = 1000  # Use None for the complete dataset.
 LOG_EVERY = 100
 
 
-RESUME = True
-
-
-
 def normalize_sentence(sentence: str) -> str:
-
     sentence = sentence.replace(" .", ".")
     sentence = sentence.replace(" ,", ",")
     sentence = sentence.replace(" ?", "?")
     sentence = sentence.replace(" !", "!")
     sentence = sentence.replace(" '", "'")
-    sentence = sentence.replace("''", "\"")
-    sentence = sentence.replace("``", "\"")
+    sentence = sentence.replace("''", '"')
+    sentence = sentence.replace("``", '"')
     sentence = sentence.replace(" n't", "n't")
     sentence = sentence.replace(" ...", "...")
-
     sentence = sentence.replace(".-", ". -")
-    sentence = re.sub(r"\.([^\W\d_])", r". \1", sentence)
-
-    if sentence.startswith("\" "):
-        sentence = "\"" + sentence[2:].lstrip()
-
-    sentence = sentence.strip()
+    sentence = sentence.replace("i 'm", " I'm")
+    sentence = sentence.replace("i 'll", " I'll")
+    sentence = sentence.replace("i 'd", " I'd")
+    sentence = sentence.replace("i 've", " I've")
     return sentence
 
 
-def force_capitalize_first_letter(sentence: str) -> str:
-    # Поднимаем первую встретившуюся буквенную позицию.
-    chars = list(sentence)
-    for i, ch in enumerate(chars):
-        if ch.isalpha():
-            chars[i] = ch.upper()
-            break
-    return "".join(chars)
+def main() -> None:
+    word_set = read_embedded_dict()
 
+    print("Loading dataset...")
+    dataset = load_dataset(DATASET_NAME, split=SPLIT)
+    total_sentences = len(dataset)
+    if MAX_SENTENCES is not None:
+        total_sentences = min(total_sentences, MAX_SENTENCES)
+    print(f"Total sentences: {total_sentences:,}")
 
-print("Loading dataset...")
+    new_words: set[str] = set()
+    logged_sentences = 0
 
-dataset = load_dataset(DATASET_NAME, split=SPLIT)
+    with open(NEW_WORDS_SENTENCES_FILE, "w", encoding="utf-8", newline="\n") as output:
+        for sentence_id in range(total_sentences):
+            original_text = dataset[sentence_id]["text"]
+            words = set(str_tokenize_words(normalize_sentence(original_text)))
+            sentence_new_words = words - word_set - new_words
 
-total_sentences = len(dataset)
+            if sentence_new_words:
+                item = {"id": sentence_id, "original_text": original_text}
+                output.write(json.dumps(item, ensure_ascii=False) + "\n")
+                new_words.update(sentence_new_words)
+                logged_sentences += 1
 
-if MAX_SENTENCES is not None:
-    total_sentences = min(total_sentences, MAX_SENTENCES)
+            if (sentence_id + 1) % LOG_EVERY == 0:
+                print(
+                    f"processed={sentence_id + 1:,}/{total_sentences:,} | "
+                    f"new_words={len(new_words):,} | logged={logged_sentences:,}"
+                )
 
-print(f"Total sentences: {total_sentences:,}")
-
-
-def get_resume_position():
-
-    if not RESUME:
-        return 0
-
-    print("Existing output found. Checking resume position...")
-
-    last_id = -1
-
-    with open(OUTPUT_FILE, "r", encoding="utf-8", ) as f:
-
-        for line in f:
-
-            line = line.strip()
-
-            if not line:
-                continue
-
-            item = json.loads(line)
-
-            last_id = max(last_id, item["id"])
-
-
-    start = last_id + 1
-
-    print(f"Resume from sentence: {start:,}")
-
-    return start
-
-
-def main():
-
-    start_index = get_resume_position()
-
-    new_words = set()
-
-    #file_mode = "a" if start_index > 0 else "w"
-    if start_index > 0 and os.path.exists(NEW_WORDS_FILE):
-        with open(NEW_WORDS_FILE, "r", encoding="utf-8") as fnew:
-            new_words = {line.strip() for line in fnew if line.strip()}
-
-
-    for sentence_id in range(start_index, total_sentences):
-
-        original_text = dataset[sentence_id]["text"]
-
-        normalized = normalize_sentence(original_text)
-
-        words = set(str_tokenize_words(normalized))
-        new_words.update(words - word_set)
-
-
-
-    sorted_new_words = sorted(new_words, key=lambda x: (x.lower(), x))
-    with open(NEW_WORDS_FILE, "w", encoding="utf-8") as fnew:
-        for w in sorted_new_words:
-            fnew.write(w + "\n")
-
+    with open(NEW_WORDS_FILE, "w", encoding="utf-8", newline="\n") as output:
+        for word in sorted(new_words, key=lambda value: (value.lower(), value)):
+            output.write(word + "\n")
 
     print("=" * 60)
     print("DONE")
     print("=" * 60)
-
-    print(f"output:     {OUTPUT_FILE}")
-    print(f"new words:  {len(sorted_new_words):,} -> {NEW_WORDS_FILE}")
+    print(f"new words:  {len(new_words):,} -> {NEW_WORDS_FILE}")
+    print(f"sentences:  {logged_sentences:,} -> {NEW_WORDS_SENTENCES_FILE}")
 
 
 if __name__ == "__main__":
