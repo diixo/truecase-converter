@@ -51,6 +51,8 @@ def get_resume_position():
 
 def main():
 
+    start_index = get_resume_position()
+
     embed_set = read_embedded_dict()
     embed_set.update(read_names().keys())
 
@@ -70,8 +72,7 @@ def main():
     file_mode = "a" if start_index > 0 else "w"
 
     with (
-        open(NEW_WORDS_SENTENCES_FILE, file_mode, encoding="utf-8", newline="\n") as output,
-        open(NEW_WORDS_FILE, file_mode, encoding="utf-8", newline="\n") as words_output,
+        open(NEW_WORDS_SENTENCES_FILE, file_mode, encoding="utf-8", newline="\n") as output
     ):
         for sentence_id in range(start_index, total_sentences):
             original_text = dataset[sentence_id]["text"]
@@ -79,9 +80,9 @@ def main():
             words = {
                 word
                 for word in tokenized_words
-                if not is_number_token(word)
+                if not is_number_token(word) and (word.find("-") == -1)
             }
-            sentence_new_words = words - word_set
+            sentence_new_words = words - embed_set
             unseen_new_words = sentence_new_words - new_words
 
             if sentence_new_words:
@@ -91,11 +92,7 @@ def main():
                 }
                 output.write(json.dumps(item, ensure_ascii=False) + "\n")
 
-                for word in sorted(unseen_new_words):
-                    words_output.write(word + "\n")
-
                 output.flush()
-                words_output.flush()
                 new_words.update(unseen_new_words)
 
                 logged_sentences += 1

@@ -6,7 +6,8 @@ import re
 
 def str_tokenize_words(s: str):
     # removed defis from original
-    s = re.findall("(\.?\w[\w'\.&]*\w|\w\+*#?)", s)
+    s = re.findall("(\.?\w[\w'\.&-]*\w|\w\+*#?)", s)
+    #s = re.findall("(\.?\w[\w'\.&]*\w|\w\+*#?)", s)
     if s: return s
     return []
 
