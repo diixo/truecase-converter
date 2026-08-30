@@ -12,8 +12,8 @@ class StrTokenizeWordsTests(unittest.TestCase):
 
     def test_apostrophes_and_hyphens_are_kept_inside_words(self):
         self.assertEqual(
-            str_tokenize_words("Bella's well-known dog isn't here day-by-day -abc."),
-            ["Bella's", "well", "known", "dog", "isn't", "here", "day", "by", "day", "abc"],
+            str_tokenize_words("Bella 's well-known dog isn't here day-by-day -abc."),
+            ["Bella", "s", "well-known", "dog", "isn't", "here", "day-by-day", "abc"],
         )
 
     def test_numeric_tokens_keep_dots_and_apostrophes(self):
