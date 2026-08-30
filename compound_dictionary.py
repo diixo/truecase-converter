@@ -1,6 +1,30 @@
 from collections.abc import Iterable
+from functools import lru_cache
 
-from utils import split_compound_word
+
+
+def split_compound_word(word: str, known_words: set[str]) -> list[str] | None:
+    """Split an unknown word by looking for known suffixes right to left."""
+
+    @lru_cache(maxsize=None)
+    def split_prefix(prefix: str) -> tuple[str, ...] | None:
+        for split_at in range(len(prefix) - 1, 0, -1):
+            suffix = prefix[split_at:]
+            if suffix not in known_words:
+                continue
+
+            remainder = prefix[:split_at]
+            if remainder in known_words:
+                return remainder, suffix
+
+            remainder_parts = split_prefix(remainder)
+            if remainder_parts is not None:
+                return *remainder_parts, suffix
+
+        return None
+
+    result = split_prefix(word)
+    return list(result) if result is not None else None
 
 
 class CompoundDictionary:
