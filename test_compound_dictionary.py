@@ -1,6 +1,7 @@
 import unittest
 
-from compound_dictionary import CompoundDictionary
+from compound_dictionary import CompoundDictionary, split_compound_word
+from utils import read_embedded_dict
 
 
 class CompoundDictionaryTests(unittest.TestCase):
@@ -28,6 +29,31 @@ class CompoundDictionaryTests(unittest.TestCase):
 
         self.assertEqual(self.dictionary.register("notebook"), "note book")
         self.assertEqual(len(self.dictionary), 1)
+
+
+class SplitCompoundWordTests(unittest.TestCase):
+    def test_compound_word_is_split_into_known_words(self):
+        self.assertEqual(
+            split_compound_word("notebookcase", read_embedded_dict()),
+            ["notebook", "case"],
+        )
+
+    def test_suffixes_are_checked_from_the_end(self):
+        self.assertEqual(
+            split_compound_word("anotebook", read_embedded_dict()),
+            ["a", "note", "book"],
+        )
+
+    def test_long_compound_word_is_split_from_right_to_left(self):
+        self.assertEqual(
+            split_compound_word("ithinkiloveyou", read_embedded_dict()),
+            ["i", "think", "i", "love", "you"],
+        )
+
+    def test_unknown_or_single_known_word_is_not_split(self):
+        known_words = {"note", "book"}
+        self.assertIsNone(split_compound_word("unknown", known_words))
+        self.assertIsNone(split_compound_word("note", known_words))
 
 
 if __name__ == "__main__":
