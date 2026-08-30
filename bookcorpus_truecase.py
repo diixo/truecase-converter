@@ -3,7 +3,7 @@ import re
 
 from datasets import load_dataset
 
-from utils import read_embedded_dict, str_tokenize_words
+from utils import read_embedded_dict, read_names, str_tokenize_words
 
 
 DATASET_NAME = "aitetic/bookcorpus"
@@ -26,7 +26,9 @@ def is_number_token(word: str) -> bool:
 
 
 def main():
+
     embed_set = read_embedded_dict()
+    embed_set.update(read_names().keys())
 
     print("Loading dataset...")
     dataset = load_dataset(DATASET_NAME, split=SPLIT)

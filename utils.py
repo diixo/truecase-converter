@@ -50,6 +50,7 @@ def read_names(input_path: str = "data/person_names_truecase.json") -> dict[str,
     path = Path(input_path)
     with path.open("r", encoding="utf-8") as f:
         data = json.load(f)
+    print(f"person_names.sz={len(data)}")
     return data
 
 
