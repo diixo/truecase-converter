@@ -11,6 +11,24 @@ def str_tokenize_words(s: str):
     return []
 
 
+def normalize_sentence(sentence: str) -> str:
+    sentence = sentence.replace(" .", ".")
+    sentence = sentence.replace(" ,", ",")
+    sentence = sentence.replace(" ?", "?")
+    sentence = sentence.replace(" !", "!")
+    sentence = sentence.replace(" '", "'")
+    sentence = sentence.replace("''", '"')
+    sentence = sentence.replace("``", '"')
+    sentence = sentence.replace(" n't", "n't")
+    sentence = sentence.replace(" ...", "...")
+    sentence = sentence.replace(".-", ". -")
+    sentence = sentence.replace("i 'm", " I'm")
+    sentence = sentence.replace("i 'll", " I'll")
+    sentence = sentence.replace("i 'd", " I'd")
+    sentence = sentence.replace("i 've", " I've")
+    return sentence
+
+
 def read_embedded_dict() -> set:
     word_set = set()
 

@@ -28,24 +28,6 @@ def is_number_token(word: str) -> bool:
     return NUMBER_TOKEN_RE.fullmatch(word) is not None
 
 
-def normalize_sentence(sentence: str) -> str:
-    sentence = sentence.replace(" .", ".")
-    sentence = sentence.replace(" ,", ",")
-    sentence = sentence.replace(" ?", "?")
-    sentence = sentence.replace(" !", "!")
-    sentence = sentence.replace(" '", "'")
-    sentence = sentence.replace("''", '"')
-    sentence = sentence.replace("``", '"')
-    sentence = sentence.replace(" n't", "n't")
-    sentence = sentence.replace(" ...", "...")
-    sentence = sentence.replace(".-", ". -")
-    sentence = sentence.replace("i 'm", " I'm")
-    sentence = sentence.replace("i 'll", " I'll")
-    sentence = sentence.replace("i 'd", " I'd")
-    sentence = sentence.replace("i 've", " I've")
-    return sentence
-
-
 def get_resume_position():
 
     if (not RESUME or not os.path.exists(NEW_WORDS_SENTENCES_FILE)):
