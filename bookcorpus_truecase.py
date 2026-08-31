@@ -56,7 +56,15 @@ REPLACE_TABLE = {
     "theyll": "they'll",
     "whos": "who's",
     "goin": "going",
-    "hed": "he'd"
+    "hed": "he'd",
+    "waitin": "waiting",
+    "livin": "living",
+    "whys": "why's",
+    "workin": "working",
+    "livin": "living",
+    "werent": "weren't",
+    "theyve": "they've",
+    "hasnt": "hasn't",
 }
 
 
@@ -77,6 +85,9 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("wo n't", "won't")
     sentence = sentence.replace("wecan't", "we can't")
 
+
+    sentence = sentence.replace("ai n't", "ain't")
+
     sentence = sentence.replace(" n't", " not")
 
     sentence = sentence.replace("theyd", "they'd")
@@ -90,7 +101,6 @@ def normalize_strong(sentence: str) -> str:
 
     sentence = sentence.replace("youi", "you i")
     sentence = sentence.replace("buti", "but i")
-
     return sentence
 
 
