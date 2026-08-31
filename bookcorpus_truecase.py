@@ -29,7 +29,33 @@ REPLACE_TABLE = {
     "youve": "you've",
     "weve": "we've",
     "theyre": "they're",
-    "youll": "you'll"
+    "youll": "you'll",
+    "oh": "ok",
+    "im": "i'm",
+    "didnt": "didn't",
+    "doesnt": "doesn't",
+    "isnt": "isn't",
+    "wasnt": "wasn't",
+    "arent": "aren't",
+    "ive": "i've",
+    "id": "i'd",
+    "couldnt": "couldn't",
+    "shouldnt": "shouldn't",
+    "wouldnt": "wouldn't",
+    "theres": "there's",
+    "whats": "what's",
+    "hadnt": "hadn't",
+    "hes": "he's",
+    "shes": "she's",
+    "havent": "haven't",
+    "youd": "you'd",
+    "oh": "well",
+    "uh": "well",
+    "huh": "well",
+    "wow": "good",
+    "theyll": "they'll",
+    "whos": "who's",
+    "goin": "going"
 }
 
 
@@ -47,7 +73,19 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace(" 've", " ")
     sentence = sentence.replace(" 'll", " ")
     sentence = sentence.replace(" ca n't", "can't")
-    sentence = sentence.replace(" n't", " ")
+    sentence = sentence.replace("wo n't", "won't")
+    sentence = sentence.replace("wecan't", "we can't")
+
+    sentence = sentence.replace(" n't", " not")
+
+    sentence = sentence.replace("theyd", "they'd")
+    sentence = sentence.replace("youcant", "you can't")
+    sentence = sentence.replace("ican't", "i can't")
+
+    sentence = sentence.replace("i 'm ", "i'm ")
+    sentence = sentence.replace(" i 'm", " i'm")
+    sentence = sentence.replace("hecan't", "he can't")
+    
     return sentence
 
 
@@ -59,8 +97,8 @@ def construct_candidate_words(sentence: str) -> list[str]:
         for word in tokenized_words
         if not is_number_token(word) and "-" not in word and len(word) > 1
     ]
-    return words
-    #return [REPLACE_TABLE.get(word, word) for word in words]
+    #return words
+    return [REPLACE_TABLE.get(word, word) for word in words]
 
 
 def main():
