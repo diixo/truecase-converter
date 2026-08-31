@@ -101,6 +101,7 @@ def normalize_strong(sentence: str) -> str:
 
     sentence = sentence.replace("youi", "you i")
     sentence = sentence.replace("buti", "but i")
+    sentence = sentence.replace("gon na", "going")
     return sentence
 
 
