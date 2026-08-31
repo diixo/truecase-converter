@@ -65,6 +65,7 @@ REPLACE_TABLE = {
     "werent": "weren't",
     "theyve": "they've",
     "hasnt": "hasn't",
+    "ty": "tyler"
 }
 
 

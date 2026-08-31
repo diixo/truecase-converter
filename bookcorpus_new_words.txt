@@ -476696,7 +476696,6 @@ salzburgerstrasse
 salzella
 salzman
 salztorgasse
-sam
 sam's
 sam'schef
 sam'sfriend
@@ -498900,7 +498899,6 @@ shuddenly
 shudder
 shudderc'magic
 shudderec
-shuddered
 shuddered.cheater
 shuddered.every
 shuddered.i
@@ -502671,7 +502669,6 @@ siqilliyya
 siquiera
 siquieros
 siquijor
-sir
 sir..but
 sir..hang
 sir..he
@@ -577440,7 +577437,6 @@ tufting
 tufts
 tufty
 tufusahal
-tug
 tugand
 tugandshy
 tugboat
@@ -580074,7 +580070,6 @@ txts
 txu
 txz
 txzs
-ty
 ty's
 tya
 tyabb
@@ -600733,7 +600728,6 @@ vivet
 viveur
 viveurs
 vivi
-vivian
 viviana
 vivianeztherestheresi
 viviani
