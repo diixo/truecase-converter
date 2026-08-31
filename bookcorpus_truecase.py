@@ -55,7 +55,8 @@ REPLACE_TABLE = {
     "wow": "good",
     "theyll": "they'll",
     "whos": "who's",
-    "goin": "going"
+    "goin": "going",
+    "hed": "he'd"
 }
 
 
@@ -80,12 +81,16 @@ def normalize_strong(sentence: str) -> str:
 
     sentence = sentence.replace("theyd", "they'd")
     sentence = sentence.replace("youcant", "you can't")
+    sentence = sentence.replace("youcan't", "you can't")
     sentence = sentence.replace("ican't", "i can't")
 
     sentence = sentence.replace("i 'm ", "i'm ")
     sentence = sentence.replace(" i 'm", " i'm")
     sentence = sentence.replace("hecan't", "he can't")
-    
+
+    sentence = sentence.replace("youi", "you i")
+    sentence = sentence.replace("buti", "but i")
+
     return sentence
 
 

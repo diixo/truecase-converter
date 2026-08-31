@@ -1114,7 +1114,7 @@
 .nless
 .nly
 .no
-.no..youcan't
+.no..you
 .nobody
 .nodded
 .noise
@@ -1773,7 +1773,6 @@
 .yesterday
 .yet
 .you
-.youcan't
 .youd
 .youll
 .your
@@ -8669,7 +8668,7 @@ aabout
 aabreak
 aabsolutely
 aabti
-aabutin
+aabut
 aac
 aacatgaatg
 aacatgaatggtcttcggtttccgtgtttc
@@ -30364,7 +30363,6 @@ andymarlow
 andymather
 andyork
 andyou
-andyoucan't
 andyouknow
 andyoull
 andyoumightdiscoverthatit'sprettynice
@@ -37362,11 +37360,11 @@ arbury
 arbus
 arbusto
 arbustos
+arbut
 arbuthnoir
 arbuthnoirs
 arbuthnot
 arbuthnott
-arbutin
 arbutus
 arbuzov
 arbv
@@ -46425,15 +46423,13 @@ attravis
 attrawhen
 attrawho
 attribuait
+attribut
 attributeless
 attributesa
 attributesbig
 attributespatience
 attributestime
 attributesunfortunately
-attributionnoncommercialshare
-attributions
-attributive
 attributos
 attride
 attridge
@@ -46537,7 +46533,6 @@ atyet
 atyl
 atylie
 atyou
-atyoui
 atyour
 atyphoon
 atz
@@ -48293,7 +48288,7 @@ avengeance
 avenged.the
 avengeful
 avengest
-avengeyouif
+avengeyou
 avengin
 avengingariel
 avenham
@@ -53249,7 +53244,7 @@ balboas
 balbuce
 balbuceando
 balbus
-balbutier
+balbut
 balc
 balcaen
 balcarres
@@ -54055,7 +54050,7 @@ bamburgh
 bambury
 bambus
 bambusa
-bambuti
+bambut
 bamc
 bamcan't
 bamcocked
@@ -58323,7 +58318,6 @@ beachwood
 beachy
 beachyeah
 beachyou
-beachyoucan't
 beachys
 beacknowledged
 beaconed
@@ -65887,7 +65881,6 @@ betterat
 betterbefore
 betterbetterbetter
 betterbut
-betterbuti
 betterc
 bettercalmer
 betterchemistry
@@ -81640,7 +81633,6 @@ bringupthatpoint
 bringwhatever
 bringyou
 bringyoucomfort
-bringyouin
 briniest
 brinig
 brinigs
@@ -87120,7 +87112,6 @@ butbutam
 butbutangels
 butbutbut
 butbuthowd
-butbuti
 butbutmercedes
 butbutthat
 butbutwhowho
@@ -87327,41 +87318,6 @@ buthummm
 buthurry
 buthy
 buthyper
-buti
-buti'm
-butiam
-butiama
-butias
-butic
-butid
-butido
-butif
-butifthis
-butiful
-butifulest
-butii
-butiko
-butill
-butim
-butimmediately
-butin
-butinstead
-butintheend
-butirsa
-butis
-butisnt
-butissy
-butit
-butit'snotrue
-butit'spink
-butithink
-butithought
-butits
-butitsnothing
-butive
-butiwanto
-butiwillcall
-butiyou
 butjacqueline
 butjames
 butjane
@@ -87999,7 +87955,6 @@ butyesi
 butyesterday
 butyl
 butyou
-butyoucan't
 butyoull
 butyour
 butyoure
@@ -92167,6 +92122,7 @@ can'ti
 can'tif
 can'tjust
 can'tkarenkaren
+can'tkill
 can'tl
 can'tleave
 can'tlegally
@@ -92187,6 +92143,7 @@ can'tstopcan'tstopcan'tstop
 can'ttake
 can'ttakeany
 can'ttell
+can'ttellhershewon'tbelieveyou
 can'tthey
 can'tthink
 can'tthinkcan'tcan'tca
@@ -92195,6 +92152,7 @@ can'twe
 can'tweigh
 can'twhat
 can'tyou
+can'tyouca
 can'whistle
 can'ya
 can..um.do
@@ -102723,7 +102681,6 @@ charmian.we
 charmian.why
 charmian.yet
 charmian.you
-charmian.youcan't
 charmian.your
 charmichael
 charmichaels
@@ -109667,7 +109624,6 @@ clairby
 claircan't
 clairclair
 claircognizance
-claire
 claire.robyns
 claireabsentmindedlyrubbed
 claireand
@@ -121268,6 +121224,7 @@ contrey
 contrib
 contriboot
 contribu
+contribut
 contributeall
 contributes6npa
 contributes6npaining
@@ -121275,13 +121232,6 @@ contributesin
 contributesl
 contributeso
 contributeto
-contributingtoit
-contributionfinishing
-contributioni
-contributionl
-contributions.in
-contributionsitting
-contributive
 contributor_notes.html
 contributorsbig
 contrigued
@@ -124826,7 +124776,7 @@ couldn'ttell
 couldn'tthink
 couldn'twould
 couldn'twouldn'ttell
-couldn'tyoucan't
+couldn'tyou
 couldn1
 couldna
 couldnae
@@ -140769,7 +140719,6 @@ debutanten
 debutantes
 debutantescan't
 debutants
-debuting
 debutsin
 debwas
 dec
@@ -144033,7 +143982,6 @@ demonprice
 demonproof
 demonreach
 demonry
-demons
 demons'and
 demons.he
 demons.she
@@ -153915,11 +153863,11 @@ distressingly
 distressingthat
 distribucin
 distribuer
+distribut
 distribute.bat
 distributees
 distributer
 distributers
-distribution.but
 distributorsamazon
 distributorship
 distributorsthe
@@ -153944,7 +153892,7 @@ distrossed
 distroy
 distru
 distrubance
-distrubution
+distrubut
 distrust.he
 distrustfully
 distrustfulness
@@ -187665,7 +187613,6 @@ facewithout
 facewould
 faceyelled
 faceyou
-faceyoucan't
 faceyoull
 fach
 fachan
@@ -188354,7 +188301,7 @@ faints
 faintsmile
 fainttaking
 fair'n
-fair.ifyoucan't
+fair.ifyou
 fair.look
 fair.they
 fair4
@@ -207443,7 +207390,6 @@ freebot
 freebots
 freeburg
 freebut
-freebutif
 freecall
 freecell
 freeda
@@ -208676,7 +208622,6 @@ friendy
 friendyeah
 friendyears
 friendyou
-friendyoucan't
 friendyour
 friendz
 friendzilla
@@ -210523,7 +210468,7 @@ fuckworthy
 fucky
 fuckybrook
 fuckyou
-fuckyouyoucan'tdoanything
+fuckyouyou
 fucner
 fucners
 fuco
@@ -223741,7 +223686,7 @@ go.this
 go.well
 go.when
 go.ya
-go.youcan't
+go.you
 go1
 go1od
 go20
@@ -224312,7 +224257,7 @@ godhsip
 godhumans
 godhunters
 godi
-godi'msosorryileftyouiseveryoneallrightletmemakesureyou'reokayiwas
+godi'msosorryileftyou
 godiamo
 godid
 godier
@@ -246608,7 +246553,6 @@ hecuber
 hecut
 hecworking
 hecyou
-hed
 heda
 hedaniel
 hedara
@@ -251534,7 +251478,6 @@ herself.they
 herself.thinking
 herself.what
 herself.you
-herself.youcan't
 herselfa
 herselfagain
 herselfagainst
@@ -254249,7 +254192,6 @@ him.besides
 him.beyond
 him.but
 him.but.i
-him.buti
 him.by
 him.bye
 him.carefully
@@ -255326,7 +255268,6 @@ himyes
 himyesterday
 himyet
 himyou
-himyoucan't
 himyoull
 himyoung
 himyour
@@ -256027,7 +255968,7 @@ hiscong
 hisconscience
 hisconsultation
 hiscontract
-hiscontributions
+hiscontribut
 hisconveyance
 hiscot
 hiscould
@@ -267229,6 +267170,7 @@ i'msorryi'msorryi'msorry
 i'msorrywhat
 i'msorrywhatdidyoujustsay
 i'msosorry
+i'msosorryi'msohappyyou
 i'mspecter
 i'mstill
 i'msuggesting
@@ -267659,6 +267601,7 @@ iamies
 iamiglio
 iamiricain
 iamjarodpowell
+iamlaughing
 iamleader
 iamleavingyou
 iammarrying
@@ -268932,6 +268875,7 @@ idomeni
 idon
 idon'tknow
 idon'tneedapussycat
+idon'tneedher
 idon'tneedmyclothesallcoveredwithhair
 idon'twant
 idon'twantacathangingfromthecurtain
@@ -269384,6 +269328,8 @@ iftyeight
 ifucking
 ifuckinglovethissong
 ifugao
+iful
+ifulest
 ifv
 ifvaloree
 ifve
@@ -269753,6 +269699,7 @@ ihadnt
 ihadto
 ihai
 ihalfway
+ihan
 ihand
 ihandled
 ihank
@@ -269762,7 +269709,6 @@ ihate
 ihated
 ihatethat
 ihateyou
-ihateyouihateyou
 ihave
 ihavea
 ihavean
@@ -270431,6 +270377,7 @@ illborn
 illbut
 illcallyourightback
 illcome
+illcomebeatyou
 illconceived
 illcross
 illdoers
@@ -275738,6 +275685,7 @@ ingsgate
 ingthe
 ingthey
 ingto
+ingtoit
 ington
 inguaeones
 inguagiato
@@ -276409,6 +276357,7 @@ innardsstomach
 innardy
 innarupt
 innat
+innateeth
 innatejust
 innatelysame
 innatemistrust
@@ -278953,6 +278902,7 @@ intersted
 interstel
 interstella
 interstellar
+interstellferederhydrowithgenlawnmassfulexecufrom
 interstice
 intersticed
 interstices
@@ -279107,6 +279057,7 @@ intheback
 inthecenter
 inthechest
 intheciphertext
+intheend
 inthefloor
 inthegym
 intheir
@@ -279265,6 +279216,7 @@ intointo
 intointointo
 intoit
 intoits
+intojelly
 intokate
 intoknots
 intokristian
@@ -279438,6 +279390,7 @@ intowhenthey
 intowhich
 intown
 intownand
+intownlong
 intowords
 intox
 intoxi
@@ -280330,7 +280283,6 @@ inyet
 inyo
 inyong
 inyou
-inyouin
 inyour
 inyoure
 inyourhandsinyourhandsinyourhands
@@ -280404,14 +280356,18 @@ iolrreass
 iols
 iomas
 iomhair
+ion.but
+ion.why
 ionacan't
 ionachta
 ionaire
 ionaires
 ional
 ionan
+ionany
 ionas
 ionat
+ionbut
 ionce
 iondays
 ione
@@ -280420,6 +280376,7 @@ ionelli
 ionesco
 ionescu
 ioneseu
+ionfinishing
 iong
 ioni
 ionia
@@ -280431,17 +280388,22 @@ ioniko
 ionin
 ionis
 ionised
+ionist
 ionizer
+ionl
 ionly
 ionlywant
 ionmar
 ionmars
+ionnoncommercialshare
 ionocraft
 ionograph
 ionony
 ionospheric
+ions.in
 ionsanything
 ionship
+ionsitting
 ionth
 ionucci
 ionun
@@ -281851,6 +281813,7 @@ iseult
 iseum
 iseven
 iseventually
+iseveryoneallrightletmemakesureyou'reokayiwas
 iseverywhere
 isevil
 isevoristhave
@@ -282200,6 +282163,7 @@ islandkingston
 islandlike
 islandlost
 islandme
+islandmeislandhome
 islandmost
 islandneighborhood
 islandof
@@ -283148,6 +283112,7 @@ it'snone
 it'snonexistent
 it'snot
 it'snothing
+it'snotrue
 it'sobvious
 it'sokay
 it'sone
@@ -283156,6 +283121,7 @@ it'sout
 it'sover
 it'spart
 it'spersonal
+it'spink
 it'spossible
 it'sprince
 it'sprobably
@@ -284662,6 +284628,7 @@ itsneon
 itsnever
 itsnice
 itsnot
+itsnothing
 itso
 itsobbing
 itsoccupied
@@ -285019,7 +284986,6 @@ ityetbut
 itym
 ityou
 ityoud
-ityoui
 ityoull
 ityour
 ityoure
@@ -285221,6 +285187,7 @@ ivaylo
 ivb4
 ivdas
 ive.no
+ivebeeennn
 iveenjoyed
 ivegot
 ivegotamission
@@ -285354,6 +285321,7 @@ iwantclairs
 iwanted
 iwantedto
 iwantherpowers
+iwanto
 iwantoneofthose.com
 iwantto
 iwanttobe
@@ -285433,6 +285401,7 @@ iwhoop
 iwhy
 iwi
 iwill
+iwillcall
 iwilldestroyyou
 iwillfail
 iwillhandlethis
@@ -285674,6 +285643,7 @@ izzayik
 izzenit
 izzer
 izzian
+izzianizzian
 izzie
 izziemister
 izzies
@@ -293289,7 +293259,7 @@ juddery
 juddie
 juddro
 judds
-juddyoucan't
+juddyou
 jude
 jude's
 judea
@@ -295467,7 +295437,7 @@ kabuli
 kabulis
 kabuls
 kabur
-kabutihan
+kabut
 kabuzu
 kabwe
 kabylia
@@ -302452,7 +302422,6 @@ killya
 killyew
 killyou
 killyoudeadatron
-killyouif
 killyoukillyoukillyoukillkillkill
 killyoure
 killyoursexlife.bomb
@@ -305682,7 +305651,6 @@ knowbrought
 knowbryce
 knowbuddies
 knowbut
-knowbuti
 knowbutwhat
 knowby
 knowc
@@ -306297,7 +306265,6 @@ knowyes
 knowyet
 knowyou
 knowyouarethereknowyouarethere
-knowyoucan't
 knowyoull
 knowyounger
 knowyour
@@ -311993,7 +311960,6 @@ lakchera
 lake'the
 lake.garion
 lake.you
-lake.youcan't
 lakea
 lakealong
 lakealso
@@ -334442,7 +334408,7 @@ mabuba
 mabuhay
 mabuni
 mabuse
-mabuti
+mabut
 mabwe
 mabwed
 mabwedri
@@ -346543,7 +346509,7 @@ mbu
 mbube
 mbuga
 mbulu
-mbuti
+mbut
 mbutu
 mbutus
 mc
@@ -354624,7 +354590,6 @@ meynell
 meyners
 meyon
 meyou
-meyoucan't
 meyoull
 meyour
 meyoure
@@ -369736,7 +369701,7 @@ mubbo
 mubi
 mubs
 mubuhay
-mubuti
+mubut
 muc
 mucal
 mucalinda
@@ -372057,7 +372022,7 @@ musette
 musetti
 musetto
 museu
-museum.youcan't
+museum.you
 museum6
 museuma
 museumbig
@@ -389894,7 +389859,6 @@ nowyears
 nowyes
 nowyou
 nowyou'vedoneit
-nowyoucan't
 nowyoull
 nowyour
 nowyoure
@@ -397215,7 +397179,6 @@ okaybirds
 okaybreathe
 okaybut
 okaybutdo
-okaybutidon'tneedher
 okaybutuhwhy
 okayby
 okaybye
@@ -412787,7 +412750,6 @@ papaone
 papapa
 papapot
 paparazza
-paparazzi
 paparazzing
 paparazzis
 paparazzo
@@ -420870,7 +420832,7 @@ personi
 personi'm
 personied
 personif
-personificationattributing
+personificationattribut
 personifications
 personifie
 personifiedbut
@@ -430165,7 +430127,6 @@ pointya
 pointyes
 pointyhat
 pointyou
-pointyoucan't
 poiple
 poipu
 poire
@@ -433089,7 +433050,7 @@ possible.theyre
 possible.this
 possible.triena
 possible.when
-possible.youcan't
+possible.you
 possible_
 possible_and
 possibleall
@@ -435865,7 +435826,7 @@ pregnant99.9
 pregnantafter
 pregnantand
 pregnantanyway
-pregnantbuti
+pregnantbut
 pregnantcousin
 pregnantdont
 pregnanthahahahah
@@ -454804,7 +454765,7 @@ rediscovery
 rediscussed
 redisplayed
 redistilled
-redistributionist
+redistribut
 redistributor
 redistrict
 redistricted
@@ -461276,12 +461237,7 @@ retrials
 retribuam
 retribulators
 retribushium
-retribution
-retribution.why
-retributionany
-retributionbut
-retributions
-retributive
+retribut
 retrievable
 retrieval.strange
 retrievee
@@ -466312,7 +466268,7 @@ roadworthy
 roady
 roadyi
 roadying
-roadyoucan't
+roadyou
 roadyour
 roaffirmed
 roaffirmod
@@ -474819,7 +474775,6 @@ safeat
 safeaway
 safebecause
 safebut
-safebuti
 safec
 safeclub
 safeco
@@ -481620,7 +481575,6 @@ sceneblack
 scenebreak
 scenebuilders
 scenebut
-scenebutive
 scenecould
 scened
 scenedecent
@@ -483563,7 +483517,7 @@ scopwick
 scor
 scorate
 scorbic
-scorbutic
+scorbut
 scorcery
 scorcese
 scorceses
@@ -494325,7 +494279,7 @@ shekharkhoret
 shekhem
 shekhina
 shekhinah
-shekicksyouinnateeth
+shekicksyou
 shekillkilled
 shekina
 shekinah
@@ -495379,7 +495333,6 @@ sheynkman
 sheyol
 sheyols
 sheyou
-sheyoui
 sheyour
 sheyu
 shez
@@ -513152,7 +513105,6 @@ somethingwrong
 somethingwrongwith
 somethingyes
 somethingyou
-somethingyouinside
 somethingyoull
 somethingyour
 somethingyoure
@@ -515111,7 +515063,7 @@ sosas
 sosave
 soscan't
 soscared
-soscaredicameasfastasicouldi'msosorryileftyoui'msosorryi'msohappyyou
+soscaredicameasfastasicouldi'msosorryileftyou
 soscary
 soscia
 sose
@@ -516279,7 +516231,7 @@ sovereignwhose
 soverenyi
 soverign
 sovershennoe
-soverykindthankyouitsgetting
+soverykindthankyou
 sovetskoy
 sovicarious
 soviet
@@ -523335,7 +523287,6 @@ startedwith
 startedworkin
 startedwriting
 startedyou
-startedyoucan't
 starteled
 starteresa
 starterhe
@@ -527101,7 +527052,7 @@ stop.please
 stop.pride
 stop.stop
 stop.wait
-stop.youcan't
+stop.you
 stop9
 stopa
 stopall
@@ -553546,7 +553497,6 @@ themwriting
 themya
 themyet
 themyou
-themyouill
 themyoung
 themyour
 themyoure
@@ -560217,7 +560167,6 @@ thoughtyelled
 thoughtyou
 thoughtyoud
 thoughtyouhome
-thoughtyoui
 thoughtyour
 thoughtyouwere
 thoughunless
@@ -574320,13 +574269,13 @@ tribunethat
 tribunician
 tribuno
 tribus
+tribut
 tributaries
 tributary
 tributarys
 tributehad
 tributeluckily
 tributes
-tributine
 tribux
 tric
 tricamp
@@ -584339,7 +584288,7 @@ uncontextualized
 uncontostablo
 uncontradictable
 uncontradicted
-uncontributing
+uncontribut
 uncontrived
 uncontrol
 uncontrolable
@@ -590539,7 +590488,6 @@ upbrinin
 upbuffet
 upbuilding
 upbut
-upbutim
 upbvds
 upby
 upc
@@ -590749,7 +590697,7 @@ upir
 upircan't
 upiri
 upis
-upiseeyouiseeyou
+upiseeyou
 upislands
 upit
 upities
@@ -611853,7 +611801,6 @@ wellbrainstorm
 wellbred
 wellburton
 wellbut
-wellbuti
 wellbutrin
 wellbutrins
 wellby
@@ -621816,7 +621763,6 @@ withyosiah
 withyou
 withyouand
 withyouat
-withyouinstead
 withyour
 withyouruncle
 withyouve
@@ -625054,7 +625000,6 @@ world.two
 world.within
 world.xli
 world.you
-world.youcan't
 world1990
 world78never
 world_is_the_stage
@@ -626047,7 +625992,7 @@ wouldn'ttouch
 wouldn'tunderstand
 wouldn'twork
 wouldn'twould
-wouldn'tyoucan't
+wouldn'tyou
 wouldna
 wouldnae
 wouldne
@@ -635074,7 +635019,7 @@ youbesides
 youbet
 youbethinking
 youbetrayed
-youbetterwriteorheavenhelpyouillcomebeatyouintojelly
+youbetterwriteorheavenhelpyou
 youbeyond
 youbig
 youbind
@@ -635107,13 +635052,6 @@ youcalled
 youcame
 youcametoseethefantasticcraft
 youcan
-youcan't
-youcan'tbe
-youcan'tdoanything
-youcan'tkill
-youcan'ttellhershewon'tbelieveyou
-youcan'tyoucan'tyouca
-youcan'tyoucan'tyoucan'tyouca
 youcand
 youcandothis
 youcandothisyoucandothis
@@ -635402,40 +635340,6 @@ youhowfuck
 youhs
 youhuman
 youhurt
-youi
-youi'm
-youi.i
-youiamlaughing
-youian
-youid
-youidiot
-youidiots
-youif
-youii
-youiim
-youill
-youim
-youimagine
-youimprisonment
-youin
-youinside
-youintend
-youinterstellferederhydrowithgenlawnmassfulexecufrom
-youinthe
-youinto
-youintownlong
-youinviting
-youioh
-youis
-youislandmeislandhome
-youit
-youithank
-youits
-youive
-youivebeeennn
-youiwhat
-youiyoui
-youizzianizzian
 youj.p
 youjabberwocksand
 youjace
@@ -636875,7 +636779,6 @@ youyis
 youyknow
 youyou
 youyouarent
-youyoucan't
 youyoud
 youyoull
 youyoung
