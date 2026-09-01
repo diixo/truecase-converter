@@ -1730,7 +1730,6 @@
 .whipping
 .whispered
 .who
-.whoa
 .whoever
 .whole
 .whoooooooaaaaaaahhhhhhh
@@ -8029,6 +8028,7 @@ a.m.thank
 a.m.the
 a.m.who
 a.m.writing
+a.major
 a.mand
 a.matter
 a.mcg
@@ -8074,6 +8074,7 @@ a.t.m
 a.t.misikawa
 a.t.t
 a.t.winter
+a.take
 a.the
 a.this
 a.thousand
@@ -13830,7 +13831,6 @@ adherences
 adherins
 adhesions
 adhesivan
-adhesive
 adhesively
 adhesiveness
 adhesives
@@ -14326,6 +14326,7 @@ adoniss
 adonites
 adonna
 adonoi
+adont
 adonus
 adonuss
 adooorable
@@ -18309,7 +18310,6 @@ agwotown
 agwriting
 agyne
 agyness
-ah
 ah'crav
 ah'ed
 ah'proclaimed
@@ -18728,6 +18728,7 @@ ahits
 ahitsjust
 ahitsohappensiwaspassingtheapothecaryonmywayhere
 ahituv
+ahiv
 ahiyau
 ahjlan
 ahjussi
@@ -19456,7 +19457,7 @@ air.the
 air.there
 air.they
 air.what
-air.whoa
+air.who
 air.why
 air7
 aira
@@ -20779,7 +20780,6 @@ alarmher
 alarmi
 alarmif
 alarmin
-alarmingly
 alarmingly.i
 alarmis
 alarmism
@@ -29834,6 +29834,7 @@ andshoving
 andshowered
 andshrugged
 andshushedher
+andshy
 andsick
 andsides
 andsigh
@@ -30292,8 +30293,6 @@ andwhispered
 andwhistled
 andwhite
 andwho
-andwhoa
-andwhoawhat
 andwhoever
 andwhoops
 andwhoosh
@@ -32974,7 +32973,6 @@ anthologies
 anthologization
 anthologize
 anthologized
-anthology
 anthologyocr
 anthologyother
 anthon
@@ -34789,6 +34787,7 @@ aoifefall
 aoifes
 aoikaert
 aok
+aokay
 aoki
 aokigahara
 aol
@@ -34813,6 +34812,7 @@ aonic
 aonly
 aons
 aoo
+aoofthere
 aoogah
 aoor'under
 aoout
@@ -44918,6 +44918,7 @@ atdelos
 atdoeswor
 atdunbar
 ate'nt
+ate.blogspot.com
 ate.it
 atea
 ateach
@@ -45147,6 +45148,7 @@ atherbetrothed
 atherblankly
 atherdisgruntled
 athere
+atheres
 atherfold
 atherheels
 atherhood
@@ -49249,7 +49251,7 @@ awhirr
 awhisper
 awhite
 awho
-awhoa
+awhoever
 awhole
 awholepickle
 awholeyear
@@ -49840,6 +49842,7 @@ ayou
 ayoub
 ayoung
 ayour
+ayoure
 ayourei
 ayouth
 ayph
@@ -51532,7 +51535,6 @@ backknowing
 backky
 backl
 backlars
-backlash
 backlashed
 backlashes
 backlashing
@@ -70238,7 +70240,6 @@ blaise
 blaises
 blaize
 blak
-blake
 blake..pls
 blake.4
 blakean
@@ -70575,7 +70576,6 @@ blasphemies
 blaspheming
 blasphemous
 blasphemously
-blasphemy
 blass
 blasser
 blassingame
@@ -72287,7 +72287,7 @@ blowith
 blowjob
 blowjobby
 blowjobs
-blowjobwhoa
+blowjobwho
 blowjulia
 blowker
 blowlamp
@@ -81625,7 +81625,6 @@ brininess
 brining
 brinite
 brinjal
-brink
 brinka
 brinker
 brinkerhoff
@@ -83121,7 +83120,7 @@ brownwall
 brownwe
 brownwere
 brownwetblack
-brownwhoa
+brownwho
 brownwyn
 browny
 brownyn
@@ -97612,7 +97611,7 @@ cathys
 cathyshe
 cathythe
 cathythen
-cathywhoa
+cathywho
 cati
 catie
 caties
@@ -103433,7 +103432,6 @@ checkman
 checkmark
 checkmarked
 checkmarks
-checkmate
 checkmated
 checkmates
 checkmating
@@ -107102,7 +107100,6 @@ chrissypeebles.blogspot.com
 chrissys
 chrissythatd
 chrissywho
-christ
 christ..creator
 christ.sophie
 christ.the
@@ -107604,7 +107601,6 @@ chucklea
 chuckleand
 chuckleaw
 chucklebuds
-chuckled
 chuckled..funny
 chuckled.come
 chuckled.no
@@ -116393,7 +116389,6 @@ commenait
 commenandccedil
 commenc
 commencedrecording
-commencement
 commencements
 commencer
 commencerait
@@ -117465,7 +117460,6 @@ complicitly
 complicitor
 complicitous
 complicitously
-complicity
 complicityfor
 complicityi
 complied.he
@@ -117855,7 +117849,7 @@ comradeships
 comradesi
 comradesnoble
 comradeswho
-comradewhoa
+comradewho
 comrado
 comrage
 comrations
@@ -117958,9 +117952,7 @@ concealability
 concealable
 concealedand
 concealedbehind
-concealer
 concealercan't
-concealers
 concealhis
 concealin
 concealingdbarelydhis
@@ -125969,7 +125961,6 @@ courtscan't
 courtsconfidentially
 courtsey
 courtshes
-courtship
 courtships
 courtshipthe
 courtside
@@ -129736,7 +129727,6 @@ crotz
 croucha
 crouchback
 crouchbending
-crouched
 crouchedwith
 croucher
 crouches
@@ -136556,7 +136546,6 @@ dantalionplease
 dantalions
 dantan
 dantans
-dante
 dante3
 dantean
 danteand
@@ -136927,7 +136916,6 @@ daringer
 daringness
 daringtotry
 darins
-dario
 darion
 darior
 dariorism
@@ -147551,7 +147539,6 @@ devolvement
 devolvi
 devolvindole
 devomnodenti
-devon
 devona
 devonat
 devoncan't
@@ -154391,7 +154378,6 @@ dizzybut
 dizzydizzy
 dizzydying
 dizzyi
-dizzying
 dizzyingdbut
 dizzyingly
 dizzyingthe
@@ -155935,7 +155921,7 @@ dogwatch
 dogwatches
 dogweed
 dogwhich
-dogwhoate.blogspot.com
+dogwho
 dogwise
 dogwolf
 dogwolfrun
@@ -160105,7 +160091,7 @@ dowster
 dowt
 dowti
 dowtry
-dowwhoaoofthere
+dowwho
 dowwwwn
 dox
 doxcha
@@ -160911,7 +160897,6 @@ drakarle
 drakarlean
 drakarleans
 drakarles
-drake
 drake's
 drake.daniel
 drakean
@@ -161527,7 +161512,6 @@ dreamlandteenfantasy.blogspot.com
 dreamlandthat
 dreamlandthough
 dreamleft
-dreamless
 dreamlessly
 dreamlessness
 dreamlet
@@ -163885,7 +163869,6 @@ duckcaller
 duckcallers
 duckdive
 duckdiving
-ducked
 duckednow
 duckenbroth
 ducker
@@ -171896,7 +171879,6 @@ elentiya
 elenwe
 elenya
 elenzura
-eleonora
 eleonoras
 eleonore
 eleonores
@@ -173371,7 +173353,6 @@ elviney
 elvinprin
 elvins
 elvir
-elvira
 elviracan't
 elviraish
 elviras
@@ -189556,7 +189537,6 @@ fanfixx.net
 fanfold
 fanfreakingtastic
 fanfuckingtastic
-fang
 fang321
 fang950
 fangasur
@@ -189596,7 +189576,6 @@ fangoria.com
 fangorn
 fangrila
 fangroups
-fangs
 fangs.as
 fangs.however
 fangs.i
@@ -195514,7 +195493,6 @@ fiero
 fieros
 fiers
 fierstein
-fiery
 fieryber
 fierylocks
 fieryperhaps
@@ -200276,7 +200254,6 @@ flickandshy
 flickeda
 flickercuriosity
 flickerdoodle
-flickered
 flickereda
 flickeredjust
 flickeredsomeone
@@ -200496,7 +200473,6 @@ flintstoneno
 flintstones
 flintuwi
 flintwood
-flinty
 flior
 flios
 flioved
@@ -205516,7 +205492,6 @@ forwhether
 forwhich
 forwhiskey
 forwho
-forwhoa
 forwhom
 forwhy
 forwickedat
@@ -207735,7 +207710,6 @@ fren
 fren'ly
 frenaaa
 frenazo
-french
 frencha
 frenchand
 frenchay
@@ -212616,7 +212590,6 @@ gabbys
 gabbywonderwoman
 gabcik
 gabciks
-gabe
 gabeare
 gabeat
 gabebal
@@ -213988,7 +213961,6 @@ gamelin
 gamelins
 gamelion
 gamelon
-gamely
 gamemaker
 gamemakers
 gamemaster
@@ -214956,7 +214928,6 @@ garino
 garins
 garioch
 gariok
-garion
 garionl
 garioth
 garis
@@ -216213,7 +216184,6 @@ gazebolike
 gazebos
 gazecan't
 gazecould
-gazed
 gazeded
 gazedid
 gazedropped
@@ -216242,7 +216212,6 @@ gazepalva
 gazer
 gazerless
 gazers
-gazes
 gazeshifted
 gazeshotaroundthe
 gazesilently
@@ -216284,7 +216253,6 @@ gazillioned
 gazillions
 gazillionth
 gazin
-gazing
 gazingand
 gazings
 gazlay
@@ -219983,7 +219951,6 @@ giddyyap
 gide
 gidedrian
 gidedrians
-gideon
 gideoncan't
 gideoni
 gideons
@@ -227476,7 +227443,7 @@ gowhen
 gowhere
 gowhich
 gowhile
-gowhoa
+gowho
 gowhose
 gowith
 gowith.dirk
@@ -228488,7 +228455,6 @@ grandolin
 grandor
 grandos
 grandovert
-grandpa
 grandpa's87
 grandpa262
 grandpaaa
@@ -232228,7 +232194,6 @@ growlier
 growliest
 growlight
 growlin
-growling
 growlingly
 growlings
 growlingwell.like
@@ -236030,7 +235995,6 @@ h9
 h900101
 h_____
 h_t1ravo6yq
-ha
 ha'aad
 ha'ad
 ha'ants
@@ -256364,7 +256328,6 @@ hissatchel
 hissatires
 hissavoring
 hisseat
-hissed
 hissed.i
 hissed.if
 hissed.the
@@ -256384,7 +256347,6 @@ hisseparation
 hisser
 hissers
 hisservant
-hisses
 hisseventies
 hissez
 hisshaft
@@ -258573,7 +258535,6 @@ hollowwaiting
 holls
 hollum
 hollwood
-holly
 holly'but
 holly.author
 hollyand
@@ -264916,7 +264877,6 @@ hunik
 hunington
 hunitz'at
 hunjansson
-hunk
 hunk'aak
 hunk..looking
 hunka
@@ -266026,7 +265986,6 @@ hwhen
 hwhere
 hwhich
 hwho
-hwhoa
 hwhole
 hwholly
 hwhoo
@@ -272728,7 +272687,6 @@ imwhat
 imwhatwhat
 imwhere
 imwho
-imwhoa
 imwith
 imwriting
 imy
@@ -277674,7 +277632,6 @@ insulate
 insulated
 insulates
 insulating
-insulation
 insulationeven
 insulations
 insulative
@@ -284900,7 +284857,6 @@ itwhether
 itwhich
 itwhile
 itwho
-itwhoa
 itwhole
 itwhos
 itwhy
@@ -285353,7 +285309,6 @@ iwhich
 iwhile
 iwhispered
 iwho
-iwhoa
 iwhoop
 iwhy
 iwi
@@ -285895,7 +285850,6 @@ jacco
 jaccomplissais
 jaccueille
 jaccuse
-jace
 jaceacacias
 jacebat
 jacecan't
@@ -286219,7 +286173,6 @@ jackzen
 jaclement.ondarkshores
 jaclement.wordpress.com
 jaclementwriter
-jaclyn
 jaclyns
 jaco
 jacob's
@@ -287306,7 +287259,6 @@ janiac
 janiak
 janias
 janica
-janice
 janice.ross
 janices
 janiceshey
@@ -290993,7 +290945,6 @@ joalous
 joalousy
 joam
 joams
-joan
 joan'sleeches
 joan_fallon
 joana
@@ -309983,7 +309934,7 @@ kyli
 kylian
 kylieee
 kylies
-kyliewhoa
+kyliewho
 kylis
 kylix
 kyllian
@@ -320661,7 +320612,6 @@ liaisonyou
 liaitor
 liak
 liallainn
-liam
 liama
 liamas
 liambro
@@ -323106,7 +323056,6 @@ lilltle
 lillu
 lilluminating
 lillusion
-lilly
 lillya
 lillyand
 lillyans
@@ -323146,7 +323095,6 @@ lilus
 lilvia
 lilwaynes
 lilwhile
-lily
 lily'concoction
 lily.casablauca
 lily_ofthe_valley
@@ -330056,7 +330004,6 @@ loungey
 loungeyou
 loungin
 lounginess
-lounging
 loungingall
 loungo
 loup
@@ -331304,7 +331251,6 @@ lucidum
 lucieh
 luciele
 lucieles
-lucien
 lucien's
 lucienbut
 luciendo
@@ -331343,7 +331289,6 @@ lucilia
 luciliae
 lucilius
 lucilla
-lucille
 lucillebut
 lucilleher
 lucilles
@@ -331529,7 +331474,6 @@ lucullus
 lucumo
 lucumos
 lucus
-lucy
 lucy's
 lucybean
 lucycan't
@@ -336432,7 +336376,6 @@ magnetite
 magnetizable
 magnetization
 magnetize
-magnetized
 magnetizes
 magnetizing
 magneto
@@ -340040,7 +339983,6 @@ maniac.you
 maniacal
 maniacalbastards
 maniacall
-maniacally
 maniacallyan
 maniacallythrough
 maniacallywhile
@@ -348722,7 +348664,6 @@ meatand
 meatbacon
 meatbags
 meatbal
-meatball
 meatballscan't
 meatballthis
 meatbars
@@ -349806,7 +349747,6 @@ mefriend
 mefrom
 mefucking
 mefvalggpdagsptpfpdeagaflglgggprteaggllasypp
-meg
 meg'scloaked
 meg'sministrations
 meg'svoice
@@ -350036,7 +349976,6 @@ meggietaylorsworks.com
 meggikins
 meggot
 meggs
-meggy
 megh
 megha
 meghaaaan
@@ -360107,7 +360046,6 @@ missionaly
 missionand
 missionaria
 missionaries
-missionary
 missionaryboth
 missionarys
 missionbehind
@@ -368095,7 +368033,6 @@ mournfulwere
 mournhe
 mournhill
 mournin
-mourning
 mourningand
 mourningfor
 mourningof
@@ -373880,7 +373817,6 @@ mywelling
 mywhat
 mywhatever
 mywho
-mywhoa
 mywholebig
 mywife
 mywildest
@@ -376818,7 +376754,6 @@ natchitos
 natchral
 natchtold
 natchure
-nate
 nate.he
 nate_guess
 nate_mom
@@ -376860,7 +376795,6 @@ nathand
 nathanhaleparker
 nathanial
 nathanials
-nathaniel
 nathaniel.why
 nathanielangel
 nathanielcan't
@@ -380869,7 +380803,6 @@ nevermindbunnu
 neverminding
 nevermindtell
 nevermoor
-nevermore
 nevermorebut
 nevermorecan't
 nevermores
@@ -382155,7 +382088,6 @@ nicias
 nicing
 nicio
 nicis
-nick
 nick.kovacs
 nick.warden
 nickable
@@ -384933,7 +384865,6 @@ noeline
 noelite
 noella
 noellas
-noelle
 noelles
 noellike
 noels
@@ -385298,7 +385229,6 @@ noku
 nokumata
 nokunta
 nol
-nola
 nolacan't
 nolaisen
 nolan
@@ -389468,7 +389398,7 @@ nowhey
 nowhim
 nowhis
 nowhitler
-nowhoarse
+nowho
 nowhold
 nowhope
 nowhopefully
@@ -390988,7 +390918,7 @@ nutsone
 nutsos
 nutsthe
 nutsville
-nutswhoa
+nutswho
 nutswood
 nutsy
 nutsyour
@@ -412625,7 +412555,6 @@ panzuzu
 pao
 pao2
 paol
-paola
 paolas
 paoli
 paolillo
@@ -416402,7 +416331,7 @@ pausedtolean
 pausedtolook
 pausedunsatisfiedand
 pausedwhen
-pausedwhoa
+pausedwho
 pausedyou
 pausegold
 pausehow
@@ -422897,7 +422826,7 @@ phoebe
 phoebematthews.com
 phoebephoebe
 phoebes
-phoebewhoa
+phoebewho
 phoebs
 phoebus
 phoedra
@@ -426014,7 +425943,6 @@ pistis
 pisto
 pistoff
 pistoia
-pistol
 pistola
 pistolandtwo
 pistolas
@@ -430701,7 +430629,6 @@ pollute
 polluter
 polluters
 pollutes
-polluting
 pollutionand
 pollutionfrances
 pollutionpeppering
@@ -440763,7 +440690,7 @@ proverichniy
 provessionally
 provethat
 proveto
-provewhoa
+provewho
 provi
 providea
 provided.the
@@ -450516,7 +450443,6 @@ raspberried
 raspberrry
 raspberryseedsofftheir
 raspborry
-rasped
 rasped.she
 rasper
 raspier
@@ -463129,7 +463055,6 @@ rici
 ricin
 ricinus
 ricircolo
-rick
 rick.bringing
 rick.she
 rickaboo
@@ -471907,7 +471832,7 @@ rulestalk
 rulesthe
 ruleswe
 ruleswhich
-ruleswhoa
+ruleswho
 ruleswouldnt
 ruleth
 rulethat
@@ -472085,7 +472010,6 @@ rumorswhen
 rumorswithout
 rumorthat
 rumoryou
-rumoured
 rumouring
 rumourmongering
 rumourmongers
@@ -474893,7 +474817,6 @@ saft
 safta
 saftwhich
 safty
-sag
 saga.they
 sagace
 sagaciously
@@ -474957,7 +474880,6 @@ sagfree
 saggad
 saggadi
 saggadis
-sagged
 saggedagainsthim
 saggedin
 saggedwithrelief
@@ -481164,7 +481086,6 @@ scarface
 scarfaced
 scarfaces
 scarfe
-scarfed
 scarfever
 scarffed
 scarffing
@@ -491130,7 +491051,6 @@ sexplaining
 sexplique
 sexploits
 sexplosion
-sexpot
 sexpots
 sexpress
 sexprima
@@ -499661,7 +499581,6 @@ siculus
 sicurezza
 sicut
 sicyon
-sid
 sid'l
 sida
 sidabo
@@ -500055,7 +499974,6 @@ sidll
 sidmouth
 sidnal
 sidnals
-sidney
 sidneyclare
 sidneys
 sidneyshe
@@ -506879,11 +506797,8 @@ sloppers
 sloppier
 sloppier.73
 sloppiest
-sloppily
 sloppin
-sloppiness
 sloppinesshed
-slopping
 sloppinger
 sloppiong
 sloppo
@@ -509517,7 +509432,6 @@ snippiest
 snippily
 snippin
 snippiness
-snipping
 snippings
 snippishly
 snippity
@@ -516341,7 +516255,6 @@ sp250
 sp6
 sp66
 sp779897c03f10cbd5
-spa
 spaak
 spaats
 spac
@@ -530108,7 +530021,7 @@ stuffweapons
 stuffwhat
 stuffwhatever
 stuffwhen
-stuffwhoa
+stuffwho
 stuffwith
 stuffyou
 stuffypants
@@ -531000,7 +530913,6 @@ subjugated
 subjugatedand
 subjugates
 subjugating
-subjugation
 subjugationi
 subjugations
 subjugato
@@ -535698,7 +535610,6 @@ surrendering
 surrenderit
 surrenderor
 surrenderreluctantly
-surrenders
 surrenderto
 surrending
 surreptiously
@@ -548711,7 +548622,6 @@ thackerays
 thackeries
 thackery
 thacter
-thad
 thad..part
 thadamus
 thadda
@@ -558793,7 +558703,6 @@ thiswhen
 thiswhere
 thiswhich
 thiswho
-thiswhoa
 thiswhoever
 thiswhole
 thiswhy
@@ -565417,7 +565326,6 @@ tobuenos
 tobusiness
 tobut
 tobuy
-toby
 tobycan't
 tobyhe
 tobymac
@@ -573755,7 +573663,6 @@ treno
 trens
 trensicourt
 trensodi
-trent
 trentacinque
 trentacinquemila
 trentamila
@@ -574947,7 +574854,6 @@ trissness
 trist
 trista
 tristam
-tristan
 tristanand
 tristanbefore
 tristanbut
@@ -579657,7 +579563,6 @@ twitted
 twitter.com
 twitterati
 twitterbug
-twittered
 twitterer
 twitterers
 twitterfeed
@@ -582408,7 +582313,6 @@ ulysess
 ulysse
 ulysses
 ulyssi
-um
 um..colt
 um..i
 um..i'm
@@ -615493,7 +615397,7 @@ wherewhen
 wherewhenshe
 wherewhere
 wherewheres
-wherewhoa
+wherewho
 wherewithals
 wherewithin
 wherewolves
@@ -616769,64 +616673,6 @@ who.who
 who41
 who9
 who_killed_the_electric_car
-whoa
-whoa.major
-whoa.take
-whoaa
-whoaaa
-whoaaaa
-whoaaaaa
-whoaaaaaaa
-whoaaaaaaaa
-whoaaaaaaaaa
-whoaaaaarh
-whoaaaah
-whoaaaahh
-whoaback
-whoabut
-whoacan
-whoaccepted
-whoaccording
-whoadean
-whoadont
-whoadude
-whoah
-whoaha
-whoahere
-whoahiv
-whoai
-whoait
-whoaive
-whoalie
-whoalook
-whoalways
-whoamong
-whoamr
-whoand
-whoandshy
-whoaokay
-whoare
-whoarein
-whoarethe
-whoareyou
-whoas
-whoasked
-whoat
-whoathat
-whoathats
-whoatheres
-whoatough
-whoawatch
-whoawe
-whoawell
-whoawhat
-whoawhats
-whoawhoever
-whoawhy
-whoaydith
-whoayou
-whoayour
-whoayoure
 whobblebury
 whobethey
 whobetrayed
@@ -617633,7 +617479,7 @@ whyheshould
 whyhowhow
 whyhowits
 whyhowwhenhow
-whyhowwhoaand
+whyhowwho
 whyi
 whyi'm
 whyid
@@ -630355,7 +630201,6 @@ y7mail.com
 y8
 y90
 y_
-ya
 ya'akov
 ya'all
 ya'are

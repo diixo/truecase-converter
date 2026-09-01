@@ -49,9 +49,6 @@ REPLACE_TABLE = {
     "shes": "she's",
     "havent": "haven't",
     "youd": "you'd",
-    "oh": "well",
-    "uh": "well",
-    "huh": "well",
     "wow": "good",
     "theyll": "they'll",
     "whos": "who's",
@@ -65,7 +62,16 @@ REPLACE_TABLE = {
     "werent": "weren't",
     "theyve": "they've",
     "hasnt": "hasn't",
-    "ty": "tyler"
+    "ty": "tyler",
+    "ah": "",
+    "um": "",
+    "oh": "",
+    "uh": "",
+    "huh": "",
+    "ha": "",
+    "ya": "you",
+    "thad": "that",
+    "meg": "meggy"
 }
 
 
@@ -103,6 +109,7 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("youi", "you i")
     sentence = sentence.replace("buti", "but i")
     sentence = sentence.replace("gon na", "going")
+    sentence = sentence.replace("whoa", "who a")
     return sentence
 
 
@@ -114,8 +121,8 @@ def construct_candidate_words(sentence: str) -> list[str]:
         for word in tokenized_words
         if not is_number_token(word) and "-" not in word and len(word) > 1
     ]
-    #return words
-    return [REPLACE_TABLE.get(word, word) for word in words]
+    replaced_words = (REPLACE_TABLE.get(word, word) for word in words)
+    return [word for word in replaced_words if word]
 
 
 def main():
