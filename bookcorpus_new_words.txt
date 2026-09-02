@@ -261,7 +261,7 @@
 .busted
 .busy
 .but
-.but..i
+.but..ican't
 .butcan't
 .butt
 .buzz
@@ -695,6 +695,7 @@
 .good
 .goodbye
 .goodness
+.goodnight
 .goop
 .got
 .gote
@@ -800,6 +801,7 @@
 .i..don't..wannit
 .ial
 .ian
+.ican't
 .ick
 .id
 .idea
@@ -1113,7 +1115,7 @@
 .nless
 .nly
 .no
-.no..you
+.no..youcan't
 .nobody
 .nodded
 .noise
@@ -1361,6 +1363,7 @@
 .sharing
 .shat
 .she
+.shecan't
 .shed
 .sheet
 .sherry
@@ -1705,6 +1708,7 @@
 .weaseling
 .weather
 .weaving
+.wecan't
 .wed
 .weird
 .welcome
@@ -1729,10 +1733,12 @@
 .whipping
 .whispered
 .who
+.whoa
 .whoever
 .whole
 .whoooooooaaaaaaahhhhhhh
 .why
+.whycan't
 .wife
 .wild
 .will
@@ -1770,6 +1776,7 @@
 .yesterday
 .yet
 .you
+.youcan't
 .youd
 .youll
 .your
@@ -8026,7 +8033,6 @@ a.m.thank
 a.m.the
 a.m.who
 a.m.writing
-a.major
 a.mand
 a.matter
 a.mcg
@@ -8072,7 +8078,6 @@ a.t.m
 a.t.misikawa
 a.t.t
 a.t.winter
-a.take
 a.the
 a.this
 a.thousand
@@ -9838,6 +9843,7 @@ abner
 abneri
 abners
 abnethe
+abnethecan't
 abnew
 abney
 abnorm
@@ -11334,6 +11340,7 @@ accidenthe
 accidenthis
 accidenti
 accidentially
+accidentican't
 accidentily
 accidentit
 accidentjack
@@ -14319,7 +14326,6 @@ adoniss
 adonites
 adonna
 adonoi
-adont
 adonus
 adonuss
 adooorable
@@ -15964,6 +15970,7 @@ afraide
 afraidfor
 afraidhe
 afraidi
+afraidican't
 afraidim
 afraidin
 afraidit
@@ -16574,6 +16581,7 @@ again.wha
 again.what
 again.when
 again.why
+again.whycan't
 again.with
 again.would
 again.yesterday
@@ -18502,6 +18510,7 @@ aheavy
 ahebbak
 ahebbek
 ahebek
+ahecan't
 ahed
 aheeee
 aheh
@@ -18720,7 +18729,6 @@ ahits
 ahitsjust
 ahitsohappensiwaspassingtheapothecaryonmywayhere
 ahituv
-ahiv
 ahiyau
 ahjlan
 ahjussi
@@ -19046,6 +19054,7 @@ aiaya
 aib
 aic
 aicalas
+aican't
 aiccording
 aicha
 aichi
@@ -19449,7 +19458,7 @@ air.the
 air.there
 air.they
 air.what
-air.who
+air.whoa
 air.why
 air7
 aira
@@ -20435,6 +20444,7 @@ akrasia
 akredshaw
 akri
 akribos
+akrican't
 akris
 akrivo
 akrof
@@ -21525,6 +21535,7 @@ alekseivitch
 aleksey
 alekseyovna
 aleksi
+aleksican't
 aleksie
 aleksis
 aleksovich
@@ -22137,6 +22148,7 @@ alibis
 alible
 alic
 alica
+alican't
 alicant6
 alicante
 alicarnasso
@@ -27692,6 +27704,7 @@ anaristocrat
 anarkali
 anarkalis
 anarki
+anarkican't
 anarkis
 anarm
 anarmchair
@@ -28808,6 +28821,7 @@ andgoo
 andgood
 andgoodbye
 andgoodluck
+andgoodnight
 andgoose
 andgot
 andgoth
@@ -28941,6 +28955,7 @@ andiamsorry
 andian
 andiappeartobevaeme4
 andibegan
+andican't
 andicirc
 andicnowing
 andidrove
@@ -29822,7 +29837,6 @@ andshoving
 andshowered
 andshrugged
 andshushedher
-andshy
 andsick
 andsides
 andsigh
@@ -30281,6 +30295,8 @@ andwhispered
 andwhistled
 andwhite
 andwho
+andwhoa
+andwhoawhat
 andwhoever
 andwhoops
 andwhoosh
@@ -30343,6 +30359,7 @@ andymarlow
 andymather
 andyork
 andyou
+andyoucan't
 andyouknow
 andyoull
 andyoumightdiscoverthatit'sprettynice
@@ -31226,6 +31243,7 @@ anianna
 aniano
 anibal
 anica
+anican't
 anicbkov
 anice
 anicelittle
@@ -34065,6 +34083,7 @@ anymorecouldnt
 anymoregave
 anymorehe
 anymorei
+anymoreican't
 anymoreif
 anymoreincluding
 anymoreit
@@ -34772,7 +34791,6 @@ aoifefall
 aoifes
 aoikaert
 aok
-aokay
 aoki
 aokigahara
 aol
@@ -34797,7 +34815,6 @@ aonic
 aonly
 aons
 aoo
-aoofthere
 aoogah
 aoor'under
 aoout
@@ -35017,7 +35034,7 @@ apartmentpiled
 apartmentright
 apartmentsa
 apartmentsesther
-apartmentsi
+apartmentsican't
 apartmentso
 apartmentsomething
 apartmentsyou
@@ -35593,6 +35610,7 @@ apothically
 apothos
 apothynom
 apothynomi
+apothynomican't
 apotrope
 apound
 apoundin
@@ -37080,6 +37098,7 @@ aramea
 aramean
 arameans
 aramei
+arameican't
 aramine
 araminta
 aramis
@@ -38855,6 +38874,7 @@ aribeth
 aribiter
 aric
 arica
+arican't
 aricas
 aricept
 arich
@@ -39387,6 +39407,7 @@ armandos
 armands
 armangnac
 armani
+armanican't
 armanis
 armanna
 armans
@@ -42225,6 +42246,7 @@ asheas
 ashebent
 asheboro
 ashecameout
+ashecan't
 ashecliffe
 ashed
 ashedies
@@ -44609,6 +44631,7 @@ asway
 aswe
 asweater
 asweatshirt
+aswecan't
 asweet
 aswelcome
 aswell
@@ -44901,7 +44924,6 @@ atdelos
 atdoeswor
 atdunbar
 ate'nt
-ate.blogspot.com
 ate.it
 atea
 ateach
@@ -45131,7 +45153,6 @@ atherbetrothed
 atherblankly
 atherdisgruntled
 athere
-atheres
 atherfold
 atherheels
 atherhood
@@ -48414,6 +48435,7 @@ aviations
 aviatrix
 aviavivivi
 avibrant
+avican't
 avicci
 avice
 avicenna
@@ -49089,6 +49111,7 @@ aweary
 aweasel
 awebut
 awec
+awecan't
 awecome
 awed
 awedding
@@ -49121,7 +49144,7 @@ awesalicious
 aweshe
 aweshome
 aweso
-awesome.i
+awesome.ican't
 awesome.they
 awesomeand
 awesomeat
@@ -49234,7 +49257,7 @@ awhirr
 awhisper
 awhite
 awho
-awhoever
+awhoa
 awhole
 awholepickle
 awholeyear
@@ -49750,7 +49773,7 @@ ayez
 ayfe
 ayfell
 ayft
-aygod
+aygoddamnsweet
 ayi
 ayia
 ayida
@@ -49825,7 +49848,6 @@ ayou
 ayoub
 ayoung
 ayour
-ayoure
 ayourei
 ayouth
 ayph
@@ -56037,7 +56059,6 @@ barrthe
 barruel
 barruh
 barrum
-barry
 barry_fairbrother
 barryeven
 barryeveryone
@@ -58291,6 +58312,7 @@ beachwood
 beachy
 beachyeah
 beachyou
+beachyoucan't
 beachys
 beacknowledged
 beaconed
@@ -58463,7 +58485,7 @@ beaneven
 beanface
 beanfield
 beanfields
-beangood
+beangoodnight
 beangty
 beanhe
 beanher
@@ -59337,7 +59359,7 @@ becausei'm
 becausei'vebeen
 becauseidid
 becauseif
-becauseiloveyouandi
+becauseiloveyouandican'tdowithoutyou
 becauseim
 becausein
 becauseit
@@ -59550,7 +59572,6 @@ beckwith
 beckwiths
 beckwyn
 beckwyns
-becky
 beckyand
 beckyare
 beckyasked
@@ -64973,6 +64994,7 @@ bertoly
 bertome
 berton
 bertoni
+bertonican't
 bertorelli
 bertorie
 bertos
@@ -71731,7 +71753,7 @@ bloodfuck
 bloodght
 bloodghts
 bloodgo
-bloodgod
+bloodgoddamn
 bloodgoode
 bloodguilt
 bloodgunk
@@ -72264,7 +72286,7 @@ blowith
 blowjob
 blowjobby
 blowjobs
-blowjobwho
+blowjobwhoa
 blowjulia
 blowker
 blowlamp
@@ -75058,7 +75080,6 @@ bonnetyou
 bonneville
 bonney
 bonng
-bonnie
 bonnier
 bonnies
 bonniest
@@ -75459,6 +75480,7 @@ bookshops
 bookshow
 bookshundreds
 booksi
+booksican't
 booksign
 booksin
 booksit
@@ -80009,6 +80031,7 @@ breathe.then
 breathe.von
 breathe.water
 breathebut
+breathecan't
 breatheda
 breathedagainas
 breathedbarely
@@ -81817,6 +81840,7 @@ brittan
 brittani
 brittania
 brittanica
+brittanican't
 brittanycan't
 brittanys
 brittanysnorted
@@ -83093,7 +83117,7 @@ brownwall
 brownwe
 brownwere
 brownwetblack
-brownwho
+brownwhoa
 brownwyn
 browny
 brownyn
@@ -87227,6 +87251,7 @@ butgiven
 butgo
 butgod
 butgoda
+butgoddamn
 butgods
 butgood
 butgotta
@@ -87240,6 +87265,7 @@ buthadnt
 buthave
 buthe
 butheand
+buthecan't
 buthed
 buthedid
 butheknew
@@ -87909,6 +87935,7 @@ butyesi
 butyesterday
 butyl
 butyou
+butyoucan't
 butyoull
 butyour
 butyoure
@@ -89303,6 +89330,7 @@ cacharel
 cacharels
 cacharro
 cachas
+cachecan't
 cachee
 cachee.under
 cachemire
@@ -91692,6 +91720,7 @@ camhes
 camhollywood
 cami
 camiach
+camican't
 camiguin
 camil
 camiling
@@ -92046,6 +92075,7 @@ can't.believe
 can't.he
 can't.i
 can't.i'm
+can't.ican't
 can't.raven
 can't.she
 can't.you
@@ -92056,6 +92086,7 @@ can'tbelieve
 can'tbelive
 can'tblame
 can'tbreathe
+can'tbreathecan'tthinkcan'tcan'tca
 can'tbreathejake
 can'tcand
 can'tcare
@@ -92065,8 +92096,6 @@ can'tcount
 can'tdeny
 can'tdo
 can'tdoanything
-can'tdoitnoica
-can'tdowithoutyou
 can'tface
 can'tfind
 can'tfleecan'tfleecan'tflee
@@ -92074,23 +92103,20 @@ can'the
 can'thellip
 can'thelp
 can'ti
+can'tican't
 can'tif
 can'tjust
 can'tkarenkaren
-can'tkill
 can'tl
 can'tleave
 can'tlegally
 can'tmake
-can'tmarryyou
 can'tnot
 can'tor
-can'tpossiblechallenchallengeshargon
 can'truin
 can'trule
 can'ts
 can'tsee
-can'tseewhereyouaregoingandsuddenlyyouarethere
 can'tsmellanything
 can'tsquash
 can'tstand
@@ -92098,16 +92124,12 @@ can'tstopcan'tstopcan'tstop
 can'ttake
 can'ttakeany
 can'ttell
-can'ttellhershewon'tbelieveyou
 can'tthey
-can'tthink
-can'tthinkcan'tcan'tca
 can'tthreaten
 can'twe
 can'tweigh
 can'twhat
 can'tyou
-can'tyouca
 can'whistle
 can'ya
 can..um.do
@@ -97583,7 +97605,7 @@ cathys
 cathyshe
 cathythe
 cathythen
-cathywho
+cathywhoa
 cati
 catie
 caties
@@ -100063,7 +100085,7 @@ certain'they
 certain'tis
 certain.cleopatra
 certain.halliday
-certain.i
+certain.ican't
 certain.joel
 certain.she
 certain.some
@@ -102634,6 +102656,7 @@ charmian.we
 charmian.why
 charmian.yet
 charmian.you
+charmian.youcan't
 charmian.your
 charmichael
 charmichaels
@@ -104306,6 +104329,7 @@ chesse
 chessel
 chessgame
 chessi
+chessican't
 chessie
 chessies
 chessington
@@ -105590,7 +105614,7 @@ chimmy
 chimney
 chimneybreast
 chimneyed
-chimneygod
+chimneygoddamn
 chimneyhe
 chimneying
 chimneypiece
@@ -109945,7 +109969,6 @@ clarityevery
 claritygod
 claritys
 claritywith
-clark
 clarkand
 clarkbut
 clarkchances
@@ -110286,7 +110309,7 @@ claustrophobe
 claustrophobes
 claustrophobia
 claustrophobia.apparently
-claustrophobiaci
+claustrophobiacican't
 claustrophobias
 claustrophobically
 claustrophobicfrankly
@@ -116083,7 +116106,7 @@ cominciare
 coming.a
 coming.all
 coming.deny
-coming.i
+coming.ican't
 coming.it
 coming.seth
 coming.the
@@ -117814,7 +117837,7 @@ comradeships
 comradesi
 comradesnoble
 comradeswho
-comradewho
+comradewhoa
 comrado
 comrage
 comrations
@@ -124707,7 +124730,7 @@ couldn'ttell
 couldn'tthink
 couldn'twould
 couldn'twouldn'ttell
-couldn'tyou
+couldn'tyoucan't
 couldn1
 couldna
 couldnae
@@ -130409,7 +130432,7 @@ crx
 cry.carol
 cry.god
 cry.good
-cry.i
+cry.ican't
 cry.latianna
 cry.weve
 cry.what
@@ -135173,6 +135196,7 @@ dali
 dalia
 dalian
 dalibi
+dalican't
 dalidas
 dalieken
 daliesque
@@ -135328,7 +135352,6 @@ dalthak
 dalthimus
 daltim
 dalto
-dalton
 daltonism
 daltonists
 daltons
@@ -135526,7 +135549,6 @@ dammes
 dammi
 dammid
 damming
-dammit
 dammit.just
 dammitall
 dammitallanyway
@@ -135545,7 +135567,6 @@ dammon
 dammuso
 damn..cant
 damn.a
-damn.person
 damn.sam
 damn.tear
 damn.terry
@@ -135570,11 +135591,8 @@ damnationwhich
 damnatory
 damnatus
 damnayshun
-damnbeen
-damnbelievable
 damnbig
 damnbitch
-damncan't
 damnchornye
 damnd
 damndamn
@@ -135583,29 +135601,23 @@ damndamndamndamn
 damndarn
 damndashed
 damndest
-damndisaster
 damndrinkyou
 damne
 damned.still
 damnedand
 damnedat
 damnedbell
-damnedcabdriver
 damnedcan't
 damnedcountry
 damnedest
-damnedever
-damnedfool
 damnedfor
 damnedgood
 damnedgrew
 damnedi
 damnedjeopardised
-damnedlucky
 damnedly
 damnedplayer
 damneds
-damnedsafety
 damnedslowat
 damnedtired
 damnee
@@ -135613,7 +135625,6 @@ damnes
 damness
 damnest
 damnexcuse
-damneyes
 damnfly
 damnfool
 damnfrog
@@ -135627,25 +135638,18 @@ damnhmm
 damnhousekeeper
 damnhow
 damni
-damnill
 damnin
 damning
 damningly
 damnings
 damnit
-damnitall
 damnits
 damnity
 damnjaps
 damnkrauts
 damnl
 damnlittle
-damnmafiya
-damnmotherf
-damnmotherfu
 damnmotherfucking
-damnmotherfuckingpieceofshit
-damnmotherfuckingsonofabitch
 damnnit
 damnnn
 damnnnn
@@ -135658,12 +135662,8 @@ damnshe
 damnshieldlance
 damnshitbugger
 damnsmall
-damnsonofabitch
 damnsterling
-damnstreet
 damnsure
-damnsweet
-damntee
 damnthat
 damnthe
 damnthere
@@ -136240,6 +136240,7 @@ danians
 danibe
 danica
 danicamine
+danican't
 danicaplease
 danicapressed
 danicas
@@ -136912,7 +136913,6 @@ darishoward
 daritai
 daritais
 daritode
-darius
 dariusand
 dariuses
 dariusnot
@@ -138481,7 +138481,6 @@ dawncan't
 dawnchant
 dawncities
 dawne
-dawned
 dawnell
 dawnells
 dawnellthatll
@@ -139921,7 +139920,7 @@ dealres
 dealricky
 dealsat
 dealshe
-dealsi
+dealsican't
 dealsnot
 dealso
 dealsomehow
@@ -149860,6 +149859,7 @@ difficultbut
 difficultbutrewarding
 difficultfor
 difficulti
+difficultican't
 difficultiesalcohol
 difficultiesand
 difficultiesyes
@@ -150516,9 +150516,9 @@ dimitiri
 dimitiris
 dimitov
 dimitra
-dimitri
 dimitri'snot
 dimitriades
+dimitrican't
 dimitrie
 dimitriev
 dimitrio
@@ -154755,6 +154755,7 @@ do.placing
 do.sage
 do.sam
 do.she
+do.shecan't
 do.tell
 do.thank
 do.that
@@ -155902,7 +155903,7 @@ dogwatch
 dogwatches
 dogweed
 dogwhich
-dogwho
+dogwhoate.blogspot.com
 dogwise
 dogwolf
 dogwolfrun
@@ -156842,6 +156843,7 @@ don'thave
 don'thaveto
 don'thow
 don'ti
+don'tican't
 don'tjusti
 don'tkill
 don'tknow
@@ -160071,7 +160073,7 @@ dowster
 dowt
 dowti
 dowtry
-dowwho
+dowwhoaoofthere
 dowwwwn
 dox
 doxcha
@@ -161889,7 +161891,6 @@ dressedupin
 dressedweird
 dressel
 dressellian
-dresser
 dresser.my
 dressera
 dresseri
@@ -171258,6 +171259,7 @@ elcano
 elcanos
 elcer
 elchai
+elchaican't
 elchais
 elcho
 elci
@@ -171743,6 +171745,7 @@ elekaiiiii
 elekrigeni
 eleks
 elekti
+elektican't
 elektra
 elektracan't
 elektricitaet
@@ -172170,7 +172173,6 @@ eliim
 eliis
 eliisnt
 elija
-elijah
 elijaha
 elijahcan't
 elijahs
@@ -172581,7 +172583,6 @@ ellipticala
 ellipticals
 ellipticity
 ellirey
-ellis
 ellises
 ellison
 ellisoncan't
@@ -173323,6 +173324,7 @@ elvey
 elvi
 elvia
 elvias
+elvican't
 elvie
 elvii
 elvin
@@ -173956,7 +173958,6 @@ emerrita
 emers
 emersed
 emersion
-emerson
 emersonian
 emersons
 emeru
@@ -176465,7 +176466,7 @@ enough.a
 enough.agent
 enough.but
 enough.carol
-enough.good
+enough.goodnight
 enough.had
 enough.he
 enough.his
@@ -182454,7 +182455,7 @@ everwood
 everworms
 everwritten
 every.f
-every.single.god
+every.single.goddamn.person
 every.single.head
 every.single.moment
 every1
@@ -187544,6 +187545,7 @@ facewithout
 facewould
 faceyelled
 faceyou
+faceyoucan't
 faceyoull
 fach
 fachan
@@ -188232,7 +188234,7 @@ faints
 faintsmile
 fainttaking
 fair'n
-fair.ifyou
+fair.ifyoucan't
 fair.look
 fair.they
 fair4
@@ -191006,6 +191008,7 @@ fatherhimself
 fatherhis
 fatherhoods
 fatheri
+fatherican't
 fatheridiot
 fatherif
 fatherim
@@ -191678,9 +191681,9 @@ fbe
 fbeen
 fbere
 fbetter
-fbi
 fbi.but
 fbian
+fbican't
 fbiess
 fbiesses
 fbifruitdicks
@@ -196948,7 +196951,6 @@ fingernail
 fingernailand
 fingernailed
 fingernailless
-fingernails
 fingernailsand
 fingernailsdesperate
 fingernailseven
@@ -197848,7 +197850,6 @@ firesoften
 firesome
 firesomething
 firespawn
-firespell
 firespelled
 firespitter
 firespot
@@ -200016,6 +200017,7 @@ flemishci
 flemishell
 flemmerton
 flemmi
+flemmican't
 flemming
 flemmings
 flemmington
@@ -204372,6 +204374,7 @@ forgivness
 forgivo
 forgivonoss
 forgod
+forgoddamnedever
 forgodsakes
 forgoes
 forgoil
@@ -205012,6 +205015,7 @@ forslighting
 forslurp
 forsman
 forsmythe
+forsmythecan't
 forso
 forsocial
 forsoft
@@ -205464,6 +205468,7 @@ forwhether
 forwhich
 forwhiskey
 forwho
+forwhoa
 forwhom
 forwhy
 forwickedat
@@ -208536,6 +208541,7 @@ friendy
 friendyeah
 friendyears
 friendyou
+friendyoucan't
 friendyour
 friendz
 friendzilla
@@ -210381,7 +210387,7 @@ fuckworthy
 fucky
 fuckybrook
 fuckyou
-fuckyouyou
+fuckyouyoucan'tdoanything
 fucner
 fucners
 fuco
@@ -215088,7 +215094,6 @@ garreth
 garrets
 garretson
 garretsoon
-garrett
 garrettand
 garrettcan't
 garrette
@@ -218912,7 +218917,7 @@ getoutgetoutget
 getoutgetoutgetout
 getoutnow
 getoutof
-getouttathegod
+getouttathegoddamnstreet
 getreacquainted
 getrek
 getrennte
@@ -219927,7 +219932,7 @@ gideva
 gidge
 gidget
 gidgetbranedotyak
-gidgeti
+gidgetican't
 gidgetit
 gidgetm1
 gidgets
@@ -223584,7 +223589,7 @@ go.this
 go.well
 go.when
 go.ya
-go.you
+go.youcan't
 go1
 go1od
 go20
@@ -223987,6 +223992,24 @@ goddammed
 goddammit
 goddammittohell
 goddammnnitt
+goddamnbeen
+goddamncan't
+goddamndest
+goddamndisaster
+goddamned
+goddamnedcabdriver
+goddamnedest
+goddamnedfool
+goddamnedlucky
+goddamnedsafety
+goddamnest
+goddamnill
+goddamnit
+goddamnitall
+goddamnmafiya
+goddamnmotherf
+goddamnmotherfuckingpieceofshit
+goddamnsonofabitch
 goddamsonofabitchmother
 goddang
 goddanged
@@ -224617,6 +224640,7 @@ gohr
 gohu
 gohuwow
 goi
+goican't
 goicochea
 goicoechea
 goidelic
@@ -225898,6 +225922,10 @@ goodnesswe
 goodnesswhat
 goodnews
 goodnice
+goodnighta
+goodnightgabriel
+goodnightnight
+goodnights
 goodno
 goodnoss
 goodnot
@@ -227386,7 +227414,7 @@ gowhen
 gowhere
 gowhich
 gowhile
-gowho
+gowhoa
 gowhose
 gowith
 gowith.dirk
@@ -230615,7 +230643,6 @@ griffes
 griffey
 griffeys
 grifffin
-griffin
 griffin.how
 griffincan't
 griffineus
@@ -230664,6 +230691,7 @@ grigon
 grigor
 grigorevna
 grigori
+grigorican't
 grigorie
 grigoriev
 grigorievs
@@ -232882,7 +232910,7 @@ guara
 guaran
 guarana
 guarandamntee
-guarangod
+guarangoddamntee
 guarani
 guarant
 guaranteecan't
@@ -238177,7 +238205,6 @@ haleu
 halevi
 halevy
 halex
-haley
 haley.f.p
 haley.ms
 haleyand
@@ -240376,7 +240403,6 @@ haniyeh
 hanje
 hanjour
 hanjour.html
-hank
 hank'l
 hank.hank
 hanka
@@ -242558,6 +242584,7 @@ hasani.but
 hasani.he
 hasani.his
 hasani.i
+hasani.ican't
 hasani.no
 hasani.open
 hasani.or
@@ -244712,6 +244739,7 @@ heada
 headabout
 headacheand
 headachebut
+headachecan't
 headachecit
 headachei
 headacheits
@@ -244763,7 +244791,6 @@ headbefore
 headbig
 headbitter
 headblood
-headboard
 headboards
 headbolt
 headbone
@@ -246402,7 +246429,6 @@ hectate
 hecter
 hectic
 hectically
-hector
 hector..might
 hectorcan't
 hectored
@@ -248484,6 +248510,7 @@ hemford
 hemhem
 hemi
 hemic
+hemican't
 hemicircle
 hemight
 hemighthave
@@ -248877,6 +248904,7 @@ henrew
 henriatta
 henribelieve
 henric
+henrican't
 henrich
 henrici
 henrician
@@ -251339,6 +251367,7 @@ herself.they
 herself.thinking
 herself.what
 herself.you
+herself.youcan't
 herselfa
 herselfagain
 herselfagainst
@@ -254519,6 +254548,7 @@ himhunting
 himhurts
 himi
 himi'm
+himican't
 himid
 himif
 himify
@@ -255128,6 +255158,7 @@ himyes
 himyesterday
 himyet
 himyou
+himyoucan't
 himyoull
 himyoung
 himyour
@@ -262015,6 +262046,7 @@ hourshes
 hourshopefully
 hourshow
 hoursi
+hoursican't
 hoursif
 hoursim
 hoursin
@@ -265919,6 +265951,7 @@ hwhen
 hwhere
 hwhich
 hwho
+hwhoa
 hwhole
 hwholly
 hwhoo
@@ -267100,6 +267133,7 @@ i..i..dont
 i..i..i
 i..i..it
 i..i.dont
+i..ican't
 i..if
 i..im
 i..made
@@ -267770,6 +267804,8 @@ icam
 icame
 icameout
 ican
+ican'tmarryyou
+ican'tthink
 icancook
 icando
 icandothis
@@ -267874,6 +267910,7 @@ icehey
 icehouse
 icehouses
 icei
+iceican't
 iceit
 iceland.but
 icelandair
@@ -268291,6 +268328,7 @@ ideahis
 ideahow
 ideai
 ideai'm
+ideaican't
 ideaid
 ideaif
 ideait
@@ -269671,6 +269709,7 @@ iibalashe
 iiberschwemmt
 iibs
 iic
+iican't
 iicant
 iicare
 iicial
@@ -272619,6 +272658,7 @@ imwhat
 imwhatwhat
 imwhere
 imwho
+imwhoa
 imwith
 imwriting
 imy
@@ -278632,7 +278672,6 @@ interrogatee
 interrogates
 interrogateur
 interrogatin
-interrogating
 interrogatingthanks
 interrogation.ill
 interrogation.it
@@ -283835,6 +283874,7 @@ ithyls
 iti
 iti'm
 itias
+itican't
 itid
 ities
 ities.industrial
@@ -284786,6 +284826,7 @@ itwhether
 itwhich
 itwhile
 itwho
+itwhoa
 itwhole
 itwhos
 itwhy
@@ -285238,6 +285279,7 @@ iwhich
 iwhile
 iwhispered
 iwho
+iwhoa
 iwhoop
 iwhy
 iwi
@@ -285945,7 +285987,7 @@ jackhes
 jackhole
 jackholes
 jacki
-jackie
+jackican't
 jackiea
 jackieand
 jackiecan't
@@ -287920,7 +287962,6 @@ javian
 javid
 javids
 javie
-javier
 javierall
 javiercan't
 javierita
@@ -288038,7 +288079,6 @@ jaxhe
 jaxi
 jaxing
 jaxof
-jaxon
 jaxons
 jaxs
 jaxson
@@ -289707,7 +289747,7 @@ jesusall
 jesusand
 jesuscant
 jesuschrist
-jesuschristgod
+jesuschristgoddamnmotherfu
 jesusdecided
 jesusdivine
 jesuses
@@ -290688,7 +290728,6 @@ jitterbugs
 jitterier
 jitteriness
 jitteringly
-jitters
 jittersome
 jittory
 jittry
@@ -291911,7 +291950,6 @@ jondriss
 jondyn
 joneki
 jonelle
-jones
 jones'y
 jonesand
 jonesboro
@@ -292750,7 +292788,6 @@ joyaux
 joybell
 joyboxes
 joycame
-joyce
 joyce'sbecause
 joycea
 joycean
@@ -293083,8 +293120,7 @@ juddery
 juddie
 juddro
 judds
-juddyou
-jude
+juddyoucan't
 jude's
 judea
 judean
@@ -293489,7 +293525,6 @@ juliancoleman
 julianhes
 julianmcoleman
 juliann
-julianna
 juliannas
 julianne
 juliannes
@@ -298144,7 +298179,6 @@ katusha
 katushiro
 katushiros
 katwijk
-katy
 katya
 katyas
 katycan't
@@ -299059,14 +299093,12 @@ keinkleinschmerz
 keio
 keipi
 keir
-keira
 keiran
 keirans
 keiras
 keiretsu
 keirkat
 keirran
-keirry
 keirsey
 keirsten
 keiryon
@@ -300652,6 +300684,7 @@ kgbt
 kgbvyborg
 kgfl
 kgi
+kgican't
 kgms
 kgn
 kgo
@@ -304262,7 +304295,7 @@ klesh
 klesia
 klesian
 klesianeese
-klesiani
+klesianican't
 klesians
 klesiathere
 klesmer
@@ -305593,6 +305626,7 @@ knowhoward
 knowhurt
 knowi
 knowi'm
+knowican't
 knowid
 knowif
 knowijust
@@ -306079,6 +306113,7 @@ knowyes
 knowyet
 knowyou
 knowyouarethereknowyouarethere
+knowyoucan't
 knowyoull
 knowyounger
 knowyour
@@ -309852,7 +309887,7 @@ kyli
 kylian
 kylieee
 kylies
-kyliewho
+kyliewhoa
 kylis
 kylix
 kyllian
@@ -311772,6 +311807,7 @@ lakchera
 lake'the
 lake.garion
 lake.you
+lake.youcan't
 lakea
 lakealong
 lakealso
@@ -317792,7 +317828,7 @@ leftyou
 leftyour
 leftys
 lefu
-leg.god
+leg.goddamn
 leg.he
 leg.it
 lega
@@ -320070,6 +320106,7 @@ leviathanson
 leviathians
 leviatus
 leviatuss
+levican't
 levick
 leviczi
 levidressed
@@ -320264,6 +320301,7 @@ lexianna
 lexible
 lexica
 lexicalization
+lexican't
 lexicographer
 lexicographers
 lexid
@@ -321234,7 +321272,6 @@ lieuc
 lieumaria
 lieut
 lieutenancy
-lieutenant
 lieutenantcaptaintorrin
 lieutenantcommander
 lieutenantfirst
@@ -323712,7 +323749,6 @@ lingerie
 lingeried
 lingerieletting
 lingerin
-lingering
 lingeringly
 lingerings
 lingeroccupied
@@ -324564,7 +324600,6 @@ lisps
 lispus
 lispy
 liss
-lissa
 lissa.please
 lissaalone
 lissabut
@@ -325046,7 +325081,6 @@ litterbin
 litterbox
 litterbug
 litterbugs
-littered
 litterer
 litterers
 litterin
@@ -335117,7 +335151,6 @@ madalong
 madalyn
 madama
 madamcan't
-madame
 madameand
 madamecan't
 madameendelle.com
@@ -335190,7 +335223,6 @@ maddern
 madderna
 maddest
 maddi
-maddie
 maddieand
 maddiebut
 maddiecan't
@@ -335223,7 +335255,6 @@ maddoxs
 maddrey
 maddux
 maddwarf
-maddy
 maddyand
 maddybe
 maddycan't
@@ -338800,7 +338831,7 @@ mamadada
 mamadaddy
 mamadou
 mamaged
-mamagood
+mamagoodnight
 mamahe
 mamahi
 mamai
@@ -341498,7 +341529,6 @@ marcius
 marcizzi
 marck
 marckenface
-marco
 marcob
 marcodickason
 marcodo
@@ -341850,6 +341880,7 @@ maribeth
 maribs
 maric
 marica
+marican't
 maricaoutside
 maricarmen
 maricathats
@@ -342107,7 +342138,6 @@ marisol
 marisols
 marisova
 mariss
-marissa
 marissa.farrar.author
 marissabelle
 marissabut
@@ -342459,7 +342489,6 @@ marleena
 marlees
 marlelytone
 marlen
-marlena
 marlenas
 marlene
 marleneare
@@ -342926,6 +342955,7 @@ marsail
 marsaille
 marsala
 marsali
+marsalican't
 marsalis
 marsallis
 marsan
@@ -343286,7 +343316,6 @@ martus
 martville
 martvr
 martvy
-marty
 martybeth
 martycan't
 martydonnellan.com
@@ -344629,7 +344658,6 @@ mathews
 mathewson
 mathhias
 mathi
-mathias
 mathiasand
 mathiascan't
 mathiascould
@@ -347752,6 +347780,7 @@ me.his
 me.how
 me.i
 me.i'm
+me.ican't
 me.if
 me.iie
 me.im
@@ -347971,6 +348000,7 @@ mealey
 mealeys
 mealhe
 meali
+mealican't
 mealie
 mealin
 mealit
@@ -349928,6 +349958,7 @@ megns
 mego
 megobari
 megod
+megoddamn
 megola
 megood
 megoodbye
@@ -350076,6 +350107,7 @@ mei
 mei'm
 meic
 meical
+meican't
 meichesters
 meicklejohn
 meid
@@ -352761,6 +352793,7 @@ merrett
 merri
 merriam
 merrian
+merrican't
 merrick
 merrickcan't
 merricks
@@ -354364,6 +354397,7 @@ meynell
 meyners
 meyon
 meyou
+meyoucan't
 meyoull
 meyour
 meyoure
@@ -354946,6 +354980,7 @@ mickeys
 mickeystar
 mickeythat
 micki
+mickican't
 mickiewicz
 mickiewicza
 mickjaggersang
@@ -357225,6 +357260,7 @@ mimesis
 mimetic
 mimi
 mimi'swee
+mimican't
 mimicing
 mimick
 mimickandshy
@@ -360484,6 +360520,7 @@ mithuth
 mithy
 miti
 mitica
+mitican't
 mitigatable
 mitilene
 mititsiya
@@ -362073,6 +362110,7 @@ moise
 moises
 moiseyev
 moishe
+moishecan't
 moisi
 moisissures
 moiss
@@ -362227,6 +362265,7 @@ moldavi
 moldavia
 moldavian
 moldavians
+moldavican't
 moldavie
 moldavis
 moldavite
@@ -366081,6 +366120,7 @@ morningfor
 morningfour
 morninggage
 morninggood
+morninggoodnight
 morninggrave
 morningguy
 morninghad
@@ -366211,6 +366251,7 @@ morofsky
 morofskys
 moroggo
 moroi
+moroican't
 morolto
 moroltos
 morom
@@ -367849,6 +367890,7 @@ mountainsstalingrad
 mountainstoo
 mountainsupstateaway
 mountainswe
+mountainswecan't
 mountainswed
 mountainswhich
 mountainswith
@@ -371251,7 +371293,6 @@ murderedof
 murderedshe
 murderedsomething
 murderee
-murderer
 murderer.cox
 murderera
 murdererand
@@ -371538,7 +371579,7 @@ murphyaka
 murphybut
 murphycan't
 murphyd
-murphyi
+murphyican't
 murphyit
 murphyjust
 murphyonic
@@ -371788,7 +371829,7 @@ musette
 musetti
 musetto
 museu
-museum.you
+museum.youcan't
 museum6
 museuma
 museumbig
@@ -372898,6 +372939,7 @@ mygirlfriend
 mygle
 mygles
 mygod
+mygoddamned
 mygodwin
 mygoodness
 mygosh
@@ -373284,6 +373326,7 @@ myself.hes
 myself.hijacked
 myself.how
 myself.i
+myself.ican't
 myself.im
 myself.it
 myself.its
@@ -373711,6 +373754,7 @@ mywelling
 mywhat
 mywhatever
 mywho
+mywhoa
 mywholebig
 mywife
 mywildest
@@ -374329,7 +374373,6 @@ nadgers
 nadh
 nadhswaram
 nadi
-nadia
 nadiabeing
 nadiacan't
 nadiall
@@ -375842,6 +375885,7 @@ naolen
 naoma
 naome
 naomes
+naomican't
 naomimost
 naomis
 naomit
@@ -378621,7 +378665,7 @@ needlesshort
 needlessly.i
 needlesslyfor
 needlesthough
-needlesthroughyourbloodgod
+needlesthroughyourbloodgoddamneyes
 needleswas
 needlethat
 needlethe
@@ -379917,7 +379961,7 @@ nervous.ahmose
 nervous.especially
 nervous.felix
 nervous.he
-nervous.i
+nervous.ican't
 nervous.it
 nervous.kicking
 nervous.mother
@@ -382620,7 +382664,6 @@ nightfriday
 nightfrom
 nightfull
 nightfury
-nightgabriel
 nightgame
 nightgang
 nightgarters
@@ -382672,7 +382715,6 @@ nightingales
 nightingall
 nightingull
 nightinstead
-nightis
 nightit
 nightits
 nightiy
@@ -382763,7 +382805,6 @@ nightmultiple
 nightmuted
 nightmy
 nightneedle
-nightnight
 nightno
 nightnobody
 nightnone
@@ -383104,7 +383145,7 @@ nikiwe
 nikke
 nikkei
 nikkeitech
-nikki
+nikkican't
 nikkie
 nikkies
 nikkii
@@ -383339,7 +383380,6 @@ nimus
 nimwen
 nimwit
 nin
-nina
 ninacady
 ninacan't
 ninaine
@@ -384563,6 +384603,7 @@ nocromancors
 nocropolis
 nocs
 noctali
+noctalican't
 noctalis
 noctambules
 noctambulism
@@ -385959,6 +386000,7 @@ nonofficial
 nonofficials
 nonohe
 nonoi
+nonoican'tdoitnoica
 nonoits
 nonone
 nonono
@@ -387584,6 +387626,7 @@ not.dead
 not.going.to.happen
 not.he
 not.i
+not.ican't
 not.in
 not.is
 not.it
@@ -388833,7 +388876,7 @@ novee
 noveee
 noveen
 novel.he
-novel.i
+novel.ican't
 novel.that
 novela
 noveland
@@ -389293,7 +389336,7 @@ nowhey
 nowhim
 nowhis
 nowhitler
-nowho
+nowhoarse
 nowhold
 nowhope
 nowhopefully
@@ -389615,6 +389658,7 @@ nowyears
 nowyes
 nowyou
 nowyou'vedoneit
+nowyoucan't
 nowyoull
 nowyour
 nowyoure
@@ -390813,7 +390857,7 @@ nutsone
 nutsos
 nutsthe
 nutsville
-nutswho
+nutswhoa
 nutswood
 nutsy
 nutsyour
@@ -392097,6 +392141,7 @@ obi
 obiah
 obiahs
 obialo
+obican't
 obichaud
 obid
 obidais
@@ -393146,7 +393191,6 @@ oclipso
 oclipsoi
 oclipsos
 ocloak
-oclock
 oclock.amy
 oclock.this
 oclocka
@@ -393308,7 +393352,7 @@ octopoid
 octopoids
 octoprocessor
 octopus.on
-octopusi
+octopusican't
 octopuslike
 octopuss
 octopussies
@@ -395036,7 +395080,7 @@ ofgivingtheman
 ofglass
 ofgo
 ofgoats
-ofgod
+ofgoddamned
 ofgoing
 ofgolden
 ofgood
@@ -395140,6 +395184,7 @@ ofhunter
 ofhurried
 ofhydrogen
 ofi
+ofican't
 oficer
 oficial
 oficiales
@@ -396618,6 +396663,7 @@ oi'm
 oia
 oiale
 oic
+oican't
 oices
 oiche
 oichhorst
@@ -399148,6 +399194,7 @@ onegingerbread
 onegives
 onegoal
 onegod
+onegoddamned
 onegonna
 onegood
 onegregor
@@ -405545,7 +405592,7 @@ oursexcept
 oursh
 ourshas
 ourshe
-oursi
+oursican't
 oursis
 oursits
 oursmall
@@ -406635,7 +406682,6 @@ outswim
 outswing
 outsystem
 outt
-outta
 outtables
 outtafit
 outtages
@@ -408098,6 +408144,7 @@ overwe
 overweaning
 overwearied
 overweave
+overwecan't
 overweening
 overweigh
 overweighed
@@ -409697,7 +409744,6 @@ paceomar
 pacepartly
 pacer
 pacers
-paces
 pacesetter
 pacesi
 pacesuited
@@ -410394,6 +410440,7 @@ pagkakasundo
 pagkatapos
 paglia
 pagliacci
+pagliaccican't
 pagliaccio
 pagliericcio
 paglione
@@ -412285,7 +412332,6 @@ pantiled
 pantiles
 pantiless
 pantin
-panting
 pantinggrew
 pantinghe
 pantingheavily
@@ -412504,6 +412550,7 @@ papaone
 papapa
 papapot
 paparazza
+paparazzican't
 paparazzing
 paparazzis
 paparazzo
@@ -414001,6 +414048,7 @@ parseval
 parsha
 parshalls
 parshendi
+parshendican't
 parshman
 parshmen
 parsi
@@ -416224,7 +416272,7 @@ pausedtolean
 pausedtolook
 pausedunsatisfiedand
 pausedwhen
-pausedwho
+pausedwhoa
 pausedyou
 pausegold
 pausehow
@@ -420332,7 +420380,6 @@ perrugia
 perruke
 perrukes
 perruque
-perry
 perry_says_texa.html
 perrycan't
 perryin
@@ -422717,7 +422764,7 @@ phoebe
 phoebematthews.com
 phoebephoebe
 phoebes
-phoebewho
+phoebewhoa
 phoebs
 phoebus
 phoedra
@@ -424057,6 +424104,7 @@ piecediamonds
 pieceful
 piecehe
 piecei
+pieceican't
 pieceit
 piecemaker
 piecemeal
@@ -427983,6 +428031,7 @@ please.5
 please.bruce
 please.dont
 please.i
+please.ican't
 please.just
 please.let
 please.no
@@ -429875,6 +429924,7 @@ pointya
 pointyes
 pointyhat
 pointyou
+pointyoucan't
 poiple
 poipu
 poire
@@ -431454,6 +431504,7 @@ poorhe
 poorhouse
 poorhouses
 poori
+poorican't
 pooring
 poorish
 poorlydressed
@@ -432796,7 +432847,7 @@ possible.theyre
 possible.this
 possible.triena
 possible.when
-possible.you
+possible.youcan't
 possible_
 possible_and
 possibleall
@@ -435918,7 +435969,7 @@ preparanoid
 preparationall
 preparationfirst
 preparationhad
-preparationi
+preparationican't
 preparationof
 preparationpreparing
 preparationpropitiousno
@@ -438018,6 +438069,7 @@ prizrak
 prizren
 prizvan
 prizzi
+prizzican't
 prizzle
 prizzzze
 prk
@@ -440578,7 +440630,7 @@ proverichniy
 provessionally
 provethat
 proveto
-provewho
+provewhoa
 provi
 providea
 provided.the
@@ -445668,6 +445720,7 @@ questionshe
 questionshed
 questionshow
 questionsi
+questionsican't
 questionsif
 questionsim
 questionsince
@@ -446353,7 +446406,6 @@ quinley
 quinlin
 quinlinor
 quinlins
-quinn
 quinnaleeni
 quinnan
 quinnand
@@ -447383,6 +447435,7 @@ rachanas
 rachd
 rache
 racheal
+rachecan't
 rachek
 racheks
 rachel.essex
@@ -448355,7 +448408,6 @@ railhe
 railhead
 railheads
 railin
-railing
 railingand
 railingas
 railingblack
@@ -453774,7 +453826,6 @@ recomposing
 recomposition
 recompress
 recompressed
-recon
 reconaire
 reconaissance
 reconcealing
@@ -453820,7 +453871,6 @@ reconnais
 reconnaisance
 reconnaissais
 reconnaissait
-reconnaissance
 reconnaissances
 reconnaissancesearching
 reconnaissants
@@ -456309,7 +456359,6 @@ reinterpretations
 reinterred
 reinterrupted
 reinterview
-reinterviewed
 reinterviewing
 reintroduce
 reintroduces
@@ -461766,7 +461815,7 @@ rewhetted
 rewhisk
 rewi
 rewilding
-rewind.i
+rewind.ican't
 rewinded
 rewinding
 rewinds
@@ -466003,7 +466052,7 @@ roadworthy
 roady
 roadyi
 roadying
-roadyou
+roadyoucan't
 roadyour
 roaffirmed
 roaffirmod
@@ -469403,7 +469452,6 @@ rosidonts
 rosidos
 rosidual
 rosiduo
-rosie
 rosiecan't
 rosied
 rosiell
@@ -471157,6 +471205,7 @@ rubianne
 rubic
 rubicam
 rubican
+rubican't
 rubick
 rubiconpoint
 rubicund
@@ -471715,7 +471764,7 @@ rulestalk
 rulesthe
 ruleswe
 ruleswhich
-ruleswho
+ruleswhoa
 ruleswouldnt
 ruleth
 rulethat
@@ -475355,6 +475404,7 @@ saidwarily
 saidwarrior
 saidwas
 saidwe
+saidwecan't
 saidwelcome
 saidwell
 saidwere
@@ -476443,7 +476493,6 @@ salvationto
 salvationyou
 salvationyour
 salvator
-salvatore
 salvatores
 salvatorethe
 salvatori
@@ -479511,7 +479560,6 @@ savanah
 savanas
 savand
 savanna
-savannah
 savannah.i
 savannahcan't
 savannahdamn
@@ -480101,6 +480149,7 @@ sayhow
 sayhowd
 sayi
 sayi'm
+sayican't
 sayihave
 sayim
 sayin
@@ -480271,6 +480320,7 @@ says.but
 says.he
 says.i
 says.i'm
+says.ican't
 says.there
 says.when
 says.which
@@ -486443,6 +486493,7 @@ seehmm
 seehoreseton
 seehow
 seei
+seeican't
 seeid
 seeif
 seeifall
@@ -487436,7 +487487,6 @@ selekai
 selekais
 selememont
 selen
-selena
 selenah
 selenahs
 selenamaybe
@@ -491391,7 +491441,7 @@ shadesmar
 shadesomething
 shadesscarlet
 shadesun
-shadeswhywhy
+shadeswhywhycan't
 shadethree
 shadewalker
 shadforth
@@ -498686,7 +498736,6 @@ shuday
 shudda
 shuddanda
 shuddenly
-shudder
 shudderc'magic
 shudderec
 shuddered.cheater
@@ -499820,6 +499869,7 @@ sidhe
 sidheag
 sidheaine
 sidheanach
+sidhecan't
 sidhes
 sidhesh
 sidi
@@ -501357,6 +501407,7 @@ simianism
 simians
 simiar
 simic
+simican't
 simien
 simiescos
 simiindelicately
@@ -501812,6 +501863,7 @@ sincehehad
 sincehisfirst
 sincehow
 sincei
+sinceican't
 sinceii
 sinceim
 sincein
@@ -504633,6 +504685,7 @@ skotchos
 skote
 skotes
 skoti
+skotican't
 skotja
 skotography
 skotos
@@ -505806,6 +505859,7 @@ sleephere
 sleephuman
 sleepi
 sleepi'm
+sleepican't
 sleepier
 sleepies
 sleepiest
@@ -511036,7 +511090,7 @@ sognefjorden
 sogni
 sogno
 sognovoce
-sogod
+sogoddamned
 sogodspeed
 sogoing
 sogood
@@ -513309,7 +513363,7 @@ songfacts.com
 songfest
 songfests
 songflew
-songgood
+songgoodnightis
 songhelm
 songhigh
 songhis
@@ -520355,7 +520409,6 @@ squinnied
 squinning
 squinny
 squintarium
-squinted
 squinted366
 squinteda
 squintedatthebushes
@@ -522974,6 +523027,7 @@ startedwith
 startedworkin
 startedwriting
 startedyou
+startedyoucan't
 starteled
 starteresa
 starterhe
@@ -524334,7 +524388,6 @@ stelian
 stelians
 stelios
 stell
-stella
 stellacan't
 stellae
 stellan
@@ -524926,7 +524979,7 @@ stevanage
 stevanovic
 stevanovics
 stevastianos
-steve.he
+steve.hecan't
 steve.she
 steve.you
 stevea
@@ -526736,7 +526789,7 @@ stop.please
 stop.pride
 stop.stop
 stop.wait
-stop.you
+stop.youcan't
 stop9
 stopa
 stopall
@@ -528789,6 +528842,7 @@ strigiled
 strigoi
 strigoia
 strigoibut
+strigoican't
 strigoil
 strigoiul
 strigoiweak
@@ -529880,7 +529934,7 @@ stuffweapons
 stuffwhat
 stuffwhatever
 stuffwhen
-stuffwho
+stuffwhoa
 stuffwith
 stuffyou
 stuffypants
@@ -531398,6 +531452,7 @@ succubae
 succubai
 succubi
 succubiarent
+succubican't
 succubiuh
 succubus
 succubus.2
@@ -534079,7 +534134,6 @@ supernaturalistic
 supernaturalists
 supernaturally
 supernaturaloften
-supernaturals
 supernaturalscan't
 supernaturalso
 supernaturalthe
@@ -535782,6 +535836,7 @@ suse
 susebron
 suser
 sushed
+sushican't
 sushil
 sushma
 sushmita
@@ -543605,6 +543660,7 @@ tavhremuil
 tavi
 tavia
 tavian
+tavican't
 tavin
 tavinar
 tavinars
@@ -547482,6 +547538,7 @@ terriblyrelievedwhen
 terriblywrong
 terriby
 terric
+terrican't
 terrics
 terrie
 terried
@@ -549502,6 +549559,7 @@ thati
 thati'm
 thatiam
 thatican
+thatican't
 thaticouldn'trefrain
 thatid
 thatidea
@@ -550829,6 +550887,7 @@ thecamel
 thecamera
 thecamps
 thecan
+thecan't
 thecandle
 thecandlejust
 thecannibalistic
@@ -551959,7 +552018,7 @@ theirfriendship
 theirfront
 theirgames
 theirgoals
-theirgod
+theirgoddamned
 theirgoods
 theirgun
 theirguns
@@ -552388,7 +552447,7 @@ them.fortunately
 them.garion
 them.gema
 them.glancing
-them.good
+them.goodnight
 them.he
 them.hed
 them.how
@@ -553145,6 +553204,7 @@ themwanted
 themwas
 themwawasens
 themwe
+themwecan't
 themwell
 themwendell
 themwere
@@ -553396,6 +553456,7 @@ thengo
 thengofetch
 thengood
 thengoodbye
+thengoodnight
 thengot
 thengrabbed
 thengradually
@@ -554803,7 +554864,6 @@ thererigid
 thererotting
 thererubbing
 theres.theres
-theresa
 theresadeadbodyheadonmylap
 theresalt
 theresame
@@ -555133,6 +555193,7 @@ theroleof
 theroman
 theron
 theronai
+theronaican't
 therone
 theroof
 theroom
@@ -556222,7 +556283,6 @@ theyca
 theycalled
 theycame
 theycan
-theycan't
 theycannot
 theycatch
 theychange
@@ -557530,6 +557590,7 @@ thinkinghing
 thinkinghow
 thinkingi
 thinkingi'm
+thinkingican't
 thinkingif
 thinkingill
 thinkingim
@@ -558172,6 +558233,7 @@ thisglaciers
 thisglory
 thisgo
 thisgod
+thisgoddamned
 thisgoing
 thisgolden
 thisgoodbye
@@ -558213,6 +558275,7 @@ thishun
 thishuntat
 thishurt
 thisi
+thisican't
 thisid
 thisif
 thisill
@@ -558556,6 +558619,7 @@ thiswhen
 thiswhere
 thiswhich
 thiswho
+thiswhoa
 thiswhoever
 thiswhole
 thiswhy
@@ -559309,6 +559373,7 @@ though.gilla
 though.he
 though.hewanted
 though.i
+though.ican't
 though.my
 though.we
 thougha
@@ -559508,6 +559573,7 @@ thought.two
 thought.unless
 thought.up
 thought.we
+thought.wecan't
 thought.when
 thought.why
 thought.with
@@ -566951,6 +567017,7 @@ tomholly
 tomi
 tomic
 tomica
+tomican't
 tomichigan
 tomid
 tomight
@@ -567084,6 +567151,7 @@ tomorrowfrom
 tomorrowgive
 tomorrowhow
 tomorrowi
+tomorrowican't
 tomorrowif
 tomorrowill
 tomorrowim
@@ -567848,7 +567916,7 @@ toofrightened
 toofrom
 toogenerously
 toogo
-toogod
+toogoddamn
 toogoing
 toogood
 toogreat
@@ -568877,6 +568945,7 @@ tori
 tori.wav
 toribio
 toric
+torican't
 toride
 torie
 toriei
@@ -572685,7 +572754,6 @@ travil
 travin
 travinang
 travinseloh
-travis
 travisbleeding
 traviscan't
 travisina
@@ -582348,7 +582416,7 @@ umget
 umgey
 umgirlfriend
 umgive
-umgood
+umgoodnight
 umh
 umhadnt
 umhang
@@ -582732,7 +582800,7 @@ unacan't
 unaccented
 unaccept
 unacceptability
-unacceptable.we
+unacceptable.wecan't
 unacceptable.you
 unacceptableall
 unacceptance
@@ -586162,7 +586230,7 @@ unglued
 unglues
 ungluing
 ungmas
-ungod
+ungoddamnbelievable
 ungodliest
 ungodlike
 ungodliness
@@ -590280,7 +590348,7 @@ upgiving
 upgloria
 upglumly
 upgo
-upgood
+upgoodnight
 upgot
 upgradeshe
 upgradin
@@ -590335,6 +590403,7 @@ uphoping
 uphopped
 uphorrous
 upi
+upican't
 upif
 upill
 upim
@@ -596179,7 +596248,6 @@ velva
 velveeta
 velveeto
 velvelevich
-velvet
 velveta
 velvetcommanding
 velvetcovered
@@ -601047,6 +601115,7 @@ voicehes
 voicehis
 voicei
 voicei'm
+voiceican't
 voiceident
 voiceillegal
 voicein
@@ -605957,6 +606026,7 @@ warningchristian
 warninghead
 warninghis
 warningi
+warningican't
 warningif
 warningin
 warningira
@@ -609238,6 +609308,7 @@ wayselah
 wayseven
 wayshe
 wayshe'stalkingshe
+wayshecan't
 waysher
 wayshful
 wayshis
@@ -611550,6 +611621,7 @@ wellgone
 wellgood
 wellgoodbye
 wellgoodluck
+wellgoodnight
 wellgoods
 wellgrand
 wellgrizzly
@@ -615240,7 +615312,7 @@ wherewhen
 wherewhenshe
 wherewhere
 wherewheres
-wherewho
+wherewhoa
 wherewithals
 wherewithin
 wherewolves
@@ -615914,7 +615986,7 @@ whisperas
 whisperdid
 whispered.cleopatra
 whispered.for
-whispered.i
+whispered.ican't
 whispered.im
 whispered.none
 whispered.now
@@ -616146,7 +616218,7 @@ whitehad
 whitehair
 whitehaired
 whitehall
-whitehalli
+whitehallican't
 whitehallor
 whitehalls
 whiteharbor
@@ -616515,6 +616587,63 @@ who.who
 who41
 who9
 who_killed_the_electric_car
+whoa.major
+whoa.take
+whoaa
+whoaaa
+whoaaaa
+whoaaaaa
+whoaaaaaaa
+whoaaaaaaaa
+whoaaaaaaaaa
+whoaaaaarh
+whoaaaah
+whoaaaahh
+whoaback
+whoabut
+whoacan
+whoaccepted
+whoaccording
+whoadean
+whoadont
+whoadude
+whoah
+whoaha
+whoahere
+whoahiv
+whoai
+whoait
+whoaive
+whoalie
+whoalook
+whoalways
+whoamong
+whoamr
+whoand
+whoandshy
+whoaokay
+whoare
+whoarein
+whoarethe
+whoareyou
+whoas
+whoasked
+whoat
+whoathat
+whoathats
+whoatheres
+whoatough
+whoawatch
+whoawe
+whoawell
+whoawhat
+whoawhats
+whoawhoever
+whoawhy
+whoaydith
+whoayou
+whoayour
+whoayoure
 whobblebury
 whobethey
 whobetrayed
@@ -617319,7 +617448,7 @@ whyheshould
 whyhowhow
 whyhowits
 whyhowwhenhow
-whyhowwho
+whyhowwhoaand
 whyi
 whyi'm
 whyid
@@ -618899,7 +619028,6 @@ wilshires
 wilsie
 wilsies
 wilsinga
-wilson
 wilson.hes
 wilsoncan't
 wilsoned
@@ -619834,7 +619962,6 @@ winklerwas
 winkles
 winkley
 winkling
-winks
 winksactually
 winksat
 winkseductive
@@ -624573,6 +624700,7 @@ world.two
 world.within
 world.xli
 world.you
+world.youcan't
 world1990
 world78never
 world_is_the_stage
@@ -625565,7 +625693,7 @@ wouldn'ttouch
 wouldn'tunderstand
 wouldn'twork
 wouldn'twould
-wouldn'tyou
+wouldn'tyoucan't
 wouldna
 wouldnae
 wouldne
@@ -626080,7 +626208,6 @@ wrellis
 wren
 wrencan't
 wrench'n
-wrenched
 wrencher
 wrenches
 wrencheven
@@ -631909,6 +632036,7 @@ yearunless
 yearusually
 yearwants
 yearwe
+yearwecan't
 yearwell
 yearwhat
 yearwhich
@@ -632309,7 +632437,6 @@ yelookreal
 yelos
 yelow
 yelowed
-yelped
 yelped.chinaand
 yelpedher
 yelpedsomething
@@ -633221,7 +633348,7 @@ yggdrasils
 yggdrassill
 ygiene
 ygmansour
-ygod
+ygoddamn
 ygoin
 ygoing
 ygon
@@ -634625,6 +634752,12 @@ youcalled
 youcame
 youcametoseethefantasticcraft
 youcan
+youcan'tbe
+youcan'tdoanything
+youcan'tkill
+youcan'ttellhershewon'tbelieveyou
+youcan'tyoucan'tyouca
+youcan'tyoucan'tyoucan'tyouca
 youcand
 youcandothis
 youcandothisyoucandothis
@@ -634635,6 +634768,8 @@ youcanmanage
 youcannot
 youcansee
 youcanstartdoingthe
+youcantpossiblechallenchallengeshargon
+youcantseewhereyouaregoingandsuddenlyyouarethere
 youcanvoteon
 youcaptain
 youcare
@@ -634836,7 +634971,7 @@ yougirls
 yougive
 yougiving
 yougo
-yougod
+yougoddamnmotherfuckingsonofabitch
 yougodzilla
 yougoes
 yougoing
@@ -635557,7 +635692,7 @@ yourgifts
 yourgirlfriend
 yourgirlfriends
 yourglow
-yourgod
+yourgoddamned
 yourgrandmother
 yourgrandson
 yourguess
@@ -636352,6 +636487,7 @@ youyis
 youyknow
 youyou
 youyouarent
+youyoucan't
 youyoud
 youyoull
 youyoung

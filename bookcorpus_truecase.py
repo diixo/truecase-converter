@@ -78,7 +78,21 @@ REPLACE_TABLE = {
     "darlin": "darling",
     "heres": "here's",
     "fuckin": "fucking",
-    #"outta": "out of"
+    "outta": "out of",
+    "theyd": "they'd",
+    "whycan't": "why can't",
+    "goodnight": "good night",
+    "goddamn": "god damn",
+    "whoa": "who a",
+    "youcant": "you can't",
+    "youcan't": "you can't",
+    "ican't": "i can't",
+    "hecan't": "he can't",
+    "wecan't": "we can't",
+    "dammit": "damn it",
+    "oclock": "o'clock",
+    "shecan't": "she can't",
+    "theycan't": "they can't"
 }
 
 
@@ -97,29 +111,17 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace(" 'll", " ")
     sentence = sentence.replace(" ca n't", "can't")
     sentence = sentence.replace("wo n't", "won't")
-    sentence = sentence.replace("wecan't", "we can't")
-
 
     sentence = sentence.replace("ai n't", "ain't")
 
     sentence = sentence.replace(" n't", " not")
 
-    sentence = sentence.replace("theyd", "they'd")
-    sentence = sentence.replace("youcant", "you can't")
-    sentence = sentence.replace("youcan't", "you can't")
-    sentence = sentence.replace("ican't", "i can't")
-
     sentence = sentence.replace("i 'm ", "i'm ")
     sentence = sentence.replace(" i 'm", " i'm")
-    sentence = sentence.replace("hecan't", "he can't")
 
     sentence = sentence.replace("youi", "you i")
     sentence = sentence.replace("buti", "but i")
     sentence = sentence.replace("gon na", "going")
-    sentence = sentence.replace("whoa", "who a")
-
-    sentence = sentence.replace("whycan't", "why can't")
-    sentence = sentence.replace("goodnight", "good night")
 
     return sentence
 
@@ -133,7 +135,11 @@ def construct_candidate_words(sentence: str) -> list[str]:
         if not is_number_token(word) and "-" not in word and len(word) > 1
     ]
     replaced_words = (REPLACE_TABLE.get(word, word) for word in words)
-    return [word for word in replaced_words if word]
+    return [
+        token
+        for replaced_word in replaced_words
+        for token in str_tokenize_words(replaced_word)
+    ]
 
 
 def main():
