@@ -71,7 +71,9 @@ REPLACE_TABLE = {
     "ha": "",
     "ya": "you",
     "thad": "that",
-    "meg": "meggy"
+    "meg": "meggy",
+    "wouldve": "would've",
+    "whod": "who'd"
 }
 
 
@@ -110,6 +112,9 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("buti", "but i")
     sentence = sentence.replace("gon na", "going")
     sentence = sentence.replace("whoa", "who a")
+
+    sentence = sentence.replace("whycan't", "why can't")
+
     return sentence
 
 

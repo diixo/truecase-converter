@@ -1734,7 +1734,6 @@
 .whole
 .whoooooooaaaaaaahhhhhhh
 .why
-.whycan't
 .wife
 .wild
 .will
@@ -9178,11 +9177,8 @@ abass
 abassy
 abastanza
 abasti
-abate
-abated
 abatedbe
 abatedsomewhat
-abatement
 abatements
 abates
 abath
@@ -9251,7 +9247,6 @@ abbesss
 abbeviated
 abbeville
 abbevillepre
-abbey
 abbey.but
 abbey1
 abbeyabout
@@ -16581,7 +16576,6 @@ again.wha
 again.what
 again.when
 again.why
-again.whycan't
 again.with
 again.would
 again.yesterday
@@ -37578,7 +37572,6 @@ archians
 archibald
 archibalds
 archidamus
-archie
 archieas
 archiects
 archiego
@@ -42520,7 +42513,6 @@ ashthinksabout
 ashthorpe
 ashthoughts
 ashtma
-ashton
 ashtonim
 ashtonraze
 ashtonraze.com
@@ -53907,7 +53899,6 @@ balthasars
 balthass
 balthaszar
 balthazaar
-balthazar
 balthazarcan't
 baltheezer
 balthesar
@@ -63968,7 +63959,6 @@ bennos
 benns
 benntingson
 bennu
-benny
 bennybecause
 bennybroke
 bennyi
@@ -70709,7 +70699,6 @@ blayzes
 blaz
 blazay
 blazeby
-blazed
 blazedbut
 blazedking
 blazei
@@ -78491,7 +78480,6 @@ bradizzle
 bradlee
 bradlees
 bradleigh
-bradley
 bradleya
 bradleybut
 bradleys
@@ -80790,7 +80778,6 @@ briankill
 brianlet
 brianmay
 briann
-brianna
 briannaaaa
 briannaaaaaa
 briannaaaaaaaaaa
@@ -115040,7 +115027,6 @@ collington
 collingwood
 collingwoods
 collinoh
-collins
 collins.lyss
 collinscollins
 collinses
@@ -138239,7 +138225,6 @@ davaunsanders
 davaunsanders.com
 davaunwrites
 davayte
-dave
 dave..erm.dave
 dave..what
 dave.well
@@ -139966,7 +139951,6 @@ deambulando
 deameaning
 deamed
 deamhan
-dean
 dean'she
 dean.larsen.5
 deana
@@ -159335,7 +159319,6 @@ dougish
 dougit
 dougla
 douglarsen50
-douglas
 douglas..2012
 douglasbut
 douglascan't
@@ -161261,7 +161244,6 @@ drawknife
 drawknives
 drawl
 drawlbut
-drawled
 drawled.as
 drawless
 drawlimagining
@@ -195263,7 +195245,6 @@ fidge
 fidgered
 fidget.so
 fidgetal
-fidgeted
 fidgetedboth
 fidgeter
 fidgetin
@@ -226451,7 +226432,6 @@ gordito
 gordium
 gordman
 gordo
-gordon
 gordonclicked
 gordonfrowned
 gordonhad
@@ -234294,7 +234274,6 @@ gunfighting
 gunfightit
 gunfightkleins
 gunfights
-gunfire
 gunfireabout
 gunfiro
 gunflash
@@ -256365,7 +256344,6 @@ hissides
 hissiest
 hissighthroughthedoor
 hissin
-hissing
 hissinghegggh
 hissingly
 hissings
@@ -301329,7 +301307,6 @@ kianini
 kianis
 kianna
 kiao
-kiara
 kiaran
 kiaras
 kiarfal
@@ -305414,7 +305391,6 @@ knotsshe
 knotswe
 knott
 knottd
-knotted
 knottedwig
 knotth
 knottier
@@ -315364,7 +315340,6 @@ laurebyand
 laurebyfirst
 laurebys
 laureen
-laurel
 laurelcan't
 laureled
 laurelholland
@@ -329944,7 +329919,6 @@ louisbourg
 louisburg
 louiscan't
 louiscemetery
-louise
 louiseand
 louiseanna
 louisecan't
@@ -339664,7 +339638,6 @@ mandumpster
 mandurah
 manduria
 mandus
-mandy
 mandya
 mandyand
 mandycat
@@ -342530,7 +342503,6 @@ markys
 markzkammell
 markzkammell.blogspot.com
 marl
-marla
 marlahow
 marlaina
 marlainas
@@ -343907,7 +343879,6 @@ masochistic
 masochistically
 masochisticdeveloped
 masomy
-mason
 mason's
 mason.tal
 masonat
@@ -352246,7 +352217,6 @@ mercatroid
 mercdes
 merce
 merced
-mercedes
 mercedes.he
 mercedeses
 mercedesplunged
@@ -366476,7 +366446,6 @@ morrill
 morrilton
 morrings
 morrini
-morris
 morris.kenyon
 morris.kenyon.1
 morriseau
@@ -425895,7 +425864,6 @@ pissier
 pissily
 pissin
 pissiness
-pissing
 pissless
 pissloads
 pissmade
@@ -463118,7 +463086,6 @@ rickstill
 ricktheauthor
 rickwent
 rickwhats
-ricky
 ricky.no
 rickyard
 rickys
@@ -473954,7 +473921,6 @@ sabin
 sabina
 sabinacan't
 sabinas
-sabine
 sabinecan't
 sabinel
 sabines
@@ -477390,7 +477356,6 @@ sanderhoff
 sanderling
 sanderlings
 sanderlingsworked
-sanders
 sanders.a
 sanders.sanders
 sanders.we
@@ -483998,7 +483963,6 @@ scree
 screech
 screecha
 screechdukes
-screeched
 screecher
 screechers
 screeches
@@ -489056,14 +489020,12 @@ sentimiento
 sentimos
 sentin
 sentinal
-sentinel
 sentinelan
 sentinelbecause
 sentineling
 sentinelize
 sentinelmay
 sentinelor
-sentinels
 sentinelsbut
 sentinelscan't
 sentinelsrya
@@ -491517,7 +491479,7 @@ shadesmar
 shadesomething
 shadesscarlet
 shadesun
-shadeswhywhycan't
+shadeswhywhy
 shadethree
 shadewalker
 shadforth
@@ -494158,7 +494120,6 @@ shelbourne
 shelbum
 shelburn
 shelburne
-shelby
 shelby.teenage
 shelbycakes
 shelbys
@@ -498700,7 +498661,6 @@ shruggedwhen
 shruggedwhereupon
 shrugger
 shruggin
-shrugging
 shrugging.whatever
 shruggingas
 shruggingaway
@@ -498830,7 +498790,6 @@ shudderedfrom
 shudderedhe
 shudderedwhen
 shudderin
-shuddering
 shudderingly
 shudderings
 shudderous
@@ -509214,7 +509173,6 @@ sneer.they
 sneera
 sneerand
 sneercan't
-sneered
 sneered.he
 sneerer
 sneerin
@@ -509346,14 +509304,11 @@ sniffiing
 sniffily
 sniffin
 sniffingaboutye
-sniffle
-sniffled
 sniffledand
 sniffledi
 sniffledyou
 sniffler
 snifflers
-sniffles
 sniffless
 snifflethen
 snifflin
@@ -510976,7 +510931,6 @@ sofiacan't
 sofian
 sofias
 soficular
-sofie
 sofiecan't
 sofies
 sofinally
@@ -538054,7 +538008,6 @@ sybelle
 syberiel
 sybian
 sybians
-sybil
 sybilcan't
 sybilians
 sybilin
@@ -589926,7 +589879,6 @@ unwater
 unwatered
 unwatery
 unwavered
-unwavering
 unwavering.so
 unwaveringly
 unwaving
@@ -608936,7 +608888,6 @@ wavells
 wavemistress
 wavemistresses
 waveof
-waver
 wavered
 waverers
 waveriders
@@ -612236,7 +612187,6 @@ wends
 wendt
 wendts
 wendwater
-wendy
 wendy..would
 wendyfrom
 wendys
@@ -616700,7 +616650,6 @@ whocould
 whocouldn'tprotectherself
 whocrawl
 whocreditable
-whod
 whoda
 whodadunkit
 whodare
@@ -617441,7 +617390,6 @@ whybrad
 whybut
 whybutyou
 whyca
-whycan't
 whyche
 whycould
 whyd
@@ -625838,7 +625786,6 @@ wouldunravel
 woulduntie
 woulduse
 wouldusually
-wouldve
 wouldvehad
 wouldvehappened
 wouldvoluntarily
