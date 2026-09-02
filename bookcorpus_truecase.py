@@ -73,7 +73,12 @@ REPLACE_TABLE = {
     "thad": "that",
     "meg": "meggy",
     "wouldve": "would've",
-    "whod": "who'd"
+    "whod": "who'd",
+    "nothin": "nothing",
+    "darlin": "darling",
+    "heres": "here's",
+    "fuckin": "fucking",
+    #"outta": "out of"
 }
 
 
@@ -114,6 +119,7 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("whoa", "who a")
 
     sentence = sentence.replace("whycan't", "why can't")
+    sentence = sentence.replace("goodnight", "good night")
 
     return sentence
 
