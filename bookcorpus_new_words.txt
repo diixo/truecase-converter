@@ -8010,7 +8010,6 @@ a.l.s
 a.l.s.g
 a.l.u
 a.little
-a.m
 a.m.a
 a.m.advertising
 a.m.and
@@ -11992,7 +11991,6 @@ achimedes
 achimou
 achin
 achiness
-aching
 achingaching
 achingcan't
 achinge
@@ -16021,7 +16019,6 @@ afrians
 afriar
 afribibble
 afric
-africa
 africa.he
 africa.it
 africaa
@@ -29493,7 +29490,6 @@ andrd
 andrdquo
 andre
 andre1
-andrea
 andreaaa
 andreacan't
 andreacefalo
@@ -31874,7 +31870,6 @@ annias
 annibale
 annica
 annick
-annie
 anniebananie14
 anniecan't
 anniedouglasslima
@@ -35436,7 +35431,6 @@ apollite
 apollites
 apollitescan't
 apolllo
-apollo
 apollocaleb
 apollodorus
 apollon
@@ -111517,7 +111511,6 @@ cloacas
 cloack
 cloadia
 cloadie
-cloak
 cloak.he
 cloak.i
 cloak.tehran
@@ -123406,7 +123399,6 @@ corportised
 corporus
 corps
 corpsand
-corpse
 corpse's.and
 corpse.bad
 corpse.blaine
@@ -123425,7 +123417,6 @@ corpselight
 corpselike
 corpseno
 corpsergeant
-corpses
 corpsesand
 corpsesash
 corpsescan't
@@ -143168,7 +143159,6 @@ dell'inferno
 dell'iris
 dell'opera
 dell'orologio
-della
 dellacan't
 dellacroce
 dellagracia
@@ -144279,7 +144269,6 @@ deniras
 deniro
 denis
 denisare
-denise
 denisecame
 denisehey
 deniseit
@@ -155971,7 +155960,6 @@ doill
 doily
 doilys
 doim
-doin
 doin'in
 doina
 doinclude
@@ -157956,7 +157944,6 @@ doorkeeper
 doorkeepers
 doorkeeping
 doorkey
-doorknob
 doorknob..sing
 doorknob.there
 doorknobhowever
@@ -160215,7 +160202,6 @@ dqd
 dqpr
 dqs
 dquitation
-dr
 dr..dressedand
 dr.ag
 dr.agged
@@ -199322,7 +199308,6 @@ flameworked
 flameworks
 flamey
 flamin
-flaming
 flamingly
 flamingmontana
 flamingnet
@@ -227957,7 +227942,6 @@ grags
 gragstown
 grah
 grah'na
-graham
 graham'and
 graham.he
 grahamcan't
@@ -231337,7 +231321,6 @@ groaningshe
 groaningsounds
 groaningthe
 groanod
-groans
 groansso
 groanthey
 groany
@@ -232172,7 +232155,6 @@ growlith
 growll
 growlnot
 growlod
-growls
 growlsemanated
 growlsome
 growlwe
@@ -242218,7 +242200,6 @@ harrises
 harrisgood
 harrishon
 harrismith
-harrison
 harrison..'he
 harrison.give
 harrisonburg
@@ -257041,7 +257022,6 @@ hmind
 hming
 hmk
 hml59
-hmm
 hmm..baked
 hmm..do
 hmm..i
@@ -283977,7 +283957,6 @@ itklem
 itknocked
 itknowing
 itkursk
-itl
 itlabor
 itlast
 itlate
@@ -360421,13 +360400,11 @@ mitar
 mitas
 mitawa
 mitawicu
-mitch
 mitcha8plt7
 mitcham
 mitchand
 mitchcan't
 mitchel
-mitchell
 mitchell.goth
 mitchell.is
 mitchell_
@@ -368142,7 +368119,6 @@ mouthfilled
 mouthfor
 mouthfrom
 mouthfu
-mouthful
 mouthfuldidnt
 mouthfulenough
 mouthfuli
@@ -371574,7 +371550,6 @@ murphievski
 murphmpm
 murphree
 murphs
-murphy
 murphyaka
 murphybut
 murphycan't
@@ -409362,7 +409337,6 @@ p.k
 p.k.s
 p.l.a
 p.l.o
-p.m
 p.m.3
 p.m.and
 p.m.as
@@ -410547,7 +410521,6 @@ paidshe
 paidthe
 paidyouwell
 paififteen
-paige
 paige.he
 paigeeven
 paiger
@@ -442390,7 +442363,6 @@ pulsealive
 pulsebeat
 pulsebeats
 pulsebetween
-pulsed
 pulsedriven
 pulseemp
 pulsehe
@@ -448146,7 +448118,6 @@ raggaeton
 raggamon
 raggar
 raggars
-ragged
 ragged.they
 raggedand
 raggedbut
@@ -450820,7 +450791,6 @@ rattlethen
 rattletrap
 rattletraps
 rattlin
-rattling
 rattlingaimed
 rattlingly
 rattlings
@@ -452701,7 +452671,6 @@ rearrived
 rears
 rearside
 rearstoreroom
-rearview
 rearviewmirror
 rearward
 rearwards
@@ -457745,7 +457714,6 @@ remmyyyyy
 remn
 remna
 remnant
-remnants
 remnantsfor
 remnantsof
 remo
@@ -466630,7 +466598,6 @@ rockdotted
 rockdust
 rocke
 rockeater
-rocked
 rockedback
 rockedjust
 rockedtotally
@@ -466714,7 +466681,6 @@ rockin
 rockinator
 rockindeed
 rockiness
-rocking
 rockingham
 rockingnrailing
 rockings
@@ -478198,7 +478164,6 @@ saquen
 saquu
 sar
 sar'nt
-sara
 sara'swhich
 sara_sbrown
 saraband
@@ -478808,7 +478773,6 @@ saseung
 sasey
 sasfaa
 sash
-sasha
 sasha'fied
 sashacan't
 sashaflora
@@ -500001,7 +499965,6 @@ sienderness
 siendo
 sienese
 sienkiewiczs
-sienna
 siennafirst
 siennas
 sienne
@@ -505051,7 +505014,6 @@ skyjammers
 skyjust
 skykomish
 skykomishpur
-skyla
 skylab
 skylahe
 skyland
@@ -520205,7 +520167,6 @@ squawwws
 squeachy
 squeakage
 squeakclunk
-squeaked
 squeakedpresumably
 squeaker
 squeakers
@@ -529537,7 +529498,6 @@ stubbies
 stubbin
 stubbins
 stubbish
-stubble
 stubblecovered
 stubbled
 stubblefield
@@ -561236,7 +561196,6 @@ thumpers
 thumperstein
 thumpier
 thumpin
-thumping
 thumpingall
 thumpingbecame
 thumpingly
@@ -601664,7 +601623,6 @@ voluntas
 volunteeered
 volunteer.on
 volunteer.sheila
-volunteered
 volunteeredharriets
 volunteeredtwelve
 volunteerin
