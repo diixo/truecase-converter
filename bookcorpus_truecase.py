@@ -95,7 +95,8 @@ REPLACE_TABLE = {
     "theycan't": "they can't",
     "itll": "it'll",
     "rearview": "rear view",
-    "doin": "doing"
+    "doin": "doing",
+    "em": "them",
 }
 
 
