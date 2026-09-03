@@ -93,7 +93,7 @@ REPLACE_TABLE = {
     "oclock": "o'clock",
     "shecan't": "she can't",
     "theycan't": "they can't",
-    "itl": "it'll",
+    "itll": "it'll",
     "rearview": "rear view",
     "doin": "doing"
 }
