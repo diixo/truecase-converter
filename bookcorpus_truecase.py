@@ -97,6 +97,13 @@ REPLACE_TABLE = {
     "rearview": "rear view",
     "doin": "doing",
     "em": "them",
+    "ben": "been",
+    "mans": "man's",
+    "weres": "werewolves",
+    "ooh": "well",
+    "thinkin": "thinking",
+    "lem": "let",
+    "aint": "ain't",
 }
 
 
