@@ -104,6 +104,19 @@ REPLACE_TABLE = {
     "thinkin": "thinking",
     "lem": "let",
     "aint": "ain't",
+    "wheres": "where is",
+    "justcan't": "just can't",
+    "itcan't": "it can't",
+    "stillcan't": "still can't",
+    "talkin": "talking",
+    "lookin": "looking",
+    "gettin": "getting",
+    "couldve": "could have",
+    "i'l": "i'll",
+    "everyones": "everyone's",
+    "c'mon": "come on",
+    "somethin": "something",
+    "hmmm": "well"
 }
 
 
