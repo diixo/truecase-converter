@@ -26145,7 +26145,6 @@ ameliacan't
 ameliai
 amelias
 ameliayou
-amelie
 ameliecan't
 ameliedoes
 amelies
@@ -31655,7 +31654,6 @@ annaanna
 annaasleep
 annab
 annabclle
-annabel
 annabela
 annabelk
 annabell
@@ -89339,7 +89337,6 @@ cacophonies
 cacophonists
 cacophonous
 cacophonously
-cacophony
 cacophrastus
 cacoshaman
 cactaceous
@@ -195278,7 +195275,6 @@ fierce5
 fierceand
 fierceid
 fierceit
-fiercely
 fiercely.and
 fiercely.just
 fiercely.you
@@ -241692,7 +241688,6 @@ harlotry
 harlotrynor
 harlots
 harlotty
-harlow
 harlowe
 harlows
 harlowtown
@@ -259722,7 +259717,6 @@ hooeee
 hooey
 hooeyoutrageous
 hooeyuntil
-hoof
 hoofa
 hoofbeat
 hoofbeats
@@ -260005,7 +259999,6 @@ hooverthe
 hoovertown
 hooverville
 hoovervilles
-hooves
 hoovesthan
 hooville
 hoovos
@@ -287092,7 +287085,6 @@ janri
 janry
 jans
 jansaid
-jansen
 jansencan't
 jansenius
 jansens
@@ -325555,7 +325547,6 @@ lizzard
 lizze
 lizzen
 lizzi
-lizzie
 lizziecan't
 lizzieee
 lizziei
@@ -356505,7 +356496,6 @@ milkiest
 milkily
 milkin
 milkiness
-milking
 milkish
 milkit
 milkitll
@@ -406237,7 +406227,6 @@ outslick
 outslightly
 outslowly
 outsmart
-outsmarted
 outsmartin
 outsmarting
 outsmarts
@@ -410199,7 +410188,6 @@ paiiin
 paiin
 paijama
 paikea
-pail
 pail.slowly
 pailful
 pailiah
@@ -410207,7 +410195,6 @@ pailings
 paillard
 paillette
 pailof
-pails
 paim
 paimon
 paimoncan't
@@ -415682,7 +415669,6 @@ pattison
 pattisons
 pattiwhere
 pattiz
-patton
 pattonese
 pattons
 pattor
@@ -450007,7 +449993,6 @@ rasper
 raspier
 raspily
 raspiness
-rasping
 raspingly
 raspings
 rasps
@@ -494136,7 +494121,6 @@ shergar
 sherhite
 sheri
 sheriam
-sheridan
 sheridanhe
 sheridans
 sheriden
@@ -499351,7 +499335,6 @@ sidesslowlymuch
 sidestage
 sidestay
 sidestepjust
-sidestepped
 sidestepper
 sidesteps
 sidesthe
@@ -504647,7 +504630,6 @@ skylaryou
 skylas
 skyle
 skylemar
-skyler
 skylercan't
 skylers
 skyless
@@ -508703,7 +508685,6 @@ sneeked
 sneeking
 sneel
 sneeped
-sneer
 sneer.they
 sneera
 sneerand
@@ -514090,7 +514071,6 @@ sorrowfulness
 sorrowgone
 sorrowguilti
 sorrowin
-sorrowing
 sorrowingif
 sorrowintense
 sorrowjoy
@@ -612885,7 +612865,6 @@ westmorland
 westmount
 westnedge
 westnot
-weston
 weston.he
 westonbridge
 westons
@@ -630280,10 +630259,8 @@ yankari
 yankedbertholdier
 yankedmy
 yankedpicked
-yankee
 yankeedom
 yankeeland
-yankees
 yankeescan't
 yankeesshe
 yankeetoo

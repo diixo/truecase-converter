@@ -134,6 +134,7 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace(" 've", " ")
     sentence = sentence.replace(" 'll", " ")
     sentence = sentence.replace(" ca n't", "can't")
+    sentence = sentence.replace(" is n't", " isn't")
     sentence = sentence.replace("wo n't", "won't")
 
     sentence = sentence.replace("ai n't", "ain't")
