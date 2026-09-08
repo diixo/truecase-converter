@@ -116,7 +116,9 @@ REPLACE_TABLE = {
     "everyones": "everyone's",
     "c'mon": "come on",
     "somethin": "something",
-    "hmmm": "well"
+    "hmmm": "well",
+    "itd": "it'd",
+    "ugh": "well",
 }
 
 
@@ -133,6 +135,7 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace(" 'd,", ",")
     sentence = sentence.replace(" 've", " ")
     sentence = sentence.replace(" 'll", " ")
+    sentence = sentence.replace(" ing ", "ing ")
     sentence = sentence.replace(" ca n't", "can't")
     sentence = sentence.replace(" is n't", " isn't")
     sentence = sentence.replace("wo n't", "won't")
