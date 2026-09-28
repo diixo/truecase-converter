@@ -123,6 +123,7 @@ REPLACE_TABLE = {
     "lettin": "letting",
     "nothin": "nothing",
     "cmon": "come on",
+    "comin": "coming"
 }
 
 
@@ -155,7 +156,9 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("buti", "but i")
     sentence = sentence.replace("gon na", "going")
     sentence = sentence.replace(" ca n't", " can't")
+    sentence = sentence.replace("ca n't ", "can't ")
     sentence = sentence.replace("wan na", "want to")
+    sentence = sentence.replace("got ta", "got to")
 
     return sentence
 
