@@ -119,6 +119,10 @@ REPLACE_TABLE = {
     "hmmm": "well",
     "itd": "it'd",
     "ugh": "well",
+    "leavin": "leaving",
+    "lettin": "letting",
+    "nothin": "nothing",
+    "cmon": "come on",
 }
 
 
@@ -150,6 +154,8 @@ def normalize_strong(sentence: str) -> str:
     sentence = sentence.replace("youi", "you i")
     sentence = sentence.replace("buti", "but i")
     sentence = sentence.replace("gon na", "going")
+    sentence = sentence.replace(" ca n't", " can't")
+    sentence = sentence.replace("wan na", "want to")
 
     return sentence
 
