@@ -123,7 +123,8 @@ REPLACE_TABLE = {
     "lettin": "letting",
     "nothin": "nothing",
     "cmon": "come on",
-    "comin": "coming"
+    "comin": "coming",
+    "don": "don't"
 }
 
 
